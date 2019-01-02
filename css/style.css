@@ -70,6 +70,37 @@ body{
     padding: 45px;
 }
 
+/*Projects Area*/
+.cards{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5% 10% 0% 10%;
+    padding: 2rem 0;
+}
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+    transition: all .25s;
+    transition-property: box-shadow,transform;
+    background-color: #fff;
+    border-radius: 7px;
+    overflow: hidden;
+    width: calc(33% - 1rem);
+    vertical-align: top;
+    margin: 0 .5rem 1rem;
+}
+.cardHeader{
+	font-weight: 500;
+	padding: 15px;
+}
+.cardBody{
+	font-size: 15px;
+	padding: 15px;
+}
+/*End Projects Area*/
+
 /*Buttons*/
 .btnWrapper{
 	padding: 25px;
