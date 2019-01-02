@@ -1,0 +1,102 @@
+/*
+
+	I AM THE SILENT STORM	
+	ping me at tinka.edgar@gmail.com
+	https://edgar256.github.io/
+
+*/
+body{
+	font-family: "Open Sans",sans-serif;
+	font-size: 20px;
+}
+
+
+.header{
+	font-size: 25px;
+	background-image: url("../images/front-wall-paper.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 650px;
+}
+.headerContent{
+	color: #fff;
+	padding-top: 150px;
+}
+.intro{
+	font-size: 50px;
+}
+.proImg{
+	border-radius: 100px;
+    margin: 30px;
+}
+.headerText{
+	font-size: 40px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px: 
+}
+.work, .tech{
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.workContent{
+	margin-top: 40px; 
+}
+.workList{
+	line-height: 2em;
+}
+.clear{
+	clear: both;
+}
+.logoWrapper{
+	width: 80%;
+	margin-right: 10%;
+    margin-left: 10%;
+    display: inline-flex;
+    padding: 30px;
+}
+.logoWrapperInner{
+	width: 25%;
+	padding-left: 5%;
+    padding-right: 5%;
+}
+.didKnow{
+	text-align: center;
+    font-size: 30px;
+    margin: 10% 20% 10% 20%;
+    color: #cfd9dd;
+    border: 2px solid #cfd9dd;
+    padding: 45px;
+}
+
+/*Buttons*/
+.btnWrapper{
+	padding: 25px;
+}
+.btnTech, .btnProject{
+	border-radius: 30px;
+	padding: 10px;
+    font-size: 15px;
+    width: 200px;
+}
+.btnTech{
+	background: #449f42;
+	color: #fff;
+}
+.btnProject{
+	background-color: #4c647e;
+}
+/*End Buttons*/
+
+/*Footer section*/
+
+.footerWrapper{
+	background-color: #35414d;
+	color: #6c7b87;
+	font-size: 12px;
+	text-align: center;
+	padding: 30px;
+}
+
+/*End of Footer section*/
