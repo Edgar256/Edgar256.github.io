@@ -13,15 +13,20 @@ $(document).ready(function(){
 					"Text attracts more attention than pictures."];
 	var counter = 0;
 	var changeInspire = document.getElementById("didKnow");
-	var start = setInterval(change,3000);
+	var start = setInterval(change,2500);
 
 	function change(){
+
 		changeInspire.innerHTML = inspire[counter];
 		counter++;
 
-		if (counter >= text.length){
+		while(counter >= inspire.length){
 			counter = 0;
 		}
+
+		/*if (counter >= inspire.length){
+			counter = 0;
+		}*/
 	}
 
 });
