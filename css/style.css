@@ -9,9 +9,9 @@ body{
 	font-family: "Open Sans",sans-serif;
 	font-size: 20px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 425px){
 	body{
-		font-size: 35px !important;
+		font-size: 20px;
 	}
 }
 
@@ -27,8 +27,18 @@ body{
 	color: #fff;
 	padding-top: 150px;
 }
+.greeting, .job, .boast{
+	font-size: 20px;
+	padding: 2px;
+}
 .intro{
 	font-size: 50px;
+}
+@media screen and (max-width: 425px){
+	.intro {
+    	font-size: 35px;
+    	padding: 15px;
+	}
 }
 .proImg{
 	border-radius: 100px;
@@ -38,7 +48,24 @@ body{
 	font-size: 40px;
 	text-align: center;
 	margin-top: 50px;
-	margin-bottom: 30px: 
+	margin-bottom: 30px; 
+}
+@media screen and (max-width: 425px){	
+	.headerText {
+    	font-size: 22px;
+	}
+	.greeting, .job, .boast{
+		padding: 15px;
+	}
+	.header{
+		height: 800px;
+	}
+	.headerContent {	    
+		padding-top: 30px;
+	}
+	.proImg{
+		width: 100px;
+	}
 }
 .work, .tech{
 	width: 100%;
@@ -86,7 +113,16 @@ body{
     border: 2px solid #cfd9dd;
     padding: 45px;
 }
-
+@media screen and (max-width: 425px){
+	.didKnow {
+	    text-align: center;
+	    font-size: 20px;
+	    margin: 10% 10% 10% 10%;
+	    color: #cfd9dd;
+	    border: 2px solid #cfd9dd;
+	    padding: 15px;
+	}
+}
 /*Projects Area*/
 .cards{
 	display: flex;
