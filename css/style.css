@@ -18,7 +18,7 @@ body{
 
 .header{
 	font-size: 25px;
-	background-image: url("../images/front-wall-paper.jpg");
+	background-image: url("../images/front-wall-paper-1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 650px;
@@ -71,6 +71,10 @@ body{
 	width: 100%;
 	margin-top: 40px;
 	margin-bottom: 30px;
+}
+.work-img-inner{
+	width: 700px;
+	margin-left: -15px;
 }
 @media screen and (max-width: 1165px){
 	.work-img{
@@ -192,3 +196,13 @@ body{
 }
 
 /*End of Footer section*/
+
+/*Clock section*/
+.mainClock{
+	color: #fff;
+    font-size: 16px;
+    display: inline-flex;
+    float: right;
+    margin: 10px 40px 0px 0px;
+}
+/*End Clock section*/
