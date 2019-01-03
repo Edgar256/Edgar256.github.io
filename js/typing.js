@@ -1,7 +1,7 @@
 var typed = new Typed('.typing', {
-		  strings: [" ", "Tinkamanyire", "Edgar Tinkamanyire"],
+		  strings: [" ", "I'm Tinkamanyire", "I'm Edgar Tinkamanyire", "Catch at tinka.edgar@gmail.com"],
 		  loop : true,
-		  typeSpeed: 150,
-		  backSpeed: 40,
+		  typeSpeed: 170,
+		  backSpeed: 60,
 		  backDelay: 1000,
 });
