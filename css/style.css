@@ -176,12 +176,17 @@ body{
     font-size: 15px;
     width: 200px;
 }
+.btnTech:hover , .btnProject:hover{
+	font-size: 17px;
+	color: #fff;
+}
 .btnTech{
 	background: #449f42;
 	color: #fff;
 }
 .btnProject{
 	background-color: #4c647e;
+	color: #fff;
 }
 /*End Buttons*/
 
