@@ -223,7 +223,7 @@ a:hover{
     font-size: 40px;
     display: inline-flex;
     text-align: center;
-    /*margin: 10px 40px 0px 0px;*/
+    margin: auto; 
 }
 .dateWrapper{
 	font-size: 20px;
@@ -231,5 +231,12 @@ a:hover{
     display: inline-flex;
     text-align: center;
     margin: auto;
+}
+@media screen and (max-width: 425px){
+	.dateClockWrapper{
+		margin: auto;
+    	float: none;
+    	width: 100%;
+	}
 }
 /*End Clock section*/
