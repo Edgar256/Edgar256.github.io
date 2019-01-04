@@ -213,11 +213,23 @@ a:hover{
 /*End of Footer section*/
 
 /*Clock section*/
+.dateClockWrapper{
+	display: inline-grid;
+	float: right;
+	margin: 10px 40px 0px 0px;
+}
 .mainClock{
 	color: #fff;
-    font-size: 16px;
+    font-size: 40px;
     display: inline-flex;
-    float: right;
-    margin: 10px 40px 0px 0px;
+    text-align: center;
+    /*margin: 10px 40px 0px 0px;*/
+}
+.dateWrapper{
+	font-size: 20px;
+    color: #fff;
+    display: inline-flex;
+    text-align: center;
+    margin: auto;
 }
 /*End Clock section*/

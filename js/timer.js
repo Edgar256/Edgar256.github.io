@@ -5,7 +5,12 @@ $(document).ready(function(){
 		var date = new Date();
 		var hrTime = date.getHours();
 		var minTime = date.getMinutes();
-		var secTime= date.getSeconds();
+		var secTime = date.getSeconds();
+		var dayTime = date.getDay();
+		var monthTime = date.getMonth();
+		var yearTime = date.getYear();
+
+		var strDate = date.toDateString();
 
 		var minTime0 = minTime.toString();
 		var secTime0 = secTime.toString();
@@ -21,6 +26,7 @@ $(document).ready(function(){
 		document.getElementById("hrClock").innerHTML = hrTime;
 		document.getElementById("minClock").innerHTML = minTime;
 		document.getElementById("secClock").innerHTML = secTime;
+		document.getElementById("myDate").innerHTML = strDate;		
 
 		if (hrTime < 12){
 			document.getElementById("greet").innerHTML = "Good morning there, have you had breakfast yet?";
