@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-	var inspire = ["Did you know ?", 
-					"It takes a visitor  12 seconds to leave your website if they are not impressed with what they see.", 
+	var inspire = ["Did you know ?",					 
 					"Fancy fonts are ignored.",
 					"Short paragraphs work better than long ones.",
 					"Ads, that are placed on the top or left part of your website, get the most views.",
