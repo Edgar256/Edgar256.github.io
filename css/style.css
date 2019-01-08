@@ -170,7 +170,7 @@ body{
     overflow: hidden;
     width: calc(33% - 1rem);
     vertical-align: top;
-    margin: 0 .5rem 1rem;
+    margin: 0 1.5rem 3rem;/*0 .5rem 1rem;*/
     min-height: 450px;
     max-width: 320px;
 }
