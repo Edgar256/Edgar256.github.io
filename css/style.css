@@ -199,6 +199,9 @@ a:hover{
 		width: 100%;
 	}
 }
+.cardHeader, .cardBody{
+	color: #6d6363;;
+}
 /*End Projects Area*/
 
 /*Buttons*/
