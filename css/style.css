@@ -188,6 +188,9 @@ body{
 	/*width: calc(33.3% - 1rem);
 	margin: 0 0rem 0rem;*/
 }
+.textCard{
+	min-height: 120px;
+}
 a:hover{
 	text-decoration: none;
 }
@@ -225,6 +228,20 @@ a:hover{
 .btnProject{
 	background-color: #4c647e;
 	color: #fff;
+}
+.btnGithub, .btnGithub:hover, .btnGithub:active, .btnGithub:focus{
+	color: #fff;
+    background-color: #008000;
+    width: 49%;
+    font-size: 85%;
+    padding: 3%;
+}
+.btnWebpage , .btnWebpage:hover , .btnWebpage:active, .btnWebpage:focus{
+	color: #fff;
+    background-color: #4064ac;
+    width: 49%;
+    font-size: 85%;
+    padding: 3%;
 }
 /*End Buttons*/
 
