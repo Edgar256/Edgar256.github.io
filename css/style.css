@@ -285,3 +285,30 @@ a:hover{
 	}
 }
 /*End Clock section*/
+
+/*Contact Links*/
+.contactLinks{
+	z-index: 50;
+    position: fixed;
+    color: #fff;
+    width: 100%;
+}
+.linkIcons{
+	float: right;
+	margin-top: 150px;
+	margin-right: 50px;
+}
+.linkIcon{
+	background-color: #000;
+    /* padding: 15px; */
+    border-radius: 50px;
+    margin: 5px; 
+    font-size: 28px; 
+    width: 60px;
+    height: 60px;
+    color: #fff;
+}
+.innerIcon{
+	margin: 17px;
+}
+/*End Contact links*/
