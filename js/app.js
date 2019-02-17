@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+	console.log('JavaScript loaded successfully');
+	$(".displayMsg").click(function(){
+  		alert("This button has not yet been linked, please check out the code on Github.");
+	});
+	/*function displayMsg(){
+		//alert("This button has not yet been linked, please check out the code on Github");
+		console.log("You clicked the button");
+	};*/
+	/*$(".kkk").click(function(){
+  		alert("The paragraph was clicked.");
+	});*/
+
 	var inspire = ["Did you know ?",					 
 					"Fancy fonts are ignored.",
 					"Short paragraphs work better than long ones.",
@@ -26,6 +38,11 @@ $(document).ready(function(){
 		/*if (counter >= inspire.length){
 			counter = 0;
 		}*/
-	}
+	};
+	
+
+	
+
+
 
 });
