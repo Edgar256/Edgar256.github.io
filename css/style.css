@@ -224,6 +224,7 @@ a:hover{
 	padding: 10px;
     font-size: 15px;
     width: 200px;
+    margin: 15px;
 }
 .btnTech:hover , .btnProject:hover{
 	font-size: 17px;
