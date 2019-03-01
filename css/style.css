@@ -46,6 +46,14 @@ body{
 	border-radius: 100px;
     margin: 30px;
 }
+.proImgWrapper{
+	margin-top: -25px; 
+}
+@media screen and (max-width: 1300px){	
+	.proImgWrapper{
+		display: none;
+	}
+}
 .headerText{
 	font-size: 40px;
 	text-align: center;
