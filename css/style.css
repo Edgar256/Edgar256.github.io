@@ -298,10 +298,11 @@ a:hover{
 
 /*Contact Links*/
 .contactLinks{
-	z-index: 50;
+    z-index: 50;
     position: fixed;
     color: #fff;
-    width: 100%;
+    /*width: 100%;*/
+    margin-left: 90%;
 }
 .linkIcons{
 	float: right;
