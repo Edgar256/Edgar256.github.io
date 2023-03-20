@@ -49,19 +49,19 @@ export default function ParticlesBackground() {
             },
             repulse: {
               distance: 200,
-              duration: 0.4,
+              duration: 0.6,
             },
           },
         },
         particles: {
           color: {
-            value: '#ffffff',
+            value: '#555',
           },
           links: {
-            color: '#ffffff',
+            color: '#555',
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.3,
             width: 1,
           },
           collisions: {
@@ -85,7 +85,7 @@ export default function ParticlesBackground() {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 0.7,
           },
           shape: {
             type: 'circle',
