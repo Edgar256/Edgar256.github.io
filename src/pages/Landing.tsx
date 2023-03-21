@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import '../App.css';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
-import { Link } from 'react-router-dom';
 
 // image imports
 import Edgar from '../images/edgar-photo.jpg';
@@ -11,26 +11,26 @@ function Landing() {
     <div>
       <ParticlesBackground />
       <div className="container position-relative">
-        <div className="d-flex justify-content-center pt-3">
+        <div className="d-flex justify-content-center pt-3" id="home">
           <nav className="nav text-white fs-4">
-            <Link className="nav-link text-white" to="/">
+            <a className="nav-link text-white" href="/">
               Home
-            </Link>
-            <Link className="nav-link text-white" to="/#about">
+            </a>
+            <a className="nav-link text-white" href="/#about">
               About
-            </Link>
-            <Link className="nav-link text-white" to="#tech">
+            </a>
+            <a className="nav-link text-white" href="/#tech">
               Technologies
-            </Link>
-            <Link className="nav-link text-white" to="/#portfolio">
+            </a>
+            <a className="nav-link text-white" href="/#portfolio">
               Portfolio
-            </Link>
-            <Link className="nav-link text-white" to="/#skill">
+            </a>
+            <a className="nav-link text-white" href="/#skill">
               Skills & CV
-            </Link>
-            <Link className="nav-link text-white" to="/#contact">
+            </a>
+            <a className="nav-link text-white" href="/#contact">
               Contact
-            </Link>
+            </a>
           </nav>
         </div>
       </div>
@@ -65,7 +65,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div className="container position-relative min-vh-100">
+      <div className="container position-relative min-vh-100" id="about">
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
           <div>
             <div className="text-white display-4 py-5 text-center">About</div>
@@ -84,7 +84,10 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div className="container position-relative min-vh-100 py-5 my-5">
+      <div
+        className="container position-relative min-vh-100 py-5 my-5"
+        id="tech"
+      >
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div className="w-100">
             <div className="text-white display-4 py-3 text-center py-5 w-100">
@@ -253,13 +256,58 @@ function Landing() {
           </div>
         </div>
       </div>
+
+      <div className="container position-relative min-vh-100" id="portfolio">
+        <div className="w-100 h-100 d-flex p-0 row">
+          <div className="col-6">
+            <h2>EKAAWA WEB APP</h2>
+            <h4>ROLE: FULL STACK SOFTWARE DEVELOPER</h4>
+            <div>
+              Ekaawa is the biggest Coffee & Coffee products online Auction Shop
+              in the world. This web App is was built to create a direct link
+              between the Coffee farmers and the final Coffee Consumer. Through
+              this platform, farmers are able to get the best prices for their
+              Coffee, while also the Coffee cosumers are able to get the best
+              quality of coffee in the world.
+            </div>
+            <div>
+              <h6>TECH</h6>
+              <div className="d-flex flex-wrap">
+                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
+                  FIGMA
+                </button>
+                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
+                  FIGMA
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* <div>
+            <div className="text-white display-4 py-5 text-center">Portfolio</div>
+            <div className="text-white text-center py-5 fs-4">
+              I'm a FrontEnd Developer at Mobile Paradigm Group (MPG) a Tech
+              Company in Uganda(East-Africa). I have a big passion for UI
+              effects, dynamic user experience, website and mobile-app
+              development. Over the years , I have played a key role in
+              converting ideas from ink to robust scalable web and mobile apps,
+              following the best engineering principles. My experience has
+              taught me that every problem requires a unique solution. This has
+              been the key to my success and the teams I have worked with. Have
+              an idea you want to convert into a WebApp or Mobile App ? Get in
+              Touch
+            </div>
+          </div> */}
+        </div>
+      </div>
+
       <div className="container position-relative min-vh-100 my-5 py-5">
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div className="w-100">
             <div className="text-white display-4 py-5 text-center">
               Skills & Resume
             </div>
-            <div className="text-white py-3 fs-4">
+            <div className="text-white py-3 fs-4" id="skill">
               Download my full PDF resume here
             </div>
             <div className="d-flex text-white w-100 p-3">
@@ -322,48 +370,73 @@ function Landing() {
           <div className="text-white display-4 py-5 text-center py-5">
             Contact
           </div>
-          <div className="">
+          <div className="" id="contact">
             <div className="card bg-transparent">
               <ul className="list-group list-group-flush bg-transparent fs-4">
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-4 col-sm-6">
                     Email <i className="bi-envelope-fill px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">
+                  <Link
+                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    to="mailto:tinka.edgar@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     tinka.edgar@gmail.com
-                  </span>
+                  </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Stackoverflow <i className="bi-stack-overflow px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">
+                  <Link
+                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    to="https://stackoverflow.com/users/6561907/edgar256"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     https://stackoverflow.com/users/6561907/edgar256
-                  </span>
+                  </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Linkedin <i className="bi-linkedin px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">
+                  <Link
+                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    to="https://www.linkedin.com/in/tinkamanyire-edgar/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     https://www.linkedin.com/in/tinkamanyire-edgar/
-                  </span>
+                  </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Github <i className="bi-github px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">
+                  <Link
+                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    to="https://github.com/Edgar256"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     https://github.com/Edgar256
-                  </span>
+                  </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Codewars <i className="bi-code-slash px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">
+                  <Link
+                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    to="https://www.codewars.com/users/Edgar256"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     https://www.codewars.com/users/Edgar256
-                  </span>
+                  </Link>
                 </li>
               </ul>
             </div>
