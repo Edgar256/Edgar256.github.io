@@ -11,7 +11,6 @@ const databases = [
   'ELASTICSEARCH',
   'FIREBASE',
   'MARIADB',
-  'MONGODB',
   'NEO4J',
 ];
 

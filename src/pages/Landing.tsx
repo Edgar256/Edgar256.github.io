@@ -6,9 +6,17 @@ import Typewriter from 'typewriter-effect';
 // image imports
 import Project from '../components/Project';
 
-// import data dump
+// import data dumps
 import data from '../data/projects';
+import backend from '../data/backend';
+import prototyping from '../data/prototyping';
+import frontend from '../data/frontend';
+import mobileapps from '../data/mobileapps';
+import cms from '../data/cms';
 
+import databases from '../data/databases';
+import versioning from '../data/versioning';
+import devops from '../data/devops';
 function Landing() {
   return (
     <div>
@@ -35,36 +43,46 @@ function Landing() {
               id="navbarNavDropdown"
             >
               <ul className="navbar-nav w-100">
+              <hr className="d-md-none d-sm-block border border-dark my-1" />
                 <li className="nav-item active">
-                  <a className="nav-link text-white" href="/">
+                  <a className="nav-link text-white fs-4 px-3" href="/">
                     Home
                   </a>
                 </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/#about">
+                  <a className="nav-link text-white fs-4 px-3" href="/#about">
                     About
                   </a>
                 </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/#tech">
-                    Technologies
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link text-white" href="/#portfolio">
+                  <a
+                    className="nav-link text-white fs-4 px-3"
+                    href="/#portfolio"
+                  >
                     Portfolio
                   </a>
                 </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/#skill">
+                  <a className="nav-link text-white fs-4 px-3" href="/#tech">
+                    Technologies
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <a className="nav-link text-white fs-4 px-3" href="/#skill">
                     Skills & CV
                   </a>
                 </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/#contact">
+                  <a className="nav-link text-white fs-4 px-3" href="/#contact">
                     Contact
                   </a>
                 </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
               </ul>
             </div>
           </nav>
@@ -122,178 +140,6 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div
-        className="container position-relative min-vh-100 py-5 my-5"
-        id="tech"
-      >
-        <div className="w-100 h-100 d-flex align-items-center p-0">
-          <div className="w-100">
-            <div className="text-white display-4 py-3 text-center py-5 w-100">
-              Technologies
-            </div>
-            <div className="text-white py-3">
-              <h4>PROTOTYPING AND WIREFRAMING</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  PEN & PAPER
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  FIGMA
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  INVISION
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  ADOBE XD
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  HOTGLOO
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>FRONTEND</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  HTML
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  CSS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  VANILLA JS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  REACT
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  TYPESCRIPT
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  APOLLO CLIENT
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  NEXT JS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  VUE
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>BACKEND</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  NODEJS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  EXPRESS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  PHP
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  LARAVEL
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  PYTHON
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  DJANGO
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  RESTFUL APIS
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>MOBILE APPS</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  REACT NATIVE
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  IONIC
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  FLUTTER
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>CMS</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  WORDPRESS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  SHOPIFY
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  DRUPAL
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  JOOMLA
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>DATABASES</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  MONGODB
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  REDIS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  MYSQL
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  POSTGRES
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>VERSION CONTROL</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  GIT
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  GITHUB
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  GITLAB
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  BITBUCKET
-                </button>
-              </div>
-            </div>
-            <div className="text-white py-3">
-              <h4>DEV-OPS</h4>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  AWS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  HEROKU
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  DOCKERS
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  LINODE
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  DIGITAL OCEAN
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div className="container position-relative min-vh-100" id="portfolio">
         <div className="w-100">
@@ -316,6 +162,131 @@ function Landing() {
             />
           );
         })}
+      </div>
+
+      <div
+        className="container position-relative min-vh-100 py-5 my-5"
+        id="tech"
+      >
+        <div className="w-100 h-100 d-flex align-items-center p-0">
+          <div className="w-100">
+            <div className="text-white display-4 py-3 text-center py-5 w-100">
+              Technologies
+            </div>
+            <div className="text-white py-3">
+              <h4>PROTOTYPING AND WIREFRAMING</h4>
+              <div className="d-flex flex-wrap">
+                {prototyping &&
+                  prototyping.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>FRONTEND</h4>
+              <div className="d-flex flex-wrap">
+                {frontend &&
+                  frontend.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>BACKEND</h4>
+              <div className="d-flex flex-wrap">
+                {backend &&
+                  backend.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>MOBILE APPS</h4>
+              <div className="d-flex flex-wrap">
+                {mobileapps &&
+                  mobileapps.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>CMS</h4>
+              <div className="d-flex flex-wrap">
+                {cms &&
+                  cms.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>DATABASES</h4>
+              <div className="d-flex flex-wrap">
+                {databases &&
+                  databases.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>VERSION CONTROL</h4>
+              <div className="d-flex flex-wrap">
+                {versioning &&
+                  versioning.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+            <div className="text-white py-3">
+              <h4>DEV-OPS</h4>
+              <div className="d-flex flex-wrap">
+                {devops &&
+                  devops.map((elem) => (
+                    <button
+                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      key={elem}
+                    >
+                      {elem}
+                    </button>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="container position-relative min-vh-100 my-5 py-5">
