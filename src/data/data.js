@@ -137,7 +137,7 @@ const data = [
       'pixabits009.jpg',
       'pixabits010.jpg',
     ],
-    websiteURL: 'https://pixabitshq.com/',
+    websiteURL: 'https://pixabits.net/',
     role: 'WORDPRESS DEVELOPER',
     roleRecap:
       'Pixabits is a startup in Uganda, that specilises in designing and developing digital products for small. medium and large enterprises. Designed annd developed the website using Wordpress and Oxygen',

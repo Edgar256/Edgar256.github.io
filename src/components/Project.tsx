@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Project(props) {
   return (
     <div className="w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block">
@@ -20,15 +22,36 @@ export default function Project(props) {
           </div>
         </div>
         <div className="d-flex flex-wrap py-5">
-          <button className="btn btn-outline-success rounded-pill m-1 px-3">
+          <Link
+            className="btn btn-outline-success rounded-pill m-1 px-3"
+            to={`/${props.id}`}
+          >
             VIEW MORE
-          </button>
-          <button className="btn btn-outline-primary rounded-pill m-1 px-3">
-            VISIT WEBSITE
-          </button>
-          <button className="btn btn-outline-warning rounded-pill m-1 px-3">
-            VIEW GITHUB REPO
-          </button>
+          </Link>
+          {props.websiteURL ? (
+            <a
+              href={props.websiteURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-primary rounded-pill m-1 px-3"
+            >
+              VISIT WEBSITE
+            </a>
+          ) : (
+            <div />
+          )}
+          {props.codeURL ? (
+            <a
+              href={props.codeURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-warning rounded-pill m-1 px-3"
+            >
+              VIEW GITHUB REPO
+            </a>
+          ) : (
+            <div />
+          )}
         </div>
       </div>
       <div className="col-lg-6 col-sm-12 py-1">

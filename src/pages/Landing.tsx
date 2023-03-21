@@ -14,13 +14,13 @@ function Landing() {
     <div>
       <ParticlesBackground />
       <div className="container position-relative">
-        <div className="d-flex justify-content-center pt-3" id="home">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">
-              Navbar
-            </a>
+        <div
+          className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
+          id="home"
+        >
+          <nav className="navbar navbar-expand-lg navbar-white bg-transparent text-white">
             <button
-              className="navbar-toggler"
+              className="navbar-toggler text-white bg-white"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNavDropdown"
@@ -28,88 +28,62 @@ function Landing() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon text-white"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav">
+            <div
+              className="collapse navbar-collapse w-100 bg-transparent"
+              id="navbarNavDropdown"
+            >
+              <ul className="navbar-nav w-100">
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">
-                    Home <span className="sr-only">(current)</span>
+                  <a className="nav-link text-white" href="/">
+                    Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Features
+                  <a className="nav-link text-white" href="/#about">
+                    About
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Pricing
+                  <a className="nav-link text-white" href="/#tech">
+                    Technologies
                   </a>
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdownMenuLink"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Dropdown link
+                <li className="nav-item">
+                  <a className="nav-link text-white" href="/#portfolio">
+                    Portfolio
                   </a>
-                  <div
-                    className="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink"
-                  >
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </div>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-white" href="/#skill">
+                    Skills & CV
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-white" href="/#contact">
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
           </nav>
-          {/* <nav className="nav text-white fs-4">
-            <a className="nav-link text-white" href="/">
-              Home
-            </a>
-            <a className="nav-link text-white" href="/#about">
-              About
-            </a>
-            <a className="nav-link text-white" href="/#tech">
-              Technologies
-            </a>
-            <a className="nav-link text-white" href="/#portfolio">
-              Portfolio
-            </a>
-            <a className="nav-link text-white" href="/#skill">
-              Skills & CV
-            </a>
-            <a className="nav-link text-white" href="/#contact">
-              Contact
-            </a>
-          </nav> */}
         </div>
       </div>
       <div className="container position-relative min-vh-100 d-flex justify-content-center align-items-center">
         <div className="w-100 h-100  p-0 py-0">
           <div className="d-lg-flex w-100 d-sm-block">
-            <img
-              src="./images/edgar-photo.jpg"
-              alt="Edgar profile"
-              className="rounded-circle mx-auto py-1 px-2"
-              width={150}
-              height={150}
-            />
+            <div className="d-sm-flex justify-content-sm-center">
+              <img
+                src="./images/edgar-photo.jpg"
+                alt="Edgar profile"
+                className="rounded-circle mx-auto py-1 px-2"
+                width={150}
+                height={150}
+              />
+            </div>
             <div className="w-100 px-2 py-2">
-              <div className="text-white display-2">
+              <div className="text-white display-2 d-sm-flex justify-content-lg-start justify-content-sm-center text-xl-start text-lg-start text-md-start text-left text-sm-center">
                 Hi, I'm Edgar Tinkamanyire,
               </div>
               <div className="text-white fs-4">
@@ -336,62 +310,12 @@ function Landing() {
               description={project.descriptionFull}
               tech={project.tech}
               photo={project.profilePhoto}
-              // backend={project.backend}
-              // mobile={project.mobile}
-              // cms={project.cms}
-              // database={project.database}
-              // versionControl={project.versionControl}
-              // devOps={project.devOps}
-              // image={project.image}
+              id={project.id}
+              websiteURL={project.websiteURL}
+              codeURL={project.codeURL}
             />
           );
-        })}
-        <Project />
-        {/* <div className="w-100 h-100 d-flex p-0 row">
-          <div className="col-6 text-white">
-            <h2>EKAAWA WEB APP</h2>
-            <h4>ROLE: FULL STACK SOFTWARE DEVELOPER</h4>
-            <div className="fs-4">
-              Ekaawa is the biggest Coffee & Coffee products online Auction Shop
-              in the world. This web App is was built to create a direct link
-              between the Coffee farmers and the final Coffee Consumer. Through
-              this platform, farmers are able to get the best prices for their
-              Coffee, while also the Coffee cosumers are able to get the best
-              quality of coffee in the world.
-            </div>
-            <div>
-              <h6>TECH</h6>
-              <div className="d-flex flex-wrap">
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  FIGMA
-                </button>
-                <button className="btn btn-outline-secondary text-white rounded-pill m-1">
-                  FIGMA
-                </button>
-              </div>
-            </div>
-            <div className="d-flex flex-wrap py-5">
-              <button className="btn btn-outline-success text-success rounded-pill m-1 px-3">
-                VIEW MORE
-              </button>
-              <button className="btn btn-outline-primary text-primary rounded-pill m-1 px-3">
-                VISIT WEBSITE
-              </button>
-              <button className="btn btn-outline-warning text-warning rounded-pill m-1 px-3">
-                VIEW GITHUB REPO
-              </button>
-            </div>
-          </div>
-          <div className="col-6">
-          <img
-              src={Ekaawa}
-              alt="Ekaawa"
-              className="w-100 p-2 rounded"
-              // width={150}
-              // height={150}
-            />
-          </div>          
-        </div> */}
+        })}        
       </div>
 
       <div className="container position-relative min-vh-100 my-5 py-5">
