@@ -21,7 +21,7 @@ function Landing() {
   return (
     <div>
       <ParticlesBackground />
-      <div className="container position-relative">
+      <div className="container-fluid position-relative">
         <div
           className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
           id="home"
@@ -121,7 +121,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      <div className="container position-relative min-vh-100" id="about">
+      <div className="container-fluid position-relative min-vh-100 p-xl-5" id="about">
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
           <div>
             <div className="text-white display-4 py-5 text-center">About</div>
@@ -141,7 +141,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="container position-relative min-vh-100" id="portfolio">
+      <div className="container-fluid position-relative min-vh-100 p-xl-5" id="portfolio">
         <div className="w-100">
           <div className="text-white display-4 py-3 text-center py-5 w-100">
             Portfolio
@@ -165,7 +165,7 @@ function Landing() {
       </div>
 
       <div
-        className="container position-relative min-vh-100 py-5 my-5"
+        className="container-fluid position-relative min-vh-100 p-xl-5 py-5 my-5"
         id="tech"
       >
         <div className="w-100 h-100 d-flex align-items-center p-0">
@@ -289,7 +289,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="container position-relative min-vh-100 my-5 py-5">
+      <div className="container-fluid position-relative min-vh-100 my-5 py-5 p-xl-5">
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div className="w-100">
             <div className="text-white display-4 py-5 text-center">
