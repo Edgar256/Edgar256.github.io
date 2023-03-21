@@ -68,7 +68,7 @@ function Landing() {
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
           <div>
             <div className="text-white display-4 py-5 text-center">About</div>
-            <div className="text-white text-center py-5">
+            <div className="text-white text-center py-5 fs-4">
               I'm a FrontEnd Developer at Mobile Paradigm Group (MPG) a Tech
               Company in Uganda(East-Africa). I have a big passion for UI
               effects, dynamic user experience, website and mobile-app
@@ -258,14 +258,14 @@ function Landing() {
             <div className="text-white display-4 py-5 text-center">
               Skills & Resume
             </div>
-            <div className="text-white py-3">
+            <div className="text-white py-3 fs-4">
               Download my full PDF resume here
             </div>
             <div className="d-flex text-white w-100 p-3">
               <h1 className="bi-list-nested display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Agile Development</h2>
-                <p>
+                <p className='fs-4'>
                   I have over 5 years experience working in Agile development
                 </p>
               </div>
@@ -274,7 +274,7 @@ function Landing() {
               <h1 className="bi-person-bounding-box display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Leadership Skills & Team work</h2>
-                <p>
+                <p className='fs-4'>
                   For the last 5 years , I have hard an opportunity to lead a
                   team of my own. I have a lot of experience working with other
                   people in a team both in-house and remotely.
@@ -285,7 +285,7 @@ function Landing() {
               <h1 className="bi-people-fill display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Collaboration Skills</h2>
-                <p>
+                <p className='fs-4'>
                   I boast off a vast experience in major collaboration tools
                   like Slack for communication, Invision & Figma for prototyping
                   and wireframing, Postman & Swagger for API documentation, Git
@@ -297,7 +297,7 @@ function Landing() {
               <h1 className="bi-x-diamond-fill display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Pixel Perfect</h2>
-                <p>
+                <p className='fs-4'>
                   My designs are pixel perfect, with strong emphasis on user
                   empathy
                 </p>
@@ -307,7 +307,7 @@ function Landing() {
               <h1 className="bi-columns-gap display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Responsive Design</h2>
-                <p>
+                <p className='fs-4'>
                   All the website apps I build are fully mobile responsive
                   across all devices.
                 </p>
@@ -323,7 +323,7 @@ function Landing() {
           </div>
           <div className="">
             <div className="card bg-transparent">
-              <ul className="list-group list-group-flush bg-transparent">
+              <ul className="list-group list-group-flush bg-transparent fs-4">
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-4 col-sm-6">
                     Email <i className="bi-envelope-fill px-2"></i> :
