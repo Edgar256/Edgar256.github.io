@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 import Project from '../components/Project';
 
 // import data dump
-import data from '../data/data';
+import data from '../data/projects';
 
 function Landing() {
   return (
@@ -315,7 +315,7 @@ function Landing() {
               codeURL={project.codeURL}
             />
           );
-        })}        
+        })}
       </div>
 
       <div className="container position-relative min-vh-100 my-5 py-5">
@@ -325,7 +325,13 @@ function Landing() {
               Skills & Resume
             </div>
             <div className="text-white py-3 fs-4" id="skill">
-              Download my full PDF resume here
+              <a
+                href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download my full PDF resume here
+              </a>
             </div>
             <div className="d-flex text-white w-100 p-4">
               <h1 className="bi-list-nested display-1 px-2"></h1>

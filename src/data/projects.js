@@ -1,4 +1,4 @@
-const data = [
+const projects = [
   {
     id: 1,
     name: 'EKAAWA WEB APP',
@@ -488,4 +488,4 @@ const data = [
   },
 ];
 
-export default data;
+export default projects;
