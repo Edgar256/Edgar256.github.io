@@ -3,7 +3,7 @@ import '../App.css';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
 
-// image imports
+// component imports
 import Project from '../components/Project';
 
 // import data dumps
@@ -13,10 +13,10 @@ import prototyping from '../data/prototyping';
 import frontend from '../data/frontend';
 import mobileapps from '../data/mobileapps';
 import cms from '../data/cms';
-
 import databases from '../data/databases';
 import versioning from '../data/versioning';
 import devops from '../data/devops';
+
 function Landing() {
   return (
     <div>
@@ -305,7 +305,7 @@ function Landing() {
               </a>
             </div>
             <div className="d-flex text-white w-100 p-4">
-              <h1 className="bi-list-nested display-1 px-2"></h1>
+              <p className="bi-list-nested display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Agile Development</h2>
                 <p className="fs-4">
@@ -314,7 +314,7 @@ function Landing() {
               </div>
             </div>
             <div className="d-flex text-white w-100 p-4">
-              <h1 className="bi-person-bounding-box display-1 px-2"></h1>
+              <p className="bi-person-bounding-box display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Leadership Skills & Team work</h2>
                 <p className="fs-4">
@@ -325,7 +325,7 @@ function Landing() {
               </div>
             </div>
             <div className="d-flex text-white w-100 p-3">
-              <h1 className="bi-people-fill display-1 px-2"></h1>
+              <p className="bi-people-fill display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Collaboration Skills</h2>
                 <p className="fs-4">
@@ -337,7 +337,7 @@ function Landing() {
               </div>
             </div>
             <div className="d-flex text-white w-100 p-3">
-              <h1 className="bi-x-diamond-fill display-1 px-2"></h1>
+              <p className="bi-x-diamond-fill display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Pixel Perfect</h2>
                 <p className="fs-4">
@@ -347,7 +347,7 @@ function Landing() {
               </div>
             </div>
             <div className="d-flex text-white w-100 p-3">
-              <h1 className="bi-columns-gap display-1 px-2"></h1>
+              <p className="bi-columns-gap display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Responsive Design</h2>
                 <p className="fs-4">

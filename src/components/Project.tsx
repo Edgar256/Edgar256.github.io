@@ -24,7 +24,7 @@ export default function Project(props) {
         <div className="d-flex flex-wrap py-5">
           <Link
             className="btn btn-outline-success rounded-pill m-1 px-3"
-            to={`/${props.id}`}
+            to={`/project/${props.id}`}
           >
             VIEW MORE
           </Link>

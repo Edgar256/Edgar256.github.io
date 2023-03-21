@@ -8,7 +8,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/:id" element={<Project />} />
+        <Route path="/project/:id" element={<Project />} />
         <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
