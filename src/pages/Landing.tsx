@@ -259,10 +259,10 @@ function Landing() {
 
       <div className="container position-relative min-vh-100" id="portfolio">
         <div className="w-100 h-100 d-flex p-0 row">
-          <div className="col-6">
+          <div className="col-6 text-white">
             <h2>EKAAWA WEB APP</h2>
             <h4>ROLE: FULL STACK SOFTWARE DEVELOPER</h4>
-            <div>
+            <div className="fs-4">
               Ekaawa is the biggest Coffee & Coffee products online Auction Shop
               in the world. This web App is was built to create a direct link
               between the Coffee farmers and the final Coffee Consumer. Through
@@ -281,6 +281,9 @@ function Landing() {
                 </button>
               </div>
             </div>
+          </div>
+          <div className="col-6">
+            
           </div>
 
           {/* <div>
