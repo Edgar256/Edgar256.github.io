@@ -1,6 +1,7 @@
 import '../App.css';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
+import { Link } from 'react-router-dom';
 
 // image imports
 import Edgar from '../images/edgar-photo.jpg';
@@ -12,24 +13,24 @@ function Landing() {
       <div className="container position-relative">
         <div className="d-flex justify-content-center pt-3">
           <nav className="nav text-white fs-4">
-            <a className="nav-link text-white" href="#">
+            <Link className="nav-link text-white" to="/">
               Home
-            </a>
-            <a className="nav-link text-white" href="#">
+            </Link>
+            <Link className="nav-link text-white" to="/#about">
               About
-            </a>
-            <a className="nav-link text-white" href="#">
+            </Link>
+            <Link className="nav-link text-white" to="#tech">
               Technologies
-            </a>
-            <a className="nav-link text-white" href="#">
+            </Link>
+            <Link className="nav-link text-white" to="/#portfolio">
               Portfolio
-            </a>
-            <a className="nav-link text-white" href="#">
+            </Link>
+            <Link className="nav-link text-white" to="/#skill">
               Skills & CV
-            </a>
-            <a className="nav-link text-white" href="#">
+            </Link>
+            <Link className="nav-link text-white" to="/#contact">
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
@@ -265,7 +266,7 @@ function Landing() {
               <h1 className="bi-list-nested display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Agile Development</h2>
-                <p className='fs-4'>
+                <p className="fs-4">
                   I have over 5 years experience working in Agile development
                 </p>
               </div>
@@ -274,7 +275,7 @@ function Landing() {
               <h1 className="bi-person-bounding-box display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Leadership Skills & Team work</h2>
-                <p className='fs-4'>
+                <p className="fs-4">
                   For the last 5 years , I have hard an opportunity to lead a
                   team of my own. I have a lot of experience working with other
                   people in a team both in-house and remotely.
@@ -285,7 +286,7 @@ function Landing() {
               <h1 className="bi-people-fill display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Collaboration Skills</h2>
-                <p className='fs-4'>
+                <p className="fs-4">
                   I boast off a vast experience in major collaboration tools
                   like Slack for communication, Invision & Figma for prototyping
                   and wireframing, Postman & Swagger for API documentation, Git
@@ -297,7 +298,7 @@ function Landing() {
               <h1 className="bi-x-diamond-fill display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Pixel Perfect</h2>
-                <p className='fs-4'>
+                <p className="fs-4">
                   My designs are pixel perfect, with strong emphasis on user
                   empathy
                 </p>
@@ -307,7 +308,7 @@ function Landing() {
               <h1 className="bi-columns-gap display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Responsive Design</h2>
-                <p className='fs-4'>
+                <p className="fs-4">
                   All the website apps I build are fully mobile responsive
                   across all devices.
                 </p>
@@ -328,31 +329,41 @@ function Landing() {
                   <span className="col-4 col-sm-6">
                     Email <i className="bi-envelope-fill px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">tinka.edgar@gmail.com</span>
+                  <span className="col-sm-8 text-break">
+                    tinka.edgar@gmail.com
+                  </span>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Stackoverflow <i className="bi-stack-overflow px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">https://stackoverflow.com/users/6561907/edgar256</span>
+                  <span className="col-sm-8 text-break">
+                    https://stackoverflow.com/users/6561907/edgar256
+                  </span>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Linkedin <i className="bi-linkedin px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">https://www.linkedin.com/in/tinkamanyire-edgar/</span>
+                  <span className="col-sm-8 text-break">
+                    https://www.linkedin.com/in/tinkamanyire-edgar/
+                  </span>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Github <i className="bi-github px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">https://github.com/Edgar256</span>
+                  <span className="col-sm-8 text-break">
+                    https://github.com/Edgar256
+                  </span>
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
                     Codewars <i className="bi-code-slash px-2"></i> :
                   </span>
-                  <span className="col-sm-8 text-break">https://www.codewars.com/users/Edgar256</span>
+                  <span className="col-sm-8 text-break">
+                    https://www.codewars.com/users/Edgar256
+                  </span>
                 </li>
               </ul>
             </div>
