@@ -5,6 +5,11 @@ import Typewriter from 'typewriter-effect';
 
 // image imports
 import Edgar from '../images/edgar-photo.jpg';
+import Ekaawa from '../images/ekaawa.jpg';
+import Project from '../components/Project';
+
+// import data dump
+import data from "../data/data";
 
 function Landing() {
   return (
@@ -258,7 +263,34 @@ function Landing() {
       </div>
 
       <div className="container position-relative min-vh-100" id="portfolio">
-        <div className="w-100 h-100 d-flex p-0 row">
+        <div className="w-100">
+          <div className="text-white display-4 py-3 text-center py-5 w-100">
+            Portfolio
+          </div>
+        </div>
+        {
+          data.map (project => {
+            return (
+              <Project
+                key={project.id}
+                title={project.name}
+                role={project.role}
+                description={project.descriptionFull}
+                tech={project.tech}
+                photo={project.profilePhoto}
+                // backend={project.backend}
+                // mobile={project.mobile}
+                // cms={project.cms}
+                // database={project.database}
+                // versionControl={project.versionControl}
+                // devOps={project.devOps}
+                // image={project.image}
+              />
+            )
+          })
+        }
+        <Project />
+        {/* <div className="w-100 h-100 d-flex p-0 row">
           <div className="col-6 text-white">
             <h2>EKAAWA WEB APP</h2>
             <h4>ROLE: FULL STACK SOFTWARE DEVELOPER</h4>
@@ -281,27 +313,28 @@ function Landing() {
                 </button>
               </div>
             </div>
+            <div className="d-flex flex-wrap py-5">
+              <button className="btn btn-outline-success text-success rounded-pill m-1 px-3">
+                VIEW MORE
+              </button>
+              <button className="btn btn-outline-primary text-primary rounded-pill m-1 px-3">
+                VISIT WEBSITE
+              </button>
+              <button className="btn btn-outline-warning text-warning rounded-pill m-1 px-3">
+                VIEW GITHUB REPO
+              </button>
+            </div>
           </div>
           <div className="col-6">
-            
-          </div>
-
-          {/* <div>
-            <div className="text-white display-4 py-5 text-center">Portfolio</div>
-            <div className="text-white text-center py-5 fs-4">
-              I'm a FrontEnd Developer at Mobile Paradigm Group (MPG) a Tech
-              Company in Uganda(East-Africa). I have a big passion for UI
-              effects, dynamic user experience, website and mobile-app
-              development. Over the years , I have played a key role in
-              converting ideas from ink to robust scalable web and mobile apps,
-              following the best engineering principles. My experience has
-              taught me that every problem requires a unique solution. This has
-              been the key to my success and the teams I have worked with. Have
-              an idea you want to convert into a WebApp or Mobile App ? Get in
-              Touch
-            </div>
-          </div> */}
-        </div>
+          <img
+              src={Ekaawa}
+              alt="Ekaawa"
+              className="w-100 p-2 rounded"
+              // width={150}
+              // height={150}
+            />
+          </div>          
+        </div> */}
       </div>
 
       <div className="container position-relative min-vh-100 my-5 py-5">
@@ -313,7 +346,7 @@ function Landing() {
             <div className="text-white py-3 fs-4" id="skill">
               Download my full PDF resume here
             </div>
-            <div className="d-flex text-white w-100 p-3">
+            <div className="d-flex text-white w-100 p-4">
               <h1 className="bi-list-nested display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Agile Development</h2>
@@ -322,7 +355,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex text-white w-100 p-3">
+            <div className="d-flex text-white w-100 p-4">
               <h1 className="bi-person-bounding-box display-1 px-2"></h1>
               <div className="py-1 px-3">
                 <h2>Leadership Skills & Team work</h2>
