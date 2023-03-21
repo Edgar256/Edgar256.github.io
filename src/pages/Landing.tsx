@@ -4,12 +4,10 @@ import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
 
 // image imports
-import Edgar from '../images/edgar-photo.jpg';
-import Ekaawa from '../images/ekaawa.jpg';
 import Project from '../components/Project';
 
 // import data dump
-import data from "../data/data";
+import data from '../data/data';
 
 function Landing() {
   return (
@@ -17,7 +15,68 @@ function Landing() {
       <ParticlesBackground />
       <div className="container position-relative">
         <div className="d-flex justify-content-center pt-3" id="home">
-          <nav className="nav text-white fs-4">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="#">
+              Navbar
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">
+                    Home <span className="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Features
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Pricing
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Dropdown link
+                  </a>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          {/* <nav className="nav text-white fs-4">
             <a className="nav-link text-white" href="/">
               Home
             </a>
@@ -36,14 +95,14 @@ function Landing() {
             <a className="nav-link text-white" href="/#contact">
               Contact
             </a>
-          </nav>
+          </nav> */}
         </div>
       </div>
       <div className="container position-relative min-vh-100 d-flex justify-content-center align-items-center">
-        <div className="w-100 h-100  p-0 py-5">
-          <div className="d-flex w-100">
+        <div className="w-100 h-100  p-0 py-0">
+          <div className="d-lg-flex w-100 d-sm-block">
             <img
-              src={Edgar}
+              src="./images/edgar-photo.jpg"
               alt="Edgar profile"
               className="rounded-circle mx-auto py-1 px-2"
               width={150}
@@ -268,27 +327,25 @@ function Landing() {
             Portfolio
           </div>
         </div>
-        {
-          data.map (project => {
-            return (
-              <Project
-                key={project.id}
-                title={project.name}
-                role={project.role}
-                description={project.descriptionFull}
-                tech={project.tech}
-                photo={project.profilePhoto}
-                // backend={project.backend}
-                // mobile={project.mobile}
-                // cms={project.cms}
-                // database={project.database}
-                // versionControl={project.versionControl}
-                // devOps={project.devOps}
-                // image={project.image}
-              />
-            )
-          })
-        }
+        {data.map((project) => {
+          return (
+            <Project
+              key={project.id}
+              title={project.name}
+              role={project.role}
+              description={project.descriptionFull}
+              tech={project.tech}
+              photo={project.profilePhoto}
+              // backend={project.backend}
+              // mobile={project.mobile}
+              // cms={project.cms}
+              // database={project.database}
+              // versionControl={project.versionControl}
+              // devOps={project.devOps}
+              // image={project.image}
+            />
+          );
+        })}
         <Project />
         {/* <div className="w-100 h-100 d-flex p-0 row">
           <div className="col-6 text-white">

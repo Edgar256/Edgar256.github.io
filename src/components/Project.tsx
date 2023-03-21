@@ -19,7 +19,7 @@ export default function Project(props) {
               ))}
           </div>
         </div>
-        <div className="d-flex flex-wrap py-3">
+        <div className="d-flex flex-wrap py-5">
           <button className="btn btn-outline-success rounded-pill m-1 px-3">
             VIEW MORE
           </button>
