@@ -21,8 +21,7 @@ function Landing() {
   return (
     <div>
       <ParticlesBackground />
-      <div className="container-fluid position-relative">
-        <div>
+      <div className="container-fluid position-relative">      
           <div
             className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
             id="home"
@@ -90,8 +89,7 @@ function Landing() {
                 </ul>
               </div>
             </nav>
-          </div>
-        </div>
+          </div>        
       </div>
       <div className="container position-relative min-vh-100 d-flex justify-content-center align-items-center">
         <div className="w-100 h-100  p-0 py-0">
