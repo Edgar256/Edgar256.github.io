@@ -51,9 +51,9 @@ function Landing() {
                   </li>
                   <hr className="d-md-none d-sm-block border border-white my-1" />
                   <li className="nav-item">
-                    <Link className="nav-link text-white fs-4 px-3" to="#about">
+                    <a className="nav-link text-white fs-4 px-3" href="#about">
                       About
-                    </Link>
+                    </a>
                   </li>
                   <hr className="d-md-none d-sm-block border border-white my-1" />
                   <li className="nav-item">
