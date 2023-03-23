@@ -1,4 +1,4 @@
-import { HashRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
@@ -21,75 +21,72 @@ function Landing() {
   return (
     <div>
       <ParticlesBackground />
-      <div className="container-fluid position-relative">      
-          <div
-            className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
-            id="home"
-          >
-            <nav className="navbar navbar-expand-lg navbar-white bg-transparent text-white">
-              <button
-                className="navbar-toggler text-white bg-white"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon text-white"></span>
-              </button>
-              <div
-                className="collapse navbar-collapse w-100 bg-transparent"
-                id="navbarNavDropdown"
-              >
-                <ul className="navbar-nav w-100">
-                  <hr className="d-md-none d-sm-block border border-dark my-1" />
-                  <li className="nav-item active">
-                    <a className="nav-link text-white fs-4 px-3" href="/">
-                      Home
-                    </a>
-                  </li>
-                  <hr className="d-md-none d-sm-block border border-white my-1" />
-                  <li className="nav-item">
-                    <a className="nav-link text-white fs-4 px-3" href="#about">
-                      About
-                    </a>
-                  </li>
-                  <hr className="d-md-none d-sm-block border border-white my-1" />
-                  <li className="nav-item">
-                    <a
-                      className="nav-link text-white fs-4 px-3"
-                      href="/#portfolio"
-                    >
-                      Portfolio
-                    </a>
-                  </li>
-                  <hr className="d-md-none d-sm-block border border-white my-1" />
-                  <li className="nav-item">
-                    <a className="nav-link text-white fs-4 px-3" href="/#tech">
-                      Technologies
-                    </a>
-                  </li>
-                  <hr className="d-md-none d-sm-block border border-white my-1" />
-                  <li className="nav-item">
-                    <a className="nav-link text-white fs-4 px-3" href="/#skill">
-                      Skills & CV
-                    </a>
-                  </li>
-                  <hr className="d-md-none d-sm-block border border-white my-1" />
-                  <li className="nav-item">
-                    <a
-                      className="nav-link text-white fs-4 px-3"
-                      href="/#contact"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                  <hr className="d-md-none d-sm-block border border-white my-1" />
-                </ul>
-              </div>
-            </nav>
-          </div>        
+      <div className="container-fluid position-relative">
+        <div
+          className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
+          id="home"
+        >
+          <nav className="navbar navbar-expand-lg navbar-white bg-transparent text-white">
+            <button
+              className="navbar-toggler text-white bg-white"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon text-white"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse w-100 bg-transparent"
+              id="navbarNavDropdown"
+            >
+              <ul className="navbar-nav w-100">
+                <hr className="d-md-none d-sm-block border border-dark my-1" />
+                <li className="nav-item active">
+                  <a className="nav-link text-white fs-4 px-3" href="/">
+                    Home
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <a className="nav-link text-white fs-4 px-3" href="#about">
+                    About
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <a
+                    className="nav-link text-white fs-4 px-3"
+                    href="/#portfolio"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <a className="nav-link text-white fs-4 px-3" href="/#tech">
+                    Technologies
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <a className="nav-link text-white fs-4 px-3" href="/#skill">
+                    Skills & CV
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <a className="nav-link text-white fs-4 px-3" href="/#contact">
+                    Contact
+                  </a>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
       <div className="container position-relative min-vh-100 d-flex justify-content-center align-items-center">
         <div className="w-100 h-100  p-0 py-0">
