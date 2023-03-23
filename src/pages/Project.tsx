@@ -1,14 +1,23 @@
-import { useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Image from '../components/Image';
 import ParticlesBackground from '../components/ParticlesBackground';
 import projects from '../data/projects';
 
 export default function Project() {
   let { id } = useParams();
   const [project, setProject] = useState([]);
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const project = projects.find((project) => project.id === parseInt(id));
     setProject([project]);
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
   }, [id]);
 
   return (
@@ -20,7 +29,14 @@ export default function Project() {
         </h1>
         <hr className="d-sm-block border border-white my-1" />
         <div className="row d-lg-flex d-md-flex">
-          <div className="col-lg-7 text-white p-4">
+          <div
+            ref={ref}
+            className={
+              isVisible
+                ? 'ease-in-text col-lg-7 text-white p-4'
+                : 'col-lg-7 text-white p-4'
+            }
+          >
             <h2 className="fs-3">{project.length > 0 && project[0].name}</h2>
             <p className="fs-4">
               {project.length > 0 && project[0].description}
@@ -54,7 +70,14 @@ export default function Project() {
               </ul>
             </div>
           </div>
-          <div className="col-lg-5 text-white p-4">
+          <div
+            ref={ref}
+            className={
+              isVisible
+                ? 'ease-in-image col-lg-5 text-white p-4'
+                : 'col-lg-5 text-white p-4'
+            }
+          >
             {project.length > 0 ? (
               <img
                 src={'/' + project[0].profilePhoto}
@@ -70,13 +93,7 @@ export default function Project() {
           {project.length > 0
             ? project[0].photos.map((photo) => {
                 return (
-                  <div key={photo} className="p-xl-5 p-sm-2 my-2">
-                    <img
-                      src={'/images/' + photo}
-                      alt={photo}
-                      className="img-fluid_ w-100"
-                    />
-                  </div>
+                  <Image key={photo} photo={photo} />                  
                 );
               })
             : ''}

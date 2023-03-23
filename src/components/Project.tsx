@@ -1,9 +1,28 @@
+import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Project(props) {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block">
-      <div className="col-lg-6 col-sm-12 text-white py-1">
+      <div
+        ref={ref}
+        className={
+          isVisible
+            ? 'ease-in-text col-lg-6 col-sm-12 text-white py-1'
+            : 'col-lg-6 col-sm-12 text-white py-1'
+        }
+      >
         <h2>{props.title}</h2>
         <h4>ROLE: {props.role}</h4>
         <div className="fs-4">{props.description}</div>
@@ -54,13 +73,21 @@ export default function Project(props) {
           )}
         </div>
       </div>
-      <div className="col-lg-6 col-sm-12 py-1">
+      <div
+        className={
+          isVisible
+            ? 'ease-in-image col-lg-6 col-sm-12 py-1'
+            : 'col-lg-6 col-sm-12 py-1'
+        }
+      >
         <img
           src={props.photo}
           alt={props.title}
-          className="w-100 p-2 rounded text-white"
-          // width={150}
-          // height={150}
+          className={
+            isVisible
+              ? 'ease-in-image w-100 p-2 rounded text-white'
+              : 'w-100 p-2 rounded text-white'
+          }
         />
       </div>
     </div>

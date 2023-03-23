@@ -1,5 +1,5 @@
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
 
@@ -18,6 +18,17 @@ import versioning from '../data/versioning';
 import devops from '../data/devops';
 
 function Landing() {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
       <ParticlesBackground />
@@ -128,7 +139,14 @@ function Landing() {
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
           <div>
             <div className="text-white display-4 py-5 text-center">About</div>
-            <div className="text-white text-center py-5 fs-4">
+            <div
+              ref={ref}
+              className={
+                isVisible
+                  ? 'ease-in-text text-white text-center py-5 fs-4'
+                  : 'text-white text-center py-5 fs-4'
+              }
+            >
               I'm a FrontEnd Developer at Mobile Paradigm Group (MPG) a Tech
               Company in Uganda(East-Africa). I have a big passion for UI
               effects, dynamic user experience, website and mobile-app
@@ -175,7 +193,10 @@ function Landing() {
         id="tech"
       >
         <div className="w-100 h-100 d-flex align-items-center p-0">
-          <div className="w-100">
+          <div
+            ref={ref}
+            className={isVisible ? 'ease-in-image w-100' : 'w-100'}
+          >
             <div className="text-white display-4 py-3 text-center py-5 w-100">
               Technologies
             </div>
@@ -297,7 +318,10 @@ function Landing() {
 
       <div className="container-fluid position-relative min-vh-100 my-5 py-5 p-xl-5">
         <div className="w-100 h-100 d-flex align-items-center p-0">
-          <div className="w-100">
+          <div
+            ref={ref}
+            className={isVisible ? 'ease-in-image w-100' : 'w-100'}
+          >
             <div className="text-white display-4 py-5 text-center">
               Skills & Resume
             </div>
@@ -365,8 +389,9 @@ function Landing() {
           </div>
         </div>
       </div>
+
       <div className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center">
-        <div className="w-100">
+        <div ref={ref} className={isVisible ? 'ease-in-image w-100' : 'w-100'}>
           <div className="text-white display-4 py-5 text-center py-5">
             Contact
           </div>
