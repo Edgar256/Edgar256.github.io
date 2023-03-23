@@ -137,16 +137,9 @@ function Landing() {
         id="about"
       >
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
-          <div>
+          <div ref={ref} className={isVisible ? 'ease-in-text' : ''}>
             <div className="text-white display-4 py-5 text-center">About</div>
-            <div
-              ref={ref}
-              className={
-                isVisible
-                  ? 'ease-in-text text-white text-center py-5 fs-4'
-                  : 'text-white text-center py-5 fs-4'
-              }
-            >
+            <div className="text-white text-center py-5 fs-4">
               I'm a FrontEnd Developer at Mobile Paradigm Group (MPG) a Tech
               Company in Uganda(East-Africa). I have a big passion for UI
               effects, dynamic user experience, website and mobile-app
