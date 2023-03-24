@@ -3,10 +3,10 @@ const projects = [
     id: 1,
     name: 'EKAAWA WEB APP',
     description:
-      'Ekaawa is the biggest Coffee & Coffee products online Auction Shop in the world. This web App is was built to create a direct link between the Coffee farmers and the final Coffee Consumer. Through this platform, farmers are able to get the best prices for their Coffee, while also the Coffee cosumers are able to get the best quality of coffee in the world.',
+      'I was hired as a Full Stack Software Developer by Inspire Africa, a Startup based in Uganda, Africa, to build a digital product that would establish a direct connection between coffee farmers and end-users. After several discussions with their business development team, we conceptualized and launched http://www.ekaawa.com.',
     descriptionFull:
-      'Inspire Africa, a StartUp in Uganda, Africa approached me with a desire to create a digital product that would create a direct link between the Coffee farmers to the End User. Through a series of meetings with their Business development team , http://www.ekaawa.com was born.',
-    tech: [
+      'EKAAWA WEB APP was a project I worked on as a Full Stack Software Developer for a startup called Inspire Africa based in Uganda, Africa. The goal of the project was to create a digital product that would create a direct link between the Coffee farmers and the End User. I collaborated with their Business Development team in a series of meetings to discuss their requirements, and as a result, the http://www.ekaawa.com platform was born. To achieve this, I utilized a range of technologies, including React, Express, NodeJS, and MongoDB. I chose these technologies for their compatibility and ability to handle high volumes of data in real-time. React was the perfect choice for the front-end development, providing users with a responsive and intuitive interface. Express and NodeJS were used for the back-end development, providing a robust and scalable server infrastructure to handle the high volume of data. Finally, MongoDB was used as the database management system to store and manage data in a secure and efficient manner.The project required a significant amount of research, planning, and development to ensure that it met the requirements of the stakeholders. I worked tirelessly to ensure that the platform was user-friendly, secure, and scalable, meeting the highest engineering principles. The project`s success was a result of a well-coordinated team effort, and I am proud to have been a part of it.',
+      tech: [
       'REACT',
       'CSS3',
       'AWS',
@@ -34,10 +34,11 @@ const projects = [
     roleRecap:
       'Throughout two years of cooperation, I led the team that built the entire platform from scratch and later maintained it and guaranteed its’ stability and success. I also served as a strong mentor of new team members.',
     contribution: [
-      'Designed the User Interface',
-      'I conducted Code Reviews for team members',
-      'Was the Ekaawa Project Manager and Lead Software Engineer',
-      'Wrote tets for the project',
+      'Developed the Ekaawa web application using a tech stack that includes React, Express, NodeJs, and MongoDB',
+      'Designed and implemented a secure payment system for online transactions',
+      'Developed the backend functionality to support the web application, including database design and management, API development, and server-side scripting',
+      'Conducted extensive testing and debugging to ensure the application is free of bugs and errorss',
+      'Worked closely with the Inspire Africa team to gather feedback and make improvements to the application over time.',
       'Mentored and trained team members on the new collaboration tools and latest Software development practices',
     ],
   },

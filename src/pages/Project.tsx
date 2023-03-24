@@ -38,14 +38,15 @@ export default function Project() {
             }
           >
             <h2 className="fs-3">{project.length > 0 && project[0].name}</h2>
-            <p className="fs-4">
-              {project.length > 0 && project[0].description}
-            </p>
             <p className="fs-4 pt-3">
               ROLE: {project.length > 0 && project[0].role}
             </p>
             <hr className="d-sm-block border border-white my-1" />
-            <p className="fs-4">{project.length > 0 && project[0].roleRecap}</p>
+            <p className="fs-4">
+              {project.length > 0 && project[0].descriptionFull}
+            </p>
+
+            {/* <p className="fs-4">{project.length > 0 && project[0].roleRecap}</p> */}
             <div className="d-flex flex-wrap">
               {project.length > 0 &&
                 project[0].tech.map((elem) => (
@@ -57,17 +58,31 @@ export default function Project() {
                   </button>
                 ))}
             </div>
-            <p className="fs-4 pt-3">PERSONAL CONTRIBUTION TO THE PROJECT</p>
-            <hr className="d-sm-block border border-white my-1" />
             <div>
-              <ul>
-                {project.length > 0 &&
-                  project[0].contribution.map((elem) => (
-                    <li className="fs-4" key={elem}>
-                      {elem}
-                    </li>
-                  ))}
-              </ul>
+              {project.length > 0 && project[0].websiteURL ? (
+                <a
+                  href={project[0].websiteURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-primary rounded-pill m-1 px-3"
+                >
+                  VISIT WEBSITE
+                </a>
+              ) : (
+                <div />
+              )}
+              {project.length > 0 && project[0].codeURL ? (
+                <a
+                  href={project[0].codeURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-warning rounded-pill m-1 px-3"
+                >
+                  VIEW GITHUB REPO
+                </a>
+              ) : (
+                <div />
+              )}
             </div>
           </div>
           <div
@@ -89,12 +104,24 @@ export default function Project() {
             )}
           </div>
         </div>
+        <div className="p-2 text-white">
+          <p className="fs-4 pt-5 mt-5">PERSONAL CONTRIBUTION TO THE PROJECT</p>
+          <hr className="d-sm-block border border-white my-1" />
+          <div>
+            <ul>
+              {project.length > 0 &&
+                project[0].contribution.map((elem) => (
+                  <li className="fs-4" key={elem}>
+                    {elem}
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
         <div className="d-block p-xl-5 p-sm-2 my-2">
           {project.length > 0
             ? project[0].photos.map((photo) => {
-                return (
-                  <Image key={photo} photo={photo} />                  
-                );
+                return <Image key={photo} photo={photo} />;
               })
             : ''}
         </div>
