@@ -34,12 +34,17 @@ const projects = [
     roleRecap:
       'Throughout two years of cooperation, I led the team that built the entire platform from scratch and later maintained it and guaranteed its’ stability and success. I also served as a strong mentor of new team members.',
     contribution: [
-      'Developed the Ekaawa web application using a tech stack that includes React, Express, NodeJs, and MongoDB',
+      'Developed the overall architecture of the project, including both front-end and back-end systems with React, Express, NodeJs, and MongoDB.',
+      'Determined the best technology stack and tools for the project, taking into account factors such as scalability, security, and budget.',
+      'Designed and developed front-end components, such as user interfaces and client-side scripting.',
+      'Developed server-side code, including back-end logic, API endpoints, and database management.',
+      'Ensured the project was optimized for performance, taking steps to minimize load times and improve user experience.',
       'Designed and implemented a secure payment system for online transactions',
-      'Developed the backend functionality to support the web application, including database design and management, API development, and server-side scripting',
-      'Conducted extensive testing and debugging to ensure the application is free of bugs and errorss',
+      'Conducted extensive testing and debugging to ensure the application is free of bugs and errors',
+      'Implemented third-party APIs intergrations to achieve complete project functionality',
+      'Collaborated with other team members, such as designers and quality assurance specialists, to ensure the project met all requirements.',
+      'Worked closely with stakeholders to ensure the project met their needs and expectations.',
       'Worked closely with the Inspire Africa team to gather feedback and make improvements to the application over time.',
-      'Mentored and trained team members on the new collaboration tools and latest Software development practices',
     ],
   },
   {
