@@ -16,21 +16,38 @@ import cms from '../data/cms';
 import databases from '../data/databases';
 import versioning from '../data/versioning';
 import devops from '../data/devops';
+import Cursor from '../components/Cursor';
 
 function Landing() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+
+  const onMouseMove = (e) => {
+    setCursorPos({ x: e.clientX, y: e.clientY });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setIsVisible(entry.isIntersecting);
     });
     observer.observe(ref.current);
-    return () => observer.disconnect();
+    window.addEventListener('mousemove', onMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      observer.disconnect();
+    };
+    // return () =>
   }, []);
 
   return (
     <div>
+      {/* <Cursor style={{ left: cursorPos.x, top: cursorPos.y }} /> */}
+      <div
+        className="cursor"
+        style={{ left: cursorPos.x, top: cursorPos.y }}
+      ></div>
       <ParticlesBackground />
       <div className="container-fluid position-relative">
         <div
@@ -119,9 +136,9 @@ function Landing() {
                 <Typewriter
                   options={{
                     strings: [
-                      'a FullStack Software Engineer with experience in both FrontEnd and BackEnd Development',
-                      'I build Web and Mobile Apps',
-                      'When I am not consuming RestFul APIs, you will find me taking Coffee',
+                      'As a FullStack Software Engineer, I have expertise in both FrontEnd and BackEnd Development.',
+                      'I specialize in developing Web and Mobile Applications.',
+                      'I am also passionate about tech writing and contribute to the Pixa Blog located at https://pixabits.net/blog/',
                     ],
                     autoStart: true,
                     loop: true,
@@ -139,7 +156,7 @@ function Landing() {
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
           <div ref={ref} className={isVisible ? 'ease-in-text' : ''}>
             <div className="text-white display-4 py-5 text-center">About</div>
-            <div className="text-white text-center py-5 fs-4">            
+            <div className="text-white text-center py-5 fs-4">
               <p>
                 As a seasoned Senior Software Engineer with extensive experience
                 in Agile processes and a strong foundation in both front-end and
@@ -409,7 +426,8 @@ function Landing() {
               <ul className="list-group list-group-flush bg-transparent fs-4">
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-4 col-sm-6">
-                    Email <i className="bi-envelope-fill px-2"></i> :
+                    Email <i className="bi-envelope-fill px-2 text-warning"></i>{' '}
+                    :
                   </span>
                   <Link
                     className="col-sm-8 text-break text-white text-decoration-none text-muted"
@@ -422,7 +440,8 @@ function Landing() {
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
-                    Stackoverflow <i className="bi-stack-overflow px-2"></i> :
+                    Stackoverflow{' '}
+                    <i className="bi-stack-overflow px-2 text-danger"></i> :
                   </span>
                   <Link
                     className="col-sm-8 text-break text-white text-decoration-none text-muted"
@@ -435,7 +454,7 @@ function Landing() {
                 </li>
                 <li className="list-group-item bg-transparent text-white row">
                   <span className="col-sm-4">
-                    Linkedin <i className="bi-linkedin px-2"></i> :
+                    Linkedin <i className="bi-linkedin px-2 text-info"></i> :
                   </span>
                   <Link
                     className="col-sm-8 text-break text-white text-decoration-none text-muted"

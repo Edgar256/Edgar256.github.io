@@ -11,6 +11,7 @@
     "@types/node": "^16.18.16",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "animated-cursor": "^1.1.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "jquery": "^3.6.4",
@@ -37,7 +38,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"    
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

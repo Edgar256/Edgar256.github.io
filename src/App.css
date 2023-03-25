@@ -20,3 +20,61 @@ html {
 .ease-in {
   animation: ease-in 0.5s;
 }
+
+.cursor {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  animation: cursorPulse 1s ease-out infinite;
+}
+
+@keyframes cursorPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cursor.active {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+a:hover,
+button:hover {
+  cursor: none;
+}
+
+a:hover .cursor,
+button:hover .cursor {
+  animation: none;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus .cursor,
+button:focus .cursor {
+  animation: none;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: #ffffff;
+  border-color: #000000;
+}
