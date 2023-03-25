@@ -6,7 +6,7 @@ const projects = [
       'I was hired as a Full Stack Software Developer by Inspire Africa, a Startup based in Uganda, Africa, to build a digital product that would establish a direct connection between coffee farmers and end-users. After several discussions with their business development team, we conceptualized and launched http://www.ekaawa.com.',
     descriptionFull:
       'EKAAWA WEB APP was a project I worked on as a Full Stack Software Developer for a startup called Inspire Africa based in Uganda, Africa. The goal of the project was to create a digital product that would create a direct link between the Coffee farmers and the End User. I collaborated with their Business Development team in a series of meetings to discuss their requirements, and as a result, the http://www.ekaawa.com platform was born. To achieve this, I utilized a range of technologies, including React, Express, NodeJS, and MongoDB. I chose these technologies for their compatibility and ability to handle high volumes of data in real-time. React was the perfect choice for the front-end development, providing users with a responsive and intuitive interface. Express and NodeJS were used for the back-end development, providing a robust and scalable server infrastructure to handle the high volume of data. Finally, MongoDB was used as the database management system to store and manage data in a secure and efficient manner.The project required a significant amount of research, planning, and development to ensure that it met the requirements of the stakeholders. I worked tirelessly to ensure that the platform was user-friendly, secure, and scalable, meeting the highest engineering principles. The project`s success was a result of a well-coordinated team effort, and I am proud to have been a part of it.',
-      tech: [
+    tech: [
       'REACT',
       'CSS3',
       'AWS',
@@ -51,9 +51,9 @@ const projects = [
     id: 2,
     name: 'FAVEAPP',
     description:
-      'FaveApp is a Reviews and Ratings App where users can write reviews and star ratings for their favorite businesses. Users are able to view the businesses with the highest ratings which they can share with their friends or give recomendations.',
+      'I oversaw the development of FaveApp frontend, a Reviews and Ratings App where users could write reviews and assign star ratings to their favorite businesses. Users were able to view the businesses with the highest ratings and share them with their friends or make recommendations.',
     descriptionFull:
-      'FaveApp is a Reviews and Ratings App where users can write reviews and star ratings for their favorite businesses. Users are able to view the businesses with the highest ratings which they can share with their friends or give recomendations.',
+      'As the Frontend Team Lead, I had the responsibility of overseeing the development of FaveApp frontend. FaveApp was designed to provide users with a platform to write reviews and assign star ratings to their favorite businesses. The goal was to offer a user-friendly and intuitive interface that allowed users to easily navigate and engage with the app. To achieve this, my team and I collaborated closely to ensure that the frontend of FaveApp was developed to the highest standards. We spent countless hours developing and testing the app to ensure that it was user-friendly, efficient, and effective. Throughout the development process, we incorporated feedback from users to ensure that the app met their needs and expectations. Once the frontend was completed, users were able to use FaveApp to view businesses with the highest ratings. This feature allowed them to discover new businesses and make informed decisions about where to spend their money. Additionally, users could share their experiences and recommendations with friends and family through the app, which helped to increase the visibility of highly-rated businesses. Overall, my role as the Frontend Team Lead for FaveApp was both challenging and rewarding. It was a great opportunity to work on a project that had a direct impact on users lives and to collaborate with a talented team to bring it to fruition.',
     tech: [
       'HTML5',
       'CSS3',
@@ -61,6 +61,7 @@ const projects = [
       'PHP',
       'MYSQL',
       'CORDOVA',
+      'AJAX',
       'RESTFUL APIS',
     ],
     profilePhoto: 'images/faveapp-all-image.png',
@@ -76,21 +77,28 @@ const projects = [
     roleRecap:
       'Throughout two years of cooperation, I led the team that built the entire platform from scratch and later maintained it and guaranteed its’ stability and success. I also served as a strong mentor of new team members.',
     contribution: [
-      'I assigned tasks to team members',
-      'I conducted Code Reviews',
-      'I wrote Unit tests for the Project',
-      'I converted Wireframes into Responsive and Beautiful Code',
-      'I received data from restful APIs from the Backend team and dispalyed it as per the design',
+      'Led a team of front-end developers in building the project',
+      'Conducted code reviews and provided feedback to team members to ensure code quality and consistency.',
+      'Collaborated with designers and product managers to ensure that the user interface met the project requirements and was visually appealing.',
+      'Developed and maintained a style guide to ensure consistency across the project.',
+      'Participated in daily stand-ups to provide updates on project progress and discuss any blockers or issues.',
+      'Mentored junior developers to improve their skills and knowledge of front-end technologies.',
+      'Implemented agile development methodologies to improve team efficiency and productivity.',
+      'Managed project timelines and ensured that deliverables were completed on time and within budget.',
+      'Collaborated with QA team to ensure that all front-end features were tested thoroughly before release.',
+      'Developed and maintained documentation of front-end development processes and procedures.',
+      'Advocated for accessibility and responsive design principles to ensure that the project was usable by a wide range of users.',
+      'Conducted regular retrospectives to identify areas for improvement and implement changes.',
     ],
   },
   {
     id: 3,
     name: 'GETPOINTS',
     description:
-      'Getpoints is a Loyalty Rewards programme that helps businesses maintain and grow their client-base through giving points that are converted into incentives In its first year alone , Getpoints Loyalty programme saw businesses across Africa grow upto 3-fold.',
+      'As a Frontend Developer at Getpoints, my role involved contributing to the development of a Loyalty Rewards program aimed at helping businesses maintain and expand their customer base. The program was designed to offer points that could be converted into incentives for customers. In its initial year of operation, the Getpoints Loyalty program was able to facilitate the growth of businesses across Africa up to three times their original size.',
     descriptionFull:
-      'Getpoints is a Loyalty Rewards programme that helps businesses maintain and grow their client-base through giving points that are converted into incentives In its first year alone , Getpoints Loyalty programme saw businesses across Africa grow upto 3-fold.',
-    tech: ['HTML5', 'CSS3', 'JQUERY', 'PHP', 'MYSQL', 'CORDOVA'],
+      'As a Frontend Developer at Getpoints, I was an integral part of the team responsible for building a sophisticated and user-friendly Loyalty Rewards program that was designed to help businesses maintain and grow their client-base. At its core, the Getpoints Loyalty program offered businesses a way to incentivize customer loyalty by giving them points that could be redeemed for rewards or discounts. As a result, businesses were able to build stronger relationships with their customers, which ultimately translated into increased revenue and long-term growth. One of the key challenges we faced in developing the Getpoints Loyalty program was creating a system that was flexible enough to meet the needs of businesses across different industries and regions. To accomplish this, we designed a platform that could be customized to suit the specific needs of each business. This required a significant amount of collaboration between our frontend and backend development teams, as well as frequent communication with our clients to ensure that their needs were being met. Despite these challenges, the Getpoints Loyalty program was a resounding success, particularly in its first year of operation. We were thrilled to see businesses across Africa experience growth of up to three-fold as a direct result of the program. This success was a testament to the hard work and dedication of our entire team, as well as the value that our Loyalty program provided to businesses in the region. As a Frontend Developer on this project, my specific responsibilities included designing and developing the user interface of the Getpoints Loyalty program. This involved working closely with our designers and product managers to ensure that the program was both visually appealing and easy to use. I was also responsible for conducting thorough testing to ensure that the program was bug-free and fully functional. Another critical aspect of my role was providing technical support to our clients as they implemented the program',
+    tech: ['HTML5', 'CSS3', 'JQUERY', 'PHP', 'MYSQL', 'AJAX', 'CORDOVA'],
     profilePhoto: 'images/gp-all-image.png',
     photos: [
       'getpoints001.PNG',
@@ -106,11 +114,17 @@ const projects = [
     roleRecap:
       'Throughout two years of cooperation, I led the team that built the entire platform from scratch and later maintained it and guaranteed its’ stability and success. I also served as a strong mentor of new team members.',
     contribution: [
-      'I assigned tasks to team members',
-      'I conducted Code Reviews',
-      'I wrote Unit tests for the Project',
-      'I converted Wireframes into Responsive and Beautiful Code',
-      'I received data from restful APIs from the Backend team and dispalyed it as per the design',
+      'Conducted code reviews and provided feedback to team members to ensure code quality and consistency.',
+      'Collaborated with designers and product managers to ensure that the user interface met the project requirements and was visually appealing.',
+      'Developed and maintained a style guide to ensure consistency across the project.',
+      'Participated in daily stand-ups to provide updates on project progress and discuss any blockers or issues.',
+      'Mentored junior developers to improve their skills and knowledge of front-end technologies.',
+      'Implemented agile development methodologies to improve team efficiency and productivity.',
+      'Managed project timelines and ensured that deliverables were completed on time and within budget.',
+      'Collaborated with QA team to ensure that all front-end features were tested thoroughly before release.',
+      'Developed and maintained documentation of front-end development processes and procedures.',
+      'Advocated for accessibility and responsive design principles to ensure that the project was usable by a wide range of users.',
+      'Conducted regular retrospectives to identify areas for improvement and implement changes.',
     ],
   },
   {
