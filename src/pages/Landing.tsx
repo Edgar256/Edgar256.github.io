@@ -296,6 +296,46 @@ function Landing() {
           </button>
           <button
             className={
+              activeFilter === 'express'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('express')}
+          >
+            EXPRESS
+          </button>
+          <button
+            className={
+              activeFilter === 'nodejs'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('nodejs')}
+          >
+            NODEJS
+          </button>
+          <button
+            className={
+              activeFilter === 'mongodb'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('mongodb')}
+          >
+            MONGODB
+          </button>
+          <button
+            className={
+              activeFilter === 'graphql'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('graphql')}
+          >
+            GRAPHQL
+          </button>
+          <button
+            className={
               activeFilter === 'algorithms'
                 ? 'btn btn-primary text-white rounded-pill m-1'
                 : 'btn btn-outline-secondary text-white rounded-pill m-1'

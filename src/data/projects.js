@@ -175,6 +175,55 @@ const projects = [
   },
   {
     id: 6,
+    name: 'FLIRTSET WEB APP',
+    websiteURL: 'https://flirtset.com/',
+    description:
+      'FlirtSet is an online dating platform designed to help individuals build lasting friendships and find their perfect partner. The platform prides itself on offering a bespoke, highly personalized service that caters to the unique needs of each user. With one of the largest databases of professional singles, FlirtSet aims to connect individuals with compatible partners who share their interests and values. Built on the latest web technologies, FlirtSet is powered by React, MongoDB, Express, GraphQL, and NodeJS. This modern technology stack ensures the platform is fast, reliable, and scalable, providing users with a seamless experience. By leveraging GraphQL, FlirtSet offers a flexible, efficient, and intuitive API that enables developers to build custom integrations and extend the platform`s functionality. Overall, FlirtSet is a cutting-edge online dating platform that offers a premium service to its users, helping them find meaningful connections and build long-lasting relationships.',
+    descriptionFull:
+      'As a full stack developer on the FlirtSet project, my role was to develop and maintain the web application using React, MongoDB, Express, GraphQL, and NodeJS. I worked closely with the project manager, UX/UI designers, and other developers to ensure that the application met the client`s requirements. My responsibilities included developing and implementing new features, maintaining and improving existing features, and fixing any issues that arose. I was responsible for writing clean and efficient code that was easily maintainable and scalable. I also ensured that the code was well-documented and adhered to best practices and coding standards. One of the major tasks I worked on was developing the user authentication and authorization system. I implemented a robust system that allowed users to register and login securely, and restricted access to certain features and pages depending on the user`s role. I also worked on integrating payment gateway APIs to enable users to purchase premium subscriptions and access additional features. I played a key role in developing the GraphQL API that powered the frontend. This involved designing and implementing the GraphQL schema and resolvers, and ensuring that the data returned was optimized for performance. I also worked on optimizing the database queries to ensure that the application was able to handle large volumes of data efficiently. Another task I worked on was implementing real-time messaging and notifications using web sockets. This allowed users to communicate with each other in real-time, and receive notifications when they received new messages or matches. Throughout the project, I worked closely with the rest of the team to ensure that the application was delivered on time and met the client`s expectations. I also provided technical support and troubleshooting assistance during and after the deployment phase. Overall, my role as a full stack developer on the FlirtSet project was challenging but rewarding, and I was proud to be part of the team that delivered a high-quality online dating platform.',
+    tech: [
+      'REACT',
+      'GRAPHQL',
+      'EXPRESS',
+      'MONGODB',
+      'NODEJS',
+      'APOLLO-CLIENT',
+      'SOCKETIO',
+    ],
+    profilePhoto: 'images/flirtset-profile.JPG',
+    photos: [
+      'flirtset-001.JPG',
+      'flirtset-002.JPG',
+      'flirtset-003.JPG',
+      'flirtset-004.JPG',
+      'flirtset-005.JPG',
+      'flirtset-006.JPG',
+      'flirtset-007.JPG',
+      'flirtset-008.JPG',
+      'flirtset-009.JPG',
+      'flirtset-010.JPG',
+    ],
+    role: 'FULL STACK SOFTWARE DEVELOPER',
+    roleRecap:
+      'Throughout two years of cooperation, I led the team that built the entire platform from scratch and later maintained it and guaranteed its’ stability and success. I also served as a strong mentor of new team members.',
+    contribution: [
+      'Designed and developed the front-end user interface using React, HTML, CSS, and JavaScript to provide a user-friendly and visually appealing experience for the dating platform.',
+      'Implemented a database schema and created data models using MongoDB to store user information and match preferences.',
+      'Developed a server-side application using NodeJS and Express to handle HTTP requests and responses, as well as to integrate with the database and external APIs.',
+      'Created GraphQL APIs and implemented resolvers to handle data queries, mutations, and subscriptions from the client-side application.',
+      'Utilized RESTful APIs to integrate third-party services such as payment gateways, email services, and social media platforms.',
+      'Implemented authentication and authorization mechanisms using JSON Web Tokens (JWT) and OAuth 2.0 to ensure secure and personalized user experiences.',
+      'Optimized the performance and scalability of the application by implementing caching, pagination, lazy loading, and other techniques.',
+      'Conducted unit testing and integration testing using Jest, Enzyme, and other tools to ensure the reliability and functionality of the application.',
+      'Collaborated with the UX/UI design team, product managers, and other developers to gather requirements, prioritize tasks, and deliver features according to the project timeline.',
+      'Participated in code reviews, debugging, and troubleshooting to identify and resolve issues and ensure code quality and consistency.',
+      'Implemented version control using Git and utilized continuous integration and deployment (CI/CD) pipelines to automate the development, testing, and deployment process.',
+      'Documented the codebase, APIs, and technical specifications using tools such as Swagger, Postman, and JSDoc to facilitate future maintenance and development.',
+      'Kept up-to-date with emerging technologies, industry best practices, and security standards, and applied them to the project as appropriate.',
+    ],
+  },
+  {
+    id: 7,
     name: 'PRODUCT CAROUSEL WITH FILTERS',
     description:
       'A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive',
@@ -210,7 +259,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: 'SHOPPING CART WITH FILTERS',
     description:
       'A Simple and User Friendly Shopping Cart with filters by category',
@@ -251,7 +300,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: 'REALTOR WEB APP',
     codeURL: 'https://github.com/Edgar256/real-estate-listing',
     description:
@@ -304,7 +353,7 @@ const projects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     name: 'ONLINE BOOKING ADVERTISING PLATFORM',
     codeURL:
       'https://github.com/Edgar256/online-outdoor-advertising-space-booking-system',
@@ -355,7 +404,7 @@ const projects = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     name: 'BIDIPA GHANA',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -393,7 +442,7 @@ const projects = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     name: 'EYE OF THE BRAINS ECO FEEDS',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -429,7 +478,7 @@ const projects = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     name: 'RECYCLING FIELD GHANA',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -467,7 +516,7 @@ const projects = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     name: 'OFNET FARMS GHANA',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -503,7 +552,7 @@ const projects = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     name: 'ANAIS MEDICAL LOGISTICS',
     description:
       "Anais is a Medical Start-up in Uganda with a goal of extending services to patients who need Palliative Care, Bedside Nursing Care, Live-In Companionship, Hospital Attendant Services, Emergency Care and Management, Personal Care and Hospice services. The web-app was built as a marketing tool and I intergrated with Anais' Social Media Feed. The Web-App was built with wordpress.",
@@ -525,7 +574,7 @@ const projects = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     name: 'EKAAWA WEB APP',
     description:
       'I was hired as a Full Stack Software Developer by Inspire Africa, a Startup based in Uganda, Africa, to build a digital product that would establish a direct connection between coffee farmers and end-users. After several discussions with their business development team, we conceptualized and launched http://www.ekaawa.com.',
