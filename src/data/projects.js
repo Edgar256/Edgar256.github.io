@@ -131,9 +131,9 @@ const projects = [
     id: 4,
     name: 'PIXABITS GROUP LTD',
     description:
-      'Pixabits is a startup in Uganda, that specilises in designing and developing digital products for small. medium and large enterprises. Designed annd developed the website using Wordpress and Oxygen',
+      'I worked as a WordPress Developer for Pixabits, a Ugandan startup that specializes in designing and developing digital products for enterprises of all sizes. As part of my role, I designed and developed a website using WordPress and Oxygen.',
     descriptionFull:
-      'Pixabits is a startup in Uganda, that specilises in designing and developing digital products for small. medium and large enterprises. Designed annd developed the website using Wordpress and Oxygen',
+      'As a skilled WordPress Developer, I had the opportunity to work for Pixabits, a promising startup based in Uganda. This company is focused on delivering top-quality digital products to businesses, regardless of their size or industry. During my time at Pixabits, I was responsible for designing and developing websites that would meet the specific needs of each client. Using my expertise in WordPress and Oxygen, I created a website that reflected the brand`s unique identity and provided a seamless user experience. My role involved collaborating with clients to understand their requirements and developing solutions that aligned with their goals. I also ensured that the website was visually appealing, easy to navigate, and optimized for search engines. Apart from website development, I was also involved in maintaining existing websites and resolving any technical issues that arose. This required a keen eye for detail and a willingness to constantly learn and adapt to new technologies.  Overall, my experience at Pixabits as a WordPress Developer allowed me to hone my skills and gain a deeper understanding of the importance of creating digital products that align with a company`s objectives.',
     tech: [
       'WORDPRESS',
       'BOOTSTRAP',
