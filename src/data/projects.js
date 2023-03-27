@@ -313,7 +313,7 @@ const projects = [
     descriptionFull:
       'As a Full Stack Developer on the Online Booking Adversting System project, I was responsible for designing and implementing the user interface using HTML, CSS, JavaScript, AJAX, and jQuery. Additionally, I was tasked with building the backend of the system using PHP and MySQL to store and retrieve data. I worked closely with the team to understand the project requirements and design an effective solution that would make property management more accessible, faster, and more efficient. I also ensured that the project met the necessary prerequisites, such as having a web server that supports PHP, a version of PHP installed on the server or local machine, a MySQL server installed, and a database management tool. In addition to building the system, I also provided support and maintenance to ensure that the system was functioning correctly and efficiently. Throughout the project, I collaborated with other team members to ensure that the project was delivered on time and to the client`s satisfaction.',
     tech: ['HTML', 'CSS3', 'PHP', 'AJAX', 'MYSQL', 'JQUERY'],
-    profilePhoto: 'images/advert-profile.jpg',
+    profilePhoto: 'images/advert-profile.JPG',
     photos: [
       'adverts-001.JPG',
       'adverts-002.JPG',
