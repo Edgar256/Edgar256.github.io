@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 2,
+    id: 1,
     name: 'FAVEAPP',
     description:
       'I oversaw the development of FaveApp frontend, a Reviews and Ratings App where users could write reviews and assign star ratings to their favorite businesses. Users were able to view the businesses with the highest ratings and share them with their friends or make recommendations.',
@@ -44,7 +44,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: 'GETPOINTS',
     description:
       'As a Frontend Developer at Getpoints, my role involved contributing to the development of a Loyalty Rewards program aimed at helping businesses maintain and expand their customer base. The program was designed to offer points that could be converted into incentives for customers. In its initial year of operation, the Getpoints Loyalty program was able to facilitate the growth of businesses across Africa up to three times their original size.',
@@ -80,7 +80,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: 'PIXABITS GROUP LTD',
     description:
       'I worked as a WordPress Developer for Pixabits, a Ugandan startup that specializes in designing and developing digital products for enterprises of all sizes. As part of my role, I designed and developed a website using WordPress and Oxygen.',
@@ -121,7 +121,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'JS ALGORITHMS',
     description:
       'The JS ALGORITHMS project is a compilation of common Javascript Algorithms created by the owner. The project aims to provide a comprehensive library of algorithms that developers can use to improve the efficiency and performance of their projects. As the owner , i am responsible for developing, testing, and optimizing the algorithms to ensure compatibility with different browsers and platforms. The project is a valuable resource for the developer community, helping to improve knowledge and skills in Javascript programming and algorithm development.',
@@ -142,7 +142,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'VINE PHARMACUETICALS ONLINE STORE',
     description:
       'Vine Pharmaceuticals Online Store was a project where I as the WordPress Developer, built on Shopify but later migrated to a WordPress platform to enhance its functionality and improve the user experience. The writer customized the website to meet the client`s specifications, optimized it for search engines, and ensured it had a responsive design accessible across different devices. The project was successful, and the writer is proud to have been a part of it.',
@@ -174,7 +174,7 @@ const projects = [
     ],
   },
   {
-    id: 12,
+    id: 6,
     name: 'PRODUCT CAROUSEL WITH FILTERS',
     description:
       'A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive',
@@ -210,7 +210,7 @@ const projects = [
     ],
   },
   {
-    id: 13,
+    id: 7,
     name: 'SHOPPING CART WITH FILTERS',
     description:
       'A Simple and User Friendly Shopping Cart with filters by category',
@@ -251,7 +251,7 @@ const projects = [
     ],
   },
   {
-    id: 30,
+    id: 8,
     name: 'REALTOR WEB APP',
     codeURL: 'https://github.com/Edgar256/real-estate-listing',
     description:
@@ -304,7 +304,58 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 9,
+    name: 'ONLINE BOOKING ADVERTISING PLATFORM',
+    codeURL:
+      'https://github.com/Edgar256/online-outdoor-advertising-space-booking-system',
+    description:
+      'This project is an Online Booking Adversting System that allows users to book advertising spaces efficiently and digitally. The system is built using HTML, CSS, JavaScript, AJAX, jQuery, PHP, and MySQL technologies. To run the project, a web server supporting PHP, a MySQL database, a database management tool, and a text editor are required. To use the system, users can register an account as a regular user. Admin can post new and edit exisiting advertising spaces. Users can search for advertising spaces and book them.',
+    descriptionFull:
+      'As a Full Stack Developer on the Online Booking Adversting System project, I was responsible for designing and implementing the user interface using HTML, CSS, JavaScript, AJAX, and jQuery. Additionally, I was tasked with building the backend of the system using PHP and MySQL to store and retrieve data. I worked closely with the team to understand the project requirements and design an effective solution that would make property management more accessible, faster, and more efficient. I also ensured that the project met the necessary prerequisites, such as having a web server that supports PHP, a version of PHP installed on the server or local machine, a MySQL server installed, and a database management tool. In addition to building the system, I also provided support and maintenance to ensure that the system was functioning correctly and efficiently. Throughout the project, I collaborated with other team members to ensure that the project was delivered on time and to the client`s satisfaction.',
+    tech: ['HTML', 'CSS3', 'PHP', 'AJAX', 'MYSQL', 'JQUERY'],
+    profilePhoto: 'images/advert-profile.jpg',
+    photos: [
+      'adverts-001.jpg',
+      'adverts-002.jpg',
+      'adverts-003.jpg',
+      'adverts-004.jpg',
+      'adverts-005.jpg',
+      'adverts-006.jpg',
+      'adverts-007.jpg',
+      'adverts-008.jpg',
+      'adverts-009.jpg',
+      'adverts-010.jpg',
+      'adverts-011.jpg',
+      'adverts-012.jpg',
+    ],
+    role: 'FULL STACK SOFTWARE DEVELOPER',
+    roleRecap:
+      'Throughout two years of cooperation, I led the team that built the entire platform from scratch and later maintained it and guaranteed its’ stability and success. I also served as a strong mentor of new team members.',
+    contribution: [
+      'Collaborated with the project team to plan and design the system`s architecture, features, and functionality.',
+      'Created wireframes, mockups, and prototypes to visualize and test user interfaces and user experiences.',
+      'Developed the front-end of the system using HTML, CSS, JavaScript, AJAX, and jQuery technologies.',
+      'Implemented responsive design techniques to ensure that the system works well on various devices and screen sizes.',
+      'Integrated third-party APIs and services, such as Google Maps and reCAPTCHA, to enhance the system`s functionality.',
+      'Developed the back-end of the system using PHP and MySQL technologies.',
+      'Created and managed the MySQL database and designed the database schema.',
+      'Developed and integrated authentication and authorization systems for users, managers, and admins.',
+      'Created and managed server-side scripts to handle user input, form submissions, and database operations.',
+      'Implemented form validation and error handling techniques to ensure data integrity and security.',
+      'Created RESTful APIs to enable communication between the front-end and back-end of the system.',
+      'Utilized version control tools, such as Git, to manage code changes and collaboration with other developers.',
+      'Worked with the team to ensure code quality, security, and scalability of the system.',
+      'Tested the system using manual and automated testing methods to ensure functionality and performance.',
+      'Debugged and fixed issues reported by users, managers, and admins.',
+      'Maintained and updated the system, including security patches, bug fixes, and feature enhancements.',
+      'Optimized the system`s performance by implementing caching, database indexing, and other techniques.',
+      'Wrote and maintained technical documentation and user manuals for the system.',
+      'Provided technical support and training to users, managers, and admins.',
+      'Participated in meetings and discussions with the team to review progress, plan updates, and brainstorm new features.',
+    ],
+  },
+  {
+    id: 10,
     name: 'BIDIPA GHANA',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -342,7 +393,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 11,
     name: 'EYE OF THE BRAINS ECO FEEDS',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -378,7 +429,7 @@ const projects = [
     ],
   },
   {
-    id: 9,
+    id: 12,
     name: 'RECYCLING FIELD GHANA',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -416,7 +467,7 @@ const projects = [
     ],
   },
   {
-    id: 10,
+    id: 13,
     name: 'OFNET FARMS GHANA',
     description:
       'Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.',
@@ -453,7 +504,7 @@ const projects = [
   },
 
   {
-    id: 11,
+    id: 14,
     name: 'ANAIS MEDICAL LOGISTICS',
     description:
       "Anais is a Medical Start-up in Uganda with a goal of extending services to patients who need Palliative Care, Bedside Nursing Care, Live-In Companionship, Hospital Attendant Services, Emergency Care and Management, Personal Care and Hospice services. The web-app was built as a marketing tool and I intergrated with Anais' Social Media Feed. The Web-App was built with wordpress.",
@@ -475,7 +526,7 @@ const projects = [
     ],
   },
   {
-    id: 1,
+    id: 15,
     name: 'EKAAWA WEB APP',
     description:
       'I was hired as a Full Stack Software Developer by Inspire Africa, a Startup based in Uganda, Africa, to build a digital product that would establish a direct connection between coffee farmers and end-users. After several discussions with their business development team, we conceptualized and launched http://www.ekaawa.com.',
