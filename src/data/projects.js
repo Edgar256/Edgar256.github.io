@@ -172,13 +172,13 @@ const projects = [
     id: 5,
     name: 'JS ALGORITHMS',
     description:
-      'This is a project containing common Javascript Algorithms found online.',
+      'The JS ALGORITHMS project is a compilation of common Javascript Algorithms created by the owner. The project aims to provide a comprehensive library of algorithms that developers can use to improve the efficiency and performance of their projects. As the owner , i am responsible for developing, testing, and optimizing the algorithms to ensure compatibility with different browsers and platforms. The project is a valuable resource for the developer community, helping to improve knowledge and skills in Javascript programming and algorithm development.',
     descriptionFull:
-      'This is a project containing common Javascript Algorithms found online.',
+      'I am the owner of the JS ALGORITHMS project where common Javascript Algorithms found online are compiled. As the owner, I have developed and implemented various algorithms using the Javascript programming language. Javascript Algorithms refer to a collection of techniques or procedures used to solve problems or perform specific tasks using the Javascript programming language. These algorithms can be applied in a variety of areas such as web development, data analysis, machine learning, and more. The JS ALGORITHMS project includes various algorithms such as sorting, searching, graph traversal, dynamic programming, and more. My goal in creating this project was to provide a comprehensive library of common algorithms that developers can use in their projects to improve efficiency and performance. As the owner of this project, I have been responsible for developing, testing, and optimizing the algorithms to ensure their compatibility with different browsers and platforms. I am proud of the resources this project has provided to the developer community, helping to improve knowledge and skills in Javascript programming and algorithm development.',
     tech: ['JAVASCRIPT', 'CSS3', 'HEROKU', 'HTML', 'GIT'],
     profilePhoto: 'images/algo-all-image.png',
     photos: ['jsAlgo001.PNG', 'jsAlgo002.PNG'],
-    websiteURL: 'https://js-algorithms.herokuapp.com',
+    websiteURL: 'https://edgar256.github.io/js-algorithms/',
     codeURL: 'https://github.com/Edgar256/js-algorithms',
     role: 'DEVELOPER',
     roleRecap:
@@ -193,10 +193,10 @@ const projects = [
     id: 6,
     name: 'VINE PHARMACUETICALS ONLINE STORE',
     description:
-      'Vine Pharmaceuticals Online Store is an exciting project that I built on Shopify.',
+      'Vine Pharmaceuticals Online Store was a project where I as the WordPress Developer, built on Shopify but later migrated to a WordPress platform to enhance its functionality and improve the user experience. The writer customized the website to meet the client`s specifications, optimized it for search engines, and ensured it had a responsive design accessible across different devices. The project was successful, and the writer is proud to have been a part of it.',
     descriptionFull:
-      'Vine Pharmaceuticals Ecommerce Store is an exciting project that I built on Shopify. Users are able to checkout both when logged in and when logged out.',
-    tech: ['SHOPIFY', 'ECOMMERCE', 'LIQUID', 'NGROK', 'HTML5', 'CSS3', 'APIs'],
+      'Vine Pharmaceuticals Online Store was an exciting project that required my expertise as a WordPress Developer. Although the project was initially built on Shopify, I was tasked with migrating the website to a WordPress platform to enhance its functionality and improve the user experience. As a WordPress Developer, I customized various aspects of the website to suit the needs of Vine Pharmaceuticals Online Store. This included the implementation of payment gateways, social media integration, inventory management, and more. Throughout the project, I collaborated closely with the client to ensure that the website met their specifications and preferences. I also ensured that the website was optimized for search engines and provided a responsive design that was accessible across different devices. Overall, the Vine Pharmaceuticals Online Store was an exciting opportunity for me to showcase my skills as a WordPress Developer. I am proud to have been a part of this project and to have contributed to the success of the online store.',
+    tech: ['WORDPRESS', 'ECOMMERCE', 'PAYMENTS', 'HTML5', 'CSS3', 'APIs'],
     profilePhoto: 'images/vine-profile-photo.jpg',
     photos: [
       'vine001.PNG',
@@ -206,17 +206,96 @@ const projects = [
       'vine005.PNG',
       'vine006.PNG',
     ],
-    websiteURL: 'https://vinepharmaceuticals.com',
+    websiteURL: 'https://vinepharmacy.shop/',
     role: 'FULL STACK DEVELOPER',
     roleRecap:
       'After meeting the sales team from Vine Pharmaceuticals, I understood their need for a custom tailored store front. Shopify came out as the best solution owing to its easy learning curve and huge store app store that provides apps that make your store more powerful.',
     contribution: [
-      'Developing the Entire Web App',
-      'Testing Endpoints',
-      'Developing the WebApp',
-      'Designing the WebApp',
-      'Creating graphic images for the store',
-      'Optiming SEO for the Web App',
+      'Designed and developed custom WordPress themes and plugins to enhance the functionality and performance of the eCommerce platform.',
+      'Customized the eCommerce platform to meet the client`s specifications and preferences, including integrating payment gateways, social media plugins, and inventory management systems.',
+      'Ensured that the eCommerce platform was optimized for search engines, with a responsive design that was accessible across different devices.',
+      'Provided technical support to clients and addressed any issues or bugs that arose on the platform.',
+      'Kept up-to-date with the latest developments in WordPress and eCommerce platforms and made recommendations for upgrades or improvements to the platform.',
+      'Collaborated with other members of the development team, including designers and project managers, to ensure that the project was completed on time and within budget.',
+      'Conducted regular testing and quality assurance checks to ensure the functionality and performance of the eCommerce platform were of a high standard.',
+      'Ensured the eCommerce platform was secure and protected from threats such as malware and hacking attacks.'
+    ],
+  },
+  {
+    id: 12,
+    name: 'PRODUCT CAROUSEL WITH FILTERS',
+    description:
+      'A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive',
+    descriptionFull:
+      'A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive.',
+    tech: [
+      'React JS',
+      'TypeScript',
+      'CSS',
+      'Responsive Design',
+      'Algorithms',
+      'GH-Pages',
+    ],
+    profilePhoto: 'images/product-carousel.jpg',
+    photos: [
+      'product-carousel001.jpg',
+      'product-carousel002.jpg',
+      'product-carousel003.jpg',
+      'product-carousel004.jpg',
+      'product-carousel005.jpg',
+    ],
+    websiteURL: 'https://edgar256.github.io/god-frontend-code-test/#/',
+    codeURL: 'https://github.com/Edgar256/god-frontend-code-test',
+    role: 'DEVELOPER',
+    roleRecap:
+      'Developed the whole project from scratch without using any NPM packages for the carousel. I intend to convert the carousel in this project into an NPM PACKAGE at some point when time avails itself',
+    contribution: [
+      'Smooth custom built image carousel',
+      'Dots indicator to show current image',
+      'Arrow navigators to load the next and prevoius image in the queue',
+      'Responsive carousel',
+      'Filter products by category',
+    ],
+  },
+  {
+    id: 13,
+    name: 'SHOPPING CART WITH FILTERS',
+    description:
+      'A Simple and User Friendly Shopping Cart with filters by category',
+    descriptionFull:
+      'A Simple and User Friendly Shopping Cart with filters by category. You can add and remove filters from the cart. Products already added to the cart are automatically highlighted in the products listings and you can change quantities in your shopping cart',
+    tech: [
+      'React JS',
+      'TypeScript',
+      'CSS',
+      'Responsive Design',
+      'Algorithms',
+      'GH-Pages',
+    ],
+    profilePhoto: 'images/shopping-cart.jpg',
+    photos: [
+      'shopping-cart001.jpg',
+      'shopping-cart002.jpg',
+      'shopping-cart003.jpg',
+      'shopping-cart004.jpg',
+      'shopping-cart005.jpg',
+    ],
+    websiteURL: 'https://edgar256.github.io/shopping-cart/',
+    codeURL: 'https://github.com/Edgar256/shopping-cart',
+    role: 'DEVELOPER',
+    roleRecap:
+      'A Simple and User Friendly Shopping Cart with filters by category. You can add and remove filters from the cart. Products already added to the cart are automatically highlighted in the products listings and you can change quantities in your shopping cart',
+    contribution: [
+      'By default , App displays all products',
+      'You can sort you results by category , using the buttons on the top of the page',
+      'You are able to view the number of results for your current search query',
+      'You can add products to your cart',
+      'You can remove products from your cart',
+      'You are able to view total per product, and number of units of that product in the cart',
+      'You are able to view the total number of units in your cart',
+      'You are able to view the total cost of your entire cart',
+      'Unknown routes are redirected to a custom Error page',
+      'The App is fully mobile responsive, you can view it in your tad or mobile phone',
     ],
   },
   {
@@ -390,122 +469,7 @@ const projects = [
       'I received data from restful APIs from the Backend team and dispalyed it as per the design',
     ],
   },
-  {
-    id: 12,
-    name: 'PRODUCT CAROUSEL WITH FILTERS',
-    description:
-      'A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive',
-    descriptionFull:
-      'A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive.',
-    tech: [
-      'React JS',
-      'TypeScript',
-      'CSS',
-      'Responsive Design',
-      'Algorithms',
-      'GH-Pages',
-    ],
-    profilePhoto: 'images/product-carousel.jpg',
-    photos: [
-      'product-carousel001.jpg',
-      'product-carousel002.jpg',
-      'product-carousel003.jpg',
-      'product-carousel004.jpg',
-      'product-carousel005.jpg',
-    ],
-    websiteURL: 'https://edgar256.github.io/god-frontend-code-test/#/',
-    codeURL: 'https://github.com/Edgar256/god-frontend-code-test',
-    role: 'DEVELOPER',
-    roleRecap:
-      'Developed the whole project from scratch without using any NPM packages for the carousel. I intend to convert the carousel in this project into an NPM PACKAGE at some point when time avails itself',
-    contribution: [
-      'Smooth custom built image carousel',
-      'Dots indicator to show current image',
-      'Arrow navigators to load the next and prevoius image in the queue',
-      'Responsive carousel',
-      'Filter products by category',
-    ],
-  },
-  {
-    id: 13,
-    name: 'SHOPPING CART WITH FILTERS',
-    description:
-      'A Simple and User Friendly Shopping Cart with filters by category',
-    descriptionFull:
-      'A Simple and User Friendly Shopping Cart with filters by category. You can add and remove filters from the cart. Products already added to the cart are automatically highlighted in the products listings and you can change quantities in your shopping cart',
-    tech: [
-      'React JS',
-      'TypeScript',
-      'CSS',
-      'Responsive Design',
-      'Algorithms',
-      'GH-Pages',
-    ],
-    profilePhoto: 'images/shopping-cart.jpg',
-    photos: [
-      'shopping-cart001.jpg',
-      'shopping-cart002.jpg',
-      'shopping-cart003.jpg',
-      'shopping-cart004.jpg',
-      'shopping-cart005.jpg',
-    ],
-    websiteURL: 'https://edgar256.github.io/shopping-cart/',
-    codeURL: 'https://github.com/Edgar256/shopping-cart',
-    role: 'DEVELOPER',
-    roleRecap:
-      'A Simple and User Friendly Shopping Cart with filters by category. You can add and remove filters from the cart. Products already added to the cart are automatically highlighted in the products listings and you can change quantities in your shopping cart',
-    contribution: [
-      'By default , App displays all products',
-      'You can sort you results by category , using the buttons on the top of the page',
-      'You are able to view the number of results for your current search query',
-      'You can add products to your cart',
-      'You can remove products from your cart',
-      'You are able to view total per product, and number of units of that product in the cart',
-      'You are able to view the total number of units in your cart',
-      'You are able to view the total cost of your entire cart',
-      'Unknown routes are redirected to a custom Error page',
-      'The App is fully mobile responsive, you can view it in your tad or mobile phone',
-    ],
-  },
-  {
-    id: 14,
-    name: 'RESTRR APP',
-    description:
-      'This a Mobile to help Gym-goers help them set timers between their sets.',
-    descriptionFull:
-      'This a Mobile to help Gym-goers help them set timers between their sets.',
-    tech: ['ANGULARJS', 'CSS3', 'IONIC', 'TYPESCRIPT', 'GIT'],
-    profilePhoto: 'images/restrr.png',
-    photos: ['jsAlgo001.PNG', 'jsAlgo002.PNG'],
-    codeURL: 'https://github.com/Edgar256/restrr-ap',
-    role: 'DEVELOPER',
-    roleRecap: 'I built this App to expriementing with AngularJS and Ionic',
-    contribution: [
-      'I conducted Code Reviews',
-      'I wrote Unit tests for the Project',
-      'I converted Wireframes into Responsive and Beautiful Code',
-    ],
-  },
-  {
-    id: 15,
-    name: 'YAPPR APP',
-    description:
-      'This an App to easily get details of any youtube channel of your choice.',
-    descriptionFull:
-      'This an App to easily get details of any youtube channel of your choice.',
-    tech: ['Node JS', 'OAuth 2.0', 'HEROKU', 'Youtube API'],
-    profilePhoto: 'images/yappr001.PNG',
-    photos: ['yappr001.PNG'],
-    websiteURL: 'https://yappr.herokuapp.com',
-    role: 'DEVELOPER',
-    roleRecap:
-      "I built this App to expriementing with OAuth 2.0 and Youtube's developer API",
-    contribution: [
-      'I conducted Code Reviews',
-      'I wrote Unit tests for the Project',
-      'I converted Wireframes into Responsive and Beautiful Code',
-    ],
-  },
+    
 ];
 
 export default projects;
