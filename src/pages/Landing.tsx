@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
@@ -16,12 +16,13 @@ import cms from '../data/cms';
 import databases from '../data/databases';
 import versioning from '../data/versioning';
 import devops from '../data/devops';
-import Cursor from '../components/Cursor';
 
 function Landing() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeProjects, setActiveProjects] = useState([]);
 
   const onMouseMove = (e) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
@@ -33,23 +34,35 @@ function Landing() {
     });
     observer.observe(ref.current);
     window.addEventListener('mousemove', onMouseMove);
+    setActiveProjects(data);
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
       observer.disconnect();
     };
-    // return () =>
   }, []);
+
+  const setActiveProjectFilter = async (filter) => {
+    try {
+      if (!filter && typeof filter !== 'string') return false;
+      let filterValue = filter.toLowerCase();
+      setActiveFilter(filterValue);
+      if (filter === 'all') return setActiveProjects(data);
+      const selectedProjects = data.filter((item) =>
+        item.tech.some((tech) =>
+          tech.toLowerCase().includes(filter.toLowerCase())
+        )
+      );
+      return setActiveProjects(selectedProjects);
+    } catch (error) {
+      console.log({ error });
+    }
+  };
 
   return (
     <div>
-      {/* <Cursor style={{ left: cursorPos.x, top: cursorPos.y }} /> */}
-      <div
-        className="cursor"
-        style={{ left: cursorPos.x, top: cursorPos.y }}
-      ></div>
       <ParticlesBackground />
-      <div className="container-fluid position-relative">
+      <div className="container-fluid position-fixed_ nav-area">
         <div
           className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
           id="home"
@@ -123,7 +136,7 @@ function Landing() {
               <img
                 src="./images/edgar-photo.jpg"
                 alt="Edgar profile"
-                className="rounded-circle mx-auto py-1 px-2"
+                className="rounded-circle mx-auto py-1 px-2 "
                 width={150}
                 height={150}
               />
@@ -197,7 +210,112 @@ function Landing() {
             Portfolio
           </div>
         </div>
-        {data.map((project) => {
+        <div className="text-center fs-4 text-white py-2">
+          Filter projects by technology or tag {'  '}({activeProjects.length})
+        </div>
+        <div className="d-flex justify-content-center flex-wrap">
+          <button
+            className={
+              activeFilter === 'all'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('all')}
+          >
+            ALL
+          </button>
+          <button
+            className={
+              activeFilter === 'react'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('react')}
+          >
+            REACT
+          </button>
+          <button
+            className={
+              activeFilter === 'php'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('php')}
+          >
+            PHP
+          </button>
+          <button
+            className={
+              activeFilter === 'mysql'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('mysql')}
+          >
+            MYSQL
+          </button>
+          <button
+            className={
+              activeFilter === 'wordpress'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('wordpress')}
+          >
+            WORDPRESS
+          </button>
+          <button
+            className={
+              activeFilter === 'gh-pages'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('gh-pages')}
+          >
+            GH-PAGES
+          </button>
+          <button
+            className={
+              activeFilter === 'javascript'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('javascript')}
+          >
+            JAVASCRIPT
+          </button>
+          <button
+            className={
+              activeFilter === 'typescript'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('typescript')}
+          >
+            TYPESCRIPT
+          </button>
+          <button
+            className={
+              activeFilter === 'algorithms'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('algorithms')}
+          >
+            ALGORITHMS
+          </button>
+          <button
+            className={
+              activeFilter === 'payments'
+                ? 'btn btn-primary text-white rounded-pill m-1'
+                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+            }
+            onClick={() => setActiveProjectFilter('payments')}
+          >
+            PAYMENTS
+          </button>
+        </div>
+        {activeProjects.map((project) => {
           return (
             <Project
               key={project.id}

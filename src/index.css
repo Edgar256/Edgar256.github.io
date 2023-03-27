@@ -28,6 +28,11 @@ html {
   animation-delay: 0s;
   animation-timing-function: ease-in;
 }
+.nav-area{
+  position: fixed;
+  background-color: black;
+  z-index: 1;
+}
 
 /* Animations */
 @keyframes ease-in-image {
@@ -48,5 +53,11 @@ html {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Typewriter{
+    height: 100px;
   }
 }
