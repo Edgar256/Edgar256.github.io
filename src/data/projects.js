@@ -267,7 +267,7 @@ const projects = [
       'realtors-004.jpg',
       'realtors-005.jpg',
       'realtors-006.jpg',
-      'realtors-007.jpg',
+      'realtors-007.JPG',
       'realtors-008.JPG',
       'realtors-009.JPG',
       'realtors-010.JPG',
@@ -502,7 +502,6 @@ const projects = [
       'Testing the website for full functionality',
     ],
   },
-
   {
     id: 14,
     name: 'ANAIS MEDICAL LOGISTICS',
