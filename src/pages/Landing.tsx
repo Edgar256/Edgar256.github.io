@@ -111,7 +111,7 @@ function Landing() {
                   <a
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
                         : 'nav-link  fs-4 px-3 text-dark fw-bold'
                     }
                     href="/"
@@ -124,7 +124,7 @@ function Landing() {
                   <a
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
                         : 'nav-link  fs-4 px-3 text-dark fw-bold'
                     }
                     href="#about"
@@ -137,7 +137,7 @@ function Landing() {
                   <a
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
                         : 'nav-link  fs-4 px-3 text-dark fw-bold'
                     }
                     href="/#portfolio"
@@ -150,7 +150,7 @@ function Landing() {
                   <a
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
                         : 'nav-link  fs-4 px-3 text-dark fw-bold'
                     }
                     href="/#tech"
@@ -163,7 +163,7 @@ function Landing() {
                   <a
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
                         : 'nav-link  fs-4 px-3 text-dark fw-bold'
                     }
                     href="/#skill"
@@ -176,7 +176,7 @@ function Landing() {
                   <a
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
                         : 'nav-link  fs-4 px-3 text-dark fw-bold'
                     }
                     href="/#contact"
