@@ -39,37 +39,44 @@ export default function Project() {
   return (
     <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'}>
       {isDark ? <ParticlesBackground /> : <div />}
-      <div className="container-fluid position-relative py-5 my-0 p-4">
-        <div className="d-flex justify-content-between">
-          <h1 className="fs-1 ">
-            Project {project.length > 0 && project[0].id}
-          </h1>
-          <Form>
-            <Form.Check
-              type="switch"
-              checked={isChecked}
-              onChange={handleToggle}
-              label={
-                <span className="Form-switch-label">
-                  {isChecked ? (
-                    <span className="dark-mode-label">
-                      <small>
-                        Dark
-                        <br /> Mode
-                      </small>
-                    </span>
-                  ) : (
-                    <span className="light-mode-label">
-                      <small>Light Mode</small>
-                    </span>
-                  )}
-                </span>
-              }
-            />
-          </Form>
+      <div className="container-fluid position-relative py-1 my-0 px-2">
+        <div className="w-100 px-2 position-relative">
+          <div
+            className={
+              isDark
+                ? 'd-flex justify-content-between px-4 py-2 position-fixed w-100 bg-black'
+                : 'd-flex justify-content-between px-4 py-2 position-fixed w-100 bg-white'
+            }
+          >
+            <h1 className="fs-1 ">
+              Project {project.length > 0 && project[0].id}
+            </h1>
+            <Form>
+              <Form.Check
+                type="switch"
+                checked={isChecked}
+                onChange={handleToggle}
+                label={
+                  <span className="Form-switch-label">
+                    {isChecked ? (
+                      <span className="dark-mode-label">
+                        <small>
+                          Dark
+                          <br /> Mode
+                        </small>
+                      </span>
+                    ) : (
+                      <span className="light-mode-label">
+                        <small>Light Mode</small>
+                      </span>
+                    )}
+                  </span>
+                }
+              />
+            </Form>
+          </div>
         </div>
-
-        <hr className="d-sm-block border border-white my-1" />
+        <hr className="d-sm-block border border-white my-1 mt-5" />
         <div className="row d-lg-flex d-md-flex">
           <div
             ref={ref}
@@ -89,7 +96,11 @@ export default function Project() {
               {project.length > 0 &&
                 project[0].tech.map((elem) => (
                   <button
-                    className="btn btn-outline-secondary  rounded-pill m-1"
+                    className={
+                      isDark
+                        ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                        : 'btn btn-outline-secondary rounded-pill m-1 fw-bold'
+                    }
                     key={elem}
                   >
                     {elem}
@@ -102,7 +113,11 @@ export default function Project() {
                   href={project[0].websiteURL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline-primary rounded-pill m-1 px-3"
+                  className={
+                    isDark
+                      ? 'btn btn-outline-primary rounded-pill m-1 px-3 py-3 fw-bold'
+                      : 'btn btn-primary rounded-pill m-1 px-3 py-3 fw-bold'
+                  }
                 >
                   VISIT WEBSITE
                 </a>
@@ -114,7 +129,11 @@ export default function Project() {
                   href={project[0].codeURL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline-warning rounded-pill m-1 px-3"
+                  className={
+                    isDark
+                      ? 'btn btn-outline-warning rounded-pill m-1 px-3 py-3 fw-bold'
+                      : 'btn btn-warning rounded-pill m-1 px-3 py-3 fw-bold'
+                  }
                 >
                   VIEW GITHUB REPO
                 </a>
