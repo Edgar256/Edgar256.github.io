@@ -369,7 +369,11 @@ function Landing() {
                 {prototyping &&
                   prototyping.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -383,7 +387,11 @@ function Landing() {
                 {frontend &&
                   frontend.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -397,7 +405,11 @@ function Landing() {
                 {backend &&
                   backend.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -411,7 +423,11 @@ function Landing() {
                 {mobileapps &&
                   mobileapps.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -425,7 +441,11 @@ function Landing() {
                 {cms &&
                   cms.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -439,7 +459,11 @@ function Landing() {
                 {databases &&
                   databases.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -453,7 +477,11 @@ function Landing() {
                 {versioning &&
                   versioning.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
@@ -467,7 +495,11 @@ function Landing() {
                 {devops &&
                   devops.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary  rounded-pill m-1"
+                      className={
+                        isDark
+                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                      }
                       key={elem}
                     >
                       {elem}
