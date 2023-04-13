@@ -27,7 +27,7 @@ export default function Project(props) {
         <h4>ROLE: {props.role}</h4>
         <div className="fs-4">{props.description}</div>
         <div>
-          <h6 className="pt-4">TECH</h6>
+          <h6 className="fs-4 pt-3">Tech Stack/Tags</h6>
           <div className="d-flex flex-wrap">
             {props.tech &&
               props.tech.map((elem) => (
