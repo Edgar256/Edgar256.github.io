@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Image from '../components/Image';
@@ -40,40 +41,47 @@ export default function Project() {
     <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'}>
       {isDark ? <ParticlesBackground /> : <div />}
       <div className="container-fluid position-relative py-1 my-0 px-2">
-        <div className="w-100 px-2 position-relative">
+        <div className="w-100 px-2 position-relative pb-3">
           <div
             className={
               isDark
-                ? 'd-flex justify-content-between px-4 py-2 position-fixed w-100 bg-black'
-                : 'd-flex justify-content-between px-4 py-2 position-fixed w-100 bg-white'
+                ? 'd-flex justify-content-between px-1 py-2 position-fixed w-100 bg-black'
+                : 'd-flex justify-content-between px-1 py-2 position-fixed w-100 bg-white'
             }
           >
-            <h1 className="fs-1 ">
-              Project {project.length > 0 && project[0].id}
-            </h1>
-            <Form>
-              <Form.Check
-                type="switch"
-                checked={isChecked}
-                onChange={handleToggle}
-                label={
-                  <span className="Form-switch-label">
-                    {isChecked ? (
-                      <span className="dark-mode-label">
-                        <small>
-                          Dark
-                          <br /> Mode
-                        </small>
-                      </span>
-                    ) : (
-                      <span className="light-mode-label">
-                        <small>Light Mode</small>
-                      </span>
-                    )}
-                  </span>
-                }
-              />
-            </Form>
+            <div className="d-flex">
+              <Link to="/" className="p-0 fs-1">
+                <i className="bi bi-arrow-left-circle-fill text-primary"></i>
+              </Link>
+              <h1 className="fs-1 px-2 py-1">
+                Project {project.length > 0 && project[0].id}
+              </h1>
+            </div>
+            <div className="px-4">
+              <Form>
+                <Form.Check
+                  type="switch"
+                  checked={isChecked}
+                  onChange={handleToggle}
+                  label={
+                    <span className="Form-switch-label">
+                      {isChecked ? (
+                        <span className="dark-mode-label">
+                          <small>
+                            Dark
+                            <br /> Mode
+                          </small>
+                        </span>
+                      ) : (
+                        <span className="light-mode-label">
+                          <small>Light Mode</small>
+                        </span>
+                      )}
+                    </span>
+                  }
+                />
+              </Form>
+            </div>
           </div>
         </div>
         <hr className="d-sm-block border border-white my-1 mt-5" />
