@@ -1,8 +1,7 @@
-import { useRef, useEffect, useState, useContext } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
-import { Container } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 
 // component imports
@@ -20,7 +19,7 @@ import versioning from '../data/versioning';
 import devops from '../data/devops';
 
 // import ThemeContext
-import { ThemeContext, useThemeContext } from '../contexts/ContextProvider';
+import { useThemeContext } from '../contexts/ContextProvider';
 
 function Landing() {
   const ref = useRef(null);
@@ -78,7 +77,6 @@ function Landing() {
 
   return (
     <div className={isDark ? 'text-white' : 'text-dark'}>
-      {/* <ParticlesBackground /> */}
       {isDark ? <ParticlesBackground /> : <div />}
       <div
         className={
