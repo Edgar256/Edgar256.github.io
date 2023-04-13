@@ -1,9 +1,13 @@
 import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// import ThemeContext
+import { useThemeContext } from '../contexts/ContextProvider';
+
 export default function Project(props) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const { isDark } = useThemeContext();
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -32,7 +36,11 @@ export default function Project(props) {
             {props.tech &&
               props.tech.map((elem) => (
                 <button
-                  className="btn btn-outline-secondary  rounded-pill m-1"
+                  className={
+                    isDark
+                      ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
+                      : 'btn btn-outline-secondary rounded-pill m-1 fw-bold'
+                  }
                   key={elem}
                 >
                   {elem}
@@ -42,17 +50,25 @@ export default function Project(props) {
         </div>
         <div className="d-flex flex-wrap py-5">
           <Link
-            className="btn btn-outline-success rounded-pill m-1 px-3"
+            className={
+              isDark
+                ? 'btn btn-outline-success rounded-pill m-1 px-3 py-3 fw-bold'
+                : 'btn btn-success rounded-pill m-1 px-3 py-3 fw-bold'
+            }
             to={`/project/${props.id}`}
           >
-            VIEW MORE
+            VIEW DETAILS
           </Link>
           {props.websiteURL ? (
             <a
               href={props.websiteURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline-primary rounded-pill m-1 px-3"
+              className={
+                isDark
+                  ? 'btn btn-outline-primary rounded-pill m-1 px-3 py-3 fw-bold'
+                  : 'btn btn-primary rounded-pill m-1 px-3 py-3 fw-bold'
+              }
             >
               VISIT WEBSITE
             </a>
@@ -64,7 +80,11 @@ export default function Project(props) {
               href={props.codeURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline-warning rounded-pill m-1 px-3"
+              className={
+                isDark
+                  ? 'btn btn-outline-warning rounded-pill m-1 px-3 py-3 fw-bold'
+                  : 'btn btn-warning rounded-pill m-1 px-3 py-3 fw-bold'
+              }
             >
               VIEW GITHUB REPO
             </a>
