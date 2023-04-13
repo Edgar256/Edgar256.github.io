@@ -14,8 +14,6 @@ export default function Image(props) {
 
   return (
     <div
-      //   key={props.photo}
-      // className="p-xl-5 p-sm-2 my-2"
       ref={ref}
       className={
         isVisible ? 'ease-in-image p-xl-5 p-sm-2 my-2' : 'p-xl-5 p-sm-2 my-2'
@@ -24,7 +22,7 @@ export default function Image(props) {
       <img
         src={'/images/' + props.photo}
         alt={props.photo}
-        className="img-fluid_ w-100"
+        className="w-100 rounded-custom"
       />
     </div>
   );

@@ -85,8 +85,8 @@ export default function Project(props) {
           alt={props.title}
           className={
             isVisible
-              ? 'ease-in-image w-100 p-2 rounded text-white'
-              : 'w-100 p-2 rounded text-white'
+              ? 'ease-in-image w-100 p-2 rounded-custom text-white'
+              : 'w-100 p-2 rounded-custom text-white'
           }
         />
       </div>

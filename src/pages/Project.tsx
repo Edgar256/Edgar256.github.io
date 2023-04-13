@@ -97,7 +97,7 @@ export default function Project() {
               <img
                 src={'/' + project[0].profilePhoto}
                 alt=""
-                className="img-fluid"
+                className="img-fluid rounded-custom"
               />
             ) : (
               ''

@@ -34,6 +34,9 @@ html {
   z-index: 9999;
   animation: cursorPulse 1s ease-out infinite;
 }
+.rounded-custom{
+  border-radius: 30px !important;
+}
 
 @keyframes cursorPulse {
   0% {
