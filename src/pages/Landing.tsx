@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Project from '../components/Project';
 
 // import data dumps
+import techStack from '../data/techStack';
 import data from '../data/projects';
 import backend from '../data/backend';
 import prototyping from '../data/prototyping';
@@ -297,148 +298,42 @@ function Landing() {
         <div className="text-center fs-4  py-2">
           Filter projects by technology or tag {'  '}({activeProjects.length})
         </div>
-        <div className="d-flex justify-content-center flex-wrap">
-          <button
-            className={
-              activeFilter === 'all'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('all')}
-          >
-            ALL
-          </button>
-          <button
-            className={
-              activeFilter === 'react'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('react')}
-          >
-            REACT
-          </button>
-          <button
-            className={
-              activeFilter === 'php'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('php')}
-          >
-            PHP
-          </button>
-          <button
-            className={
-              activeFilter === 'mysql'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('mysql')}
-          >
-            MYSQL
-          </button>
-          <button
-            className={
-              activeFilter === 'wordpress'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('wordpress')}
-          >
-            WORDPRESS
-          </button>
-          <button
-            className={
-              activeFilter === 'gh-pages'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('gh-pages')}
-          >
-            GH-PAGES
-          </button>
-          <button
-            className={
-              activeFilter === 'javascript'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('javascript')}
-          >
-            JAVASCRIPT
-          </button>
-          <button
-            className={
-              activeFilter === 'typescript'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('typescript')}
-          >
-            TYPESCRIPT
-          </button>
-          <button
-            className={
-              activeFilter === 'express'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('express')}
-          >
-            EXPRESS
-          </button>
-          <button
-            className={
-              activeFilter === 'nodejs'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('nodejs')}
-          >
-            NODEJS
-          </button>
-          <button
-            className={
-              activeFilter === 'mongodb'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('mongodb')}
-          >
-            MONGODB
-          </button>
-          <button
-            className={
-              activeFilter === 'graphql'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('graphql')}
-          >
-            GRAPHQL
-          </button>
-          <button
-            className={
-              activeFilter === 'algorithms'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('algorithms')}
-          >
-            ALGORITHMS
-          </button>
-          <button
-            className={
-              activeFilter === 'payments'
-                ? 'btn btn-primary  rounded-pill m-1'
-                : 'btn btn-outline-secondary  rounded-pill m-1'
-            }
-            onClick={() => setActiveProjectFilter('payments')}
-          >
-            PAYMENTS
-          </button>
+        <div>
+          {isDark ? (
+            <div className="d-flex justify-content-center flex-wrap">
+              {techStack.map((tech) => (
+                <button
+                  className={
+                    activeFilter === tech.toLowerCase()
+                      ? 'btn btn-primary rounded-pill m-1 fw-bold'
+                      : 'btn btn-outline-light  rounded-pill m-1 fw-bold'
+                  }
+                  onClick={() => setActiveProjectFilter(tech.toLowerCase())}
+                  key={tech}
+                >
+                  {tech}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <div className="d-flex justify-content-center flex-wrap">
+              {techStack.map((tech) => (
+                <button
+                  className={
+                    activeFilter === tech.toLowerCase()
+                      ? 'btn btn-primary rounded-pill m-1 fw-bold'
+                      : 'btn btn-outline-secondary rounded-pill m-1 fw-bold'
+                  }
+                  onClick={() => setActiveProjectFilter(tech.toLowerCase())}
+                  key={tech}
+                >
+                  {tech}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
+
         {activeProjects.map((project) => {
           return (
             <Project
