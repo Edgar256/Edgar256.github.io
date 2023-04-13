@@ -1,7 +1,9 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ParticlesBackground from '../components/ParticlesBackground';
 import Typewriter from 'typewriter-effect';
+import { Container } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 
 // component imports
 import Project from '../components/Project';
@@ -17,12 +19,27 @@ import databases from '../data/databases';
 import versioning from '../data/versioning';
 import devops from '../data/devops';
 
+// import ThemeContext
+import { ThemeContext, useThemeContext } from '../contexts/ContextProvider';
+
 function Landing() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeProjects, setActiveProjects] = useState([]);
+  const { isDark, toggleTheme } = useThemeContext();
+  const [isChecked, setIsChecked] = useState(true);
+
+  const handleToggle = async () => {
+    try {
+      await setIsChecked(!isChecked);
+      await toggleTheme();
+      return;
+    } catch (error) {
+      throw error;
+    }
+  };
 
   const onMouseMove = (e) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
@@ -60,16 +77,23 @@ function Landing() {
   };
 
   return (
-    <div>
-      <ParticlesBackground />
-      <div className="container-fluid position-fixed_ nav-area">
+    <div className={isDark ? 'text-white' : 'text-dark'}>
+      {/* <ParticlesBackground /> */}
+      {isDark ? <ParticlesBackground /> : <div />}
+      <div
+        className={
+          isDark
+            ? 'container-fluid nav-area bg-black'
+            : 'container-fluid nav-area bg-white'
+        }
+      >
         <div
           className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
           id="home"
         >
-          <nav className="navbar navbar-expand-lg navbar-white bg-transparent text-white">
+          <nav className="navbar navbar-expand-lg navbar-white bg-transparent ">
             <button
-              className="navbar-toggler text-white bg-white"
+              className="navbar-toggler  bg-white"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNavDropdown"
@@ -77,7 +101,7 @@ function Landing() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon text-white"></span>
+              <span className="navbar-toggler-icon "></span>
             </button>
             <div
               className="collapse navbar-collapse w-100 bg-transparent"
@@ -86,20 +110,38 @@ function Landing() {
               <ul className="navbar-nav w-100">
                 <hr className="d-md-none d-sm-block border border-dark my-1" />
                 <li className="nav-item active">
-                  <a className="nav-link text-white fs-4 px-3" href="/">
+                  <a
+                    className={
+                      isDark
+                        ? 'nav-link  fs-4 px-3 text-white'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                    }
+                    href="/"
+                  >
                     Home
                   </a>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white fs-4 px-3" href="#about">
+                  <a
+                    className={
+                      isDark
+                        ? 'nav-link  fs-4 px-3 text-white'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                    }
+                    href="#about"
+                  >
                     About
                   </a>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
                   <a
-                    className="nav-link text-white fs-4 px-3"
+                    className={
+                      isDark
+                        ? 'nav-link  fs-4 px-3 text-white'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                    }
                     href="/#portfolio"
                   >
                     Portfolio
@@ -107,25 +149,69 @@ function Landing() {
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white fs-4 px-3" href="/#tech">
+                  <a
+                    className={
+                      isDark
+                        ? 'nav-link  fs-4 px-3 text-white'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                    }
+                    href="/#tech"
+                  >
                     Technologies
                   </a>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white fs-4 px-3" href="/#skill">
+                  <a
+                    className={
+                      isDark
+                        ? 'nav-link  fs-4 px-3 text-white'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                    }
+                    href="/#skill"
+                  >
                     Skills & CV
                   </a>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a className="nav-link text-white fs-4 px-3" href="/#contact">
+                  <a
+                    className={
+                      isDark
+                        ? 'nav-link  fs-4 px-3 text-white'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                    }
+                    href="/#contact"
+                  >
                     Contact
                   </a>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
               </ul>
             </div>
+            <Form>
+              <Form.Check
+                type="switch"
+                checked={isChecked}
+                onChange={handleToggle}
+                label={
+                  <span className="Form-switch-label">
+                    {isChecked ? (
+                      <span className="dark-mode-label">
+                        <small>
+                          Dark
+                          <br /> Mode
+                        </small>
+                      </span>
+                    ) : (
+                      <span className="light-mode-label">
+                        <small>Light Mode</small>
+                      </span>
+                    )}
+                  </span>
+                }
+              />
+            </Form>
           </nav>
         </div>
       </div>
@@ -141,11 +227,11 @@ function Landing() {
                 height={150}
               />
             </div>
-            <div className="w-100 px-2 py-2">
-              <div className="text-white display-2 d-sm-flex justify-content-lg-start justify-content-sm-center text-xl-start text-lg-start text-md-start text-left text-sm-center">
+            <div className="w-100 px-2 py-2 ">
+              <div className="display-2 d-sm-flex justify-content-lg-start justify-content-sm-center text-xl-start text-lg-start text-md-start text-left text-sm-center">
                 Hi, I'm Edgar Tinkamanyire,
               </div>
-              <div className="text-white fs-4">
+              <div className="fs-4">
                 <Typewriter
                   options={{
                     strings: [
@@ -168,8 +254,8 @@ function Landing() {
       >
         <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
           <div ref={ref} className={isVisible ? 'ease-in-text' : ''}>
-            <div className="text-white display-4 py-5 text-center">About</div>
-            <div className="text-white text-center py-5 fs-4">
+            <div className=" display-4 py-5 text-center">About</div>
+            <div className=" text-center py-5 fs-4">
               <p>
                 As a seasoned Senior Software Engineer with extensive experience
                 in Agile processes and a strong foundation in both front-end and
@@ -206,19 +292,19 @@ function Landing() {
         id="portfolio"
       >
         <div className="w-100">
-          <div className="text-white display-4 py-3 text-center py-5 w-100">
+          <div className=" display-4 py-3 text-center py-5 w-100">
             Portfolio
           </div>
         </div>
-        <div className="text-center fs-4 text-white py-2">
+        <div className="text-center fs-4  py-2">
           Filter projects by technology or tag {'  '}({activeProjects.length})
         </div>
         <div className="d-flex justify-content-center flex-wrap">
           <button
             className={
               activeFilter === 'all'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('all')}
           >
@@ -227,8 +313,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'react'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('react')}
           >
@@ -237,8 +323,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'php'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('php')}
           >
@@ -247,8 +333,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'mysql'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('mysql')}
           >
@@ -257,8 +343,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'wordpress'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('wordpress')}
           >
@@ -267,8 +353,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'gh-pages'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('gh-pages')}
           >
@@ -277,8 +363,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'javascript'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('javascript')}
           >
@@ -287,8 +373,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'typescript'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('typescript')}
           >
@@ -297,8 +383,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'express'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('express')}
           >
@@ -307,8 +393,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'nodejs'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('nodejs')}
           >
@@ -317,8 +403,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'mongodb'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('mongodb')}
           >
@@ -327,8 +413,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'graphql'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('graphql')}
           >
@@ -337,8 +423,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'algorithms'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('algorithms')}
           >
@@ -347,8 +433,8 @@ function Landing() {
           <button
             className={
               activeFilter === 'payments'
-                ? 'btn btn-primary text-white rounded-pill m-1'
-                : 'btn btn-outline-secondary text-white rounded-pill m-1'
+                ? 'btn btn-primary  rounded-pill m-1'
+                : 'btn btn-outline-secondary  rounded-pill m-1'
             }
             onClick={() => setActiveProjectFilter('payments')}
           >
@@ -381,16 +467,16 @@ function Landing() {
             ref={ref}
             className={isVisible ? 'ease-in-image w-100' : 'w-100'}
           >
-            <div className="text-white display-4 py-3 text-center py-5 w-100">
+            <div className=" display-4 py-3 text-center py-5 w-100">
               Technologies
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>PROTOTYPING AND WIREFRAMING</h4>
               <div className="d-flex flex-wrap">
                 {prototyping &&
                   prototyping.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -398,13 +484,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>FRONTEND</h4>
               <div className="d-flex flex-wrap">
                 {frontend &&
                   frontend.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -412,13 +498,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>BACKEND</h4>
               <div className="d-flex flex-wrap">
                 {backend &&
                   backend.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -426,13 +512,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>MOBILE APPS</h4>
               <div className="d-flex flex-wrap">
                 {mobileapps &&
                   mobileapps.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -440,13 +526,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>CMS</h4>
               <div className="d-flex flex-wrap">
                 {cms &&
                   cms.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -454,13 +540,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>DATABASES</h4>
               <div className="d-flex flex-wrap">
                 {databases &&
                   databases.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -468,13 +554,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>VERSION CONTROL</h4>
               <div className="d-flex flex-wrap">
                 {versioning &&
                   versioning.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -482,13 +568,13 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className="text-white py-3">
+            <div className=" py-3">
               <h4>DEV-OPS</h4>
               <div className="d-flex flex-wrap">
                 {devops &&
                   devops.map((elem) => (
                     <button
-                      className="btn btn-outline-secondary text-white rounded-pill m-1"
+                      className="btn btn-outline-secondary  rounded-pill m-1"
                       key={elem}
                     >
                       {elem}
@@ -506,10 +592,8 @@ function Landing() {
             ref={ref}
             className={isVisible ? 'ease-in-image w-100' : 'w-100'}
           >
-            <div className="text-white display-4 py-5 text-center">
-              Skills & Resume
-            </div>
-            <div className="text-white py-3 fs-4" id="skill">
+            <div className=" display-4 py-5 text-center">Skills & Resume</div>
+            <div className=" py-3 fs-4" id="skill">
               <a
                 href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
                 target="_blank"
@@ -518,7 +602,7 @@ function Landing() {
                 Download my full PDF resume here
               </a>
             </div>
-            <div className="d-flex text-white w-100 p-4">
+            <div className="d-flex  w-100 p-4">
               <p className="bi-list-nested display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Agile Development</h2>
@@ -527,7 +611,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex text-white w-100 p-4">
+            <div className="d-flex  w-100 p-4">
               <p className="bi-person-bounding-box display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Leadership Skills & Team work</h2>
@@ -538,7 +622,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex text-white w-100 p-3">
+            <div className="d-flex  w-100 p-3">
               <p className="bi-people-fill display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Collaboration Skills</h2>
@@ -550,7 +634,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex text-white w-100 p-3">
+            <div className="d-flex  w-100 p-3">
               <p className="bi-x-diamond-fill display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Pixel Perfect</h2>
@@ -560,7 +644,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex text-white w-100 p-3">
+            <div className="d-flex  w-100 p-3">
               <p className="bi-columns-gap display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Responsive Design</h2>
@@ -576,19 +660,17 @@ function Landing() {
 
       <div className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center">
         <div ref={ref} className={isVisible ? 'ease-in-image w-100' : 'w-100'}>
-          <div className="text-white display-4 py-5 text-center py-5">
-            Contact
-          </div>
+          <div className=" display-4 py-5 text-center py-5">Contact</div>
           <div className="" id="contact">
             <div className="card bg-transparent">
               <ul className="list-group list-group-flush bg-transparent fs-4">
-                <li className="list-group-item bg-transparent text-white row">
+                <li className="list-group-item bg-transparent  row">
                   <span className="col-4 col-sm-6">
                     Email <i className="bi-envelope-fill px-2 text-warning"></i>{' '}
                     :
                   </span>
                   <Link
-                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    className="col-sm-8 text-break  text-decoration-none text-muted"
                     to="mailto:tinka.edgar@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -596,13 +678,13 @@ function Landing() {
                     tinka.edgar@gmail.com
                   </Link>
                 </li>
-                <li className="list-group-item bg-transparent text-white row">
+                <li className="list-group-item bg-transparent  row">
                   <span className="col-sm-4">
                     Stackoverflow{' '}
                     <i className="bi-stack-overflow px-2 text-danger"></i> :
                   </span>
                   <Link
-                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    className="col-sm-8 text-break  text-decoration-none text-muted"
                     to="https://stackoverflow.com/users/6561907/edgar256"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -610,12 +692,12 @@ function Landing() {
                     https://stackoverflow.com/users/6561907/edgar256
                   </Link>
                 </li>
-                <li className="list-group-item bg-transparent text-white row">
+                <li className="list-group-item bg-transparent  row">
                   <span className="col-sm-4">
                     Linkedin <i className="bi-linkedin px-2 text-info"></i> :
                   </span>
                   <Link
-                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    className="col-sm-8 text-break  text-decoration-none text-muted"
                     to="https://www.linkedin.com/in/tinkamanyire-edgar/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -623,12 +705,12 @@ function Landing() {
                     https://www.linkedin.com/in/tinkamanyire-edgar/
                   </Link>
                 </li>
-                <li className="list-group-item bg-transparent text-white row">
+                <li className="list-group-item bg-transparent  row">
                   <span className="col-sm-4">
                     Github <i className="bi-github px-2"></i> :
                   </span>
                   <Link
-                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    className="col-sm-8 text-break  text-decoration-none text-muted"
                     to="https://github.com/Edgar256"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -636,12 +718,12 @@ function Landing() {
                     https://github.com/Edgar256
                   </Link>
                 </li>
-                <li className="list-group-item bg-transparent text-white row">
+                <li className="list-group-item bg-transparent  row">
                   <span className="col-sm-4">
                     Codewars <i className="bi-code-slash px-2"></i> :
                   </span>
                   <Link
-                    className="col-sm-8 text-break text-white text-decoration-none text-muted"
+                    className="col-sm-8 text-break  text-decoration-none text-muted"
                     to="https://www.codewars.com/users/Edgar256"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -19,8 +19,8 @@ export default function Project(props) {
         ref={ref}
         className={
           isVisible
-            ? 'ease-in-text col-lg-6 col-sm-12 text-white py-1'
-            : 'col-lg-6 col-sm-12 text-white py-1'
+            ? 'ease-in-text col-lg-6 col-sm-12 py-1'
+            : 'col-lg-6 col-sm-12  py-1'
         }
       >
         <h2>{props.title}</h2>
@@ -32,7 +32,7 @@ export default function Project(props) {
             {props.tech &&
               props.tech.map((elem) => (
                 <button
-                  className="btn btn-outline-secondary text-white rounded-pill m-1"
+                  className="btn btn-outline-secondary  rounded-pill m-1"
                   key={elem}
                 >
                   {elem}
@@ -85,8 +85,8 @@ export default function Project(props) {
           alt={props.title}
           className={
             isVisible
-              ? 'ease-in-image w-100 p-2 rounded-custom text-white'
-              : 'w-100 p-2 rounded-custom text-white'
+              ? 'ease-in-image w-100 p-2 rounded-custom '
+              : 'w-100 p-2 rounded-custom '
           }
         />
       </div>

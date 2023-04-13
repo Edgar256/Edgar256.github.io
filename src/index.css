@@ -28,13 +28,39 @@ html {
   animation-delay: 0s;
   animation-timing-function: ease-in;
 }
-.nav-area{
+.nav-area {
   position: fixed;
-  background-color: black;
+  /* background-color: black; */
   z-index: 1;
 }
-.rounded-custom{
+.rounded-custom {
   border-radius: 30px !important;
+}
+
+.form-check-input {
+  height: 35px !important;
+  width: 80px !important;
+  padding: 15px !important;
+  
+}
+.form-check.form-switch{
+  position: relative !important;
+}
+.dark-mode-label{
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  line-height: 12px;
+  pointer-events: none;
+}
+.light-mode-label{
+  position: absolute;
+  top: 7px;
+  left: 35px;
+  line-height: 12px;
+  pointer-events: none;
+  color: black;
+  font-weight: 600;
 }
 
 /* Animations */
@@ -60,7 +86,11 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  .Typewriter{
+  .Typewriter {
     height: 100px;
   }
+  .navbar {
+    width: 100%;
+  }
 }
+
