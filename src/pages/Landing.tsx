@@ -76,7 +76,7 @@ function Landing() {
   };
 
   return (
-    <div className={isDark ? 'text-white' : 'text-dark'}>
+    <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'}>
       {isDark ? <ParticlesBackground /> : <div />}
       <div
         className={

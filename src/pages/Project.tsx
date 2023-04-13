@@ -37,7 +37,7 @@ export default function Project() {
   }, [id]);
 
   return (
-    <div className={isDark ? 'text-white' : 'text-dark'}>
+    <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'}>
       {isDark ? <ParticlesBackground /> : <div />}
       <div className="container-fluid position-relative py-5 my-0 p-4">
         <div className="d-flex justify-content-between">
