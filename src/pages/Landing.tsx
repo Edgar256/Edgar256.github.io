@@ -511,14 +511,16 @@ function Landing() {
         </div>
       </div>
 
-      <div className="container-fluid position-relative min-vh-100 my-5 py-5 p-xl-5">
+      <div className="container-fluid position-relative min-vh-100 my-5 py-5 p-xl-5" id="skill">
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div
             ref={ref}
             className={isVisible ? 'ease-in-image w-100' : 'w-100'}
           >
-            <div className=" display-4 py-5 text-center">Skills & Resume</div>
-            <div className=" py-3 fs-4" id="skill">
+            <div className="display-4 py-5 text-center">
+              Skills & Resume
+            </div>
+            <div className=" py-3 fs-4">
               <a
                 href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
                 target="_blank"
