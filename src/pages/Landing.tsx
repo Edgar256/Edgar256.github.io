@@ -30,6 +30,25 @@ function Landing() {
   const [activeProjects, setActiveProjects] = useState([]);
   const { isDark, toggleTheme } = useThemeContext();
   const [isChecked, setIsChecked] = useState(true);
+  const [isAtTop, setIsAtTop] = useState<boolean>(true);
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const portfolioRef = useRef<HTMLDivElement>(null);
+  const techRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const handleScrollToSection = (
+    sectionRef: React.RefObject<HTMLDivElement>
+  ) => {
+    if (sectionRef.current) {
+      const topOffset = sectionRef.current.getBoundingClientRect().top;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const targetTop = topOffset + scrollTop - 100;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    }
+  };
 
   const handleToggle = async () => {
     try {
@@ -45,6 +64,20 @@ function Landing() {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
+  const handleScroll = () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop === 0) {
+      // Window is still at the top of the page height
+      setIsAtTop(true);
+      console.log('am at top');
+    } else {
+      // Window is not at the top of the page height
+      setIsAtTop(false);
+      console.log('am not at top');
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setIsVisible(entry.isIntersecting);
@@ -53,7 +86,10 @@ function Landing() {
     window.addEventListener('mousemove', onMouseMove);
     setActiveProjects(data);
 
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
+      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousemove', onMouseMove);
       observer.disconnect();
     };
@@ -109,81 +145,81 @@ function Landing() {
               <ul className="navbar-nav w-100">
                 <hr className="d-md-none d-sm-block border border-dark my-1" />
                 <li className="nav-item active">
-                  <a
+                  <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
                     }
-                    href="/"
+                    onClick={() => handleScrollToSection(homeRef)}
                   >
                     Home
-                  </a>
+                  </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a
+                  <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
                     }
-                    href="#about"
+                    onClick={() => handleScrollToSection(aboutRef)}
                   >
                     About
-                  </a>
+                  </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a
+                  <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
                     }
-                    href="/#portfolio"
+                    onClick={() => handleScrollToSection(portfolioRef)}
                   >
                     Portfolio
-                  </a>
+                  </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a
+                  <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
                     }
-                    href="/#tech"
+                    onClick={() => handleScrollToSection(techRef)}
                   >
                     Technologies
-                  </a>
+                  </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a
+                  <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
                     }
-                    href="/#skill"
+                    onClick={() => handleScrollToSection(skillsRef)}
                   >
                     Skills & CV
-                  </a>
+                  </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
                 <li className="nav-item">
-                  <a
+                  <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold'
+                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
+                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
                     }
-                    href="/#contact"
+                    onClick={() => handleScrollToSection(contactRef)}
                   >
                     Contact
-                  </a>
+                  </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
               </ul>
@@ -214,7 +250,10 @@ function Landing() {
           </nav>
         </div>
       </div>
-      <div className="container position-relative min-vh-100 d-flex justify-content-center align-items-center">
+      <div
+        className="container position-relative min-vh-100 d-flex justify-content-center align-items-center"
+        ref={homeRef}
+      >
         <div className="w-100 h-100  p-0 py-0">
           <div className="d-lg-flex w-100 d-sm-block">
             <div className="d-sm-flex justify-content-sm-center">
@@ -251,7 +290,10 @@ function Landing() {
         className="container-fluid position-relative min-vh-100 p-xl-5"
         id="about"
       >
-        <div className="w-100 h-100 d-flex justify-content-center align-items-center p-0">
+        <div
+          className="w-100 h-100 d-flex justify-content-center align-items-center p-0"
+          ref={aboutRef}
+        >
           <div ref={ref} className={isVisible ? 'ease-in-text' : ''}>
             <div className=" display-4 py-5 text-center">About</div>
             <div className=" text-center py-5 fs-4">
@@ -289,11 +331,10 @@ function Landing() {
       <div
         className="container-fluid position-relative min-vh-100 p-xl-5"
         id="portfolio"
+        ref={portfolioRef}
       >
         <div className="w-100">
-          <div className=" display-4 py-3 text-center py-5 w-100">
-            Portfolio
-          </div>
+          <div className=" display-4 py-2 text-center w-100">Portfolio</div>
         </div>
         <div className="text-center fs-4  py-2">
           Filter projects by technology or tag {'  '}({activeProjects.length})
@@ -354,6 +395,7 @@ function Landing() {
       <div
         className="container-fluid position-relative min-vh-100 p-xl-5 py-5 my-5"
         id="tech"
+        ref={techRef}
       >
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div
@@ -511,15 +553,17 @@ function Landing() {
         </div>
       </div>
 
-      <div className="container-fluid position-relative min-vh-100 my-5 py-5 p-xl-5" id="skill">
+      <div
+        className="container-fluid position-relative min-vh-100 my-5 py-5 p-xl-5"
+        id="skill"
+        ref={skillsRef}
+      >
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div
             ref={ref}
             className={isVisible ? 'ease-in-image w-100' : 'w-100'}
           >
-            <div className="display-4 py-5 text-center">
-              Skills & Resume
-            </div>
+            <div className="display-4 py-5 text-center">Skills & Resume</div>
             <div className=" py-3 fs-4">
               <a
                 href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
@@ -585,7 +629,10 @@ function Landing() {
         </div>
       </div>
 
-      <div className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center">
+      <div
+        className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
+        ref={contactRef}
+      >
         <div ref={ref} className={isVisible ? 'ease-in-image w-100' : 'w-100'}>
           <div className=" display-4 py-5 text-center py-5">Contact</div>
           <div className="" id="contact">
@@ -663,6 +710,21 @@ function Landing() {
           </div>
         </div>
       </div>
+
+      {!isAtTop && (
+        <button
+          onClick={() => handleScrollToSection(homeRef)}
+          className="btn btn-primary rounded text-white shadow-sm m-0"
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: 1050,
+          }}
+        >
+          <i className="bi bi-arrow-up-circle px-0 text-white fs-2"></i>
+        </button>
+      )}
     </div>
   );
 }

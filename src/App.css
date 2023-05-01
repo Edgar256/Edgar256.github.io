@@ -81,3 +81,10 @@ button:focus .cursor {
   background-color: #ffffff;
   border-color: #000000;
 }
+.cursor-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.cursor-link:hover {
+  color: #007bff !important;
+}
