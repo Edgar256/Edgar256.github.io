@@ -16,6 +16,9 @@ export default function Project() {
   const [isVisible, setIsVisible] = useState(false);
   const { isDark, toggleTheme } = useThemeContext();
   const [isChecked, setIsChecked] = useState(isDark);
+  const [isAtTop, setIsAtTop] = useState<boolean>(true);
+  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+  const homeRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = async () => {
     try {
@@ -27,6 +30,36 @@ export default function Project() {
     }
   };
 
+  const handleScrollToSection = (
+    sectionRef: React.RefObject<HTMLDivElement>
+  ) => {
+    if (sectionRef.current) {
+      const topOffset = sectionRef.current.getBoundingClientRect().top;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const targetTop = topOffset + scrollTop - 100;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    }
+  };
+
+  const handleScroll = () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop === 0) {
+      // Window is still at the top of the page height
+      setIsAtTop(true);
+      console.log('am at top');
+    } else {
+      // Window is not at the top of the page height
+      setIsAtTop(false);
+      console.log('am not at top');
+    }
+  };
+
+  const onMouseMove = (e) => {
+    setCursorPos({ x: e.clientX, y: e.clientY });
+  };
+
   useEffect(() => {
     const project = projects.find((project) => project.id === parseInt(id));
     setProject([project]);
@@ -34,11 +67,19 @@ export default function Project() {
       setIsVisible(entry.isIntersecting);
     });
     observer.observe(ref.current);
-    return () => observer.disconnect();
+    window.addEventListener('mousemove', onMouseMove);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', onMouseMove);
+      observer.disconnect();
+    };
   }, [id]);
 
   return (
-    <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'}>
+    <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'} ref={homeRef}>
       {isDark ? <ParticlesBackground /> : <div />}
       <div className="container-fluid position-relative py-1 my-0 px-2">
         <div className="w-100 px-2 position-relative pb-3">
@@ -189,6 +230,20 @@ export default function Project() {
             : ''}
         </div>
       </div>
+      {!isAtTop && (
+        <button
+          onClick={() => handleScrollToSection(homeRef)}
+          className="btn btn-primary rounded text-white shadow-sm m-0"
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: 1050,
+          }}
+        >
+          <i className="bi bi-arrow-up-circle px-0 text-white fs-2"></i>
+        </button>
+      )}
     </div>
   );
 }
