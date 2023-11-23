@@ -661,7 +661,7 @@ function Landing() {
             getting back to you in a short while
           </div>
           <div className="py-5 w-100 d-flex">
-            <form onSubmit={handleSubmit} className="form-wrapper mx-auto">
+            <form onSubmit={handleSubmit} className="form-wrapper mx-auto" method="POST">
               <div className="py-3">
                 <label htmlFor="email" className="fs-4 w-100">
                   Email Address:
