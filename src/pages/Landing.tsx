@@ -694,7 +694,7 @@ function Landing() {
                   errors={state.errors}
                 />
               </div>
-              <div className="g-recaptcha" data-sitekey="6LdsABopAAAAAP9VYnYUWljArdmhFGX7GyQ_FrO9"></div>
+              <div className="g-recaptcha"></div>
               <button
                 type="submit"
                 disabled={state.submitting}
