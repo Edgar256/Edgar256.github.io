@@ -4,6 +4,7 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import Typewriter from "typewriter-effect";
 import Form from "react-bootstrap/Form";
 import { useForm, ValidationError } from "@formspree/react";
+import { Spinner } from "react-bootstrap";
 
 // component imports
 import Project from "../components/Project";
@@ -28,6 +29,7 @@ function Landing() {
   const [isVisible, setIsVisible] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [activeFilter, setActiveFilter] = useState("all");
+  const [loading, setLoading] = useState(false);
   const [activeProjects, setActiveProjects] = useState([]);
   const { isDark, toggleTheme } = useThemeContext();
   const [isChecked, setIsChecked] = useState(true);
@@ -97,9 +99,28 @@ function Landing() {
     };
   }, []);
 
+  const handleReload = () => {
+    window.location.reload();
+  };
+
   const [state, handleSubmit] = useForm("mjvqqbak");
+
   if (state.succeeded) {
-    return alert("Your message has been successfully sent. I will be contacting you shortly")
+    return (
+      <div>
+        <div className="w-100 d-flex p-3 py-5">
+          <p className="alert alert-success text-center mx-auto">
+            "Your message has been successfully sent. I will be contacting you
+            shortly"
+          </p>
+        </div>
+        <div className="w-100 p-3 d-flex my-5">
+          <button onClick={handleReload} className="btn btn-primary mx-auto">
+            Reload Page
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const setActiveProjectFilter = async (filter) => {
@@ -661,7 +682,11 @@ function Landing() {
             getting back to you in a short while
           </div>
           <div className="py-5 w-100 d-flex">
-            <form onSubmit={handleSubmit} className="form-wrapper mx-auto" method="POST">
+            <form
+              onSubmit={handleSubmit}
+              className="form-wrapper mx-auto"
+              method="POST"
+            >
               <div className="py-3">
                 <label htmlFor="email" className="fs-4 w-100">
                   Email Address:
@@ -695,13 +720,17 @@ function Landing() {
                 />
               </div>
               <div className="g-recaptcha"></div>
-              <button
-                type="submit"
-                disabled={state.submitting}
-                className="btn btn-primary fs-4 my-5"
-              >
-                SEND MESSAGE
-              </button>
+              {loading ? (
+                <Spinner />
+              ) : (
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="btn btn-primary fs-4 my-5"
+                >
+                  SEND MESSAGE
+                </button>
+              )}
             </form>
           </div>
         </div>
