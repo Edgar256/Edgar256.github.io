@@ -17,12 +17,12 @@ Visit the profile at:  [EDGAR256](https://edgar256.github.io/).
 
 ## Contact Me
 
-Email :  [tinka.edgar@gmail.com](tinka.edgar@gmail.com)
+Email 🌐 :  [tinka.edgar@gmail.com](tinka.edgar@gmail.com)
 
-StackOverflow :  [https://stackoverflow.com/users/6561907/edgar256](https://stackoverflow.com/users/6561907/edgar256)
+StackOverflow 🆎 :  [https://stackoverflow.com/users/6561907/edgar256](https://stackoverflow.com/users/6561907/edgar256)
 
-Linkedin :  [https://www.linkedin.com/in/tinkamanyire-edgar/](https://www.linkedin.com/in/tinkamanyire-edgar/)
+Linkedin🔶 :  [https://www.linkedin.com/in/tinkamanyire-edgar/](https://www.linkedin.com/in/tinkamanyire-edgar/)
 
-Github :  [https://github.com/Edgar256](https://github.com/Edgar256)
+Github ⏩ :  [https://github.com/Edgar256](https://github.com/Edgar256)
 
-Codewars :  [https://www.codewars.com/users/Edgar256](https://www.codewars.com/users/Edgar256)
+Codewars 🌐 :  [https://www.codewars.com/users/Edgar256](https://www.codewars.com/users/Edgar256)
