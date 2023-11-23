@@ -69,6 +69,10 @@ html {
 .cursor-link:hover {
   color: #007bff !important;
 }
+.form-wrapper{
+  width: 800px;
+  min-width: 400px;
+}
 
 /* Animations */
 @keyframes ease-in-image {

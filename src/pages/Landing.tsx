@@ -1,32 +1,33 @@
-import { useRef, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import ParticlesBackground from '../components/ParticlesBackground';
-import Typewriter from 'typewriter-effect';
-import Form from 'react-bootstrap/Form';
+import { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import ParticlesBackground from "../components/ParticlesBackground";
+import Typewriter from "typewriter-effect";
+import Form from "react-bootstrap/Form";
+import { useForm, ValidationError } from "@formspree/react";
 
 // component imports
-import Project from '../components/Project';
+import Project from "../components/Project";
 
 // import data dumps
-import techStack from '../data/techStack';
-import data from '../data/projects';
-import backend from '../data/backend';
-import prototyping from '../data/prototyping';
-import frontend from '../data/frontend';
-import mobileapps from '../data/mobileapps';
-import cms from '../data/cms';
-import databases from '../data/databases';
-import versioning from '../data/versioning';
-import devops from '../data/devops';
+import techStack from "../data/techStack";
+import data from "../data/projects";
+import backend from "../data/backend";
+import prototyping from "../data/prototyping";
+import frontend from "../data/frontend";
+import mobileapps from "../data/mobileapps";
+import cms from "../data/cms";
+import databases from "../data/databases";
+import versioning from "../data/versioning";
+import devops from "../data/devops";
 
 // import ThemeContext
-import { useThemeContext } from '../contexts/ContextProvider';
+import { useThemeContext } from "../contexts/ContextProvider";
 
 function Landing() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState("all");
   const [activeProjects, setActiveProjects] = useState([]);
   const { isDark, toggleTheme } = useThemeContext();
   const [isChecked, setIsChecked] = useState(true);
@@ -37,6 +38,7 @@ function Landing() {
   const techRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
 
   const handleScrollToSection = (
     sectionRef: React.RefObject<HTMLDivElement>
@@ -46,7 +48,7 @@ function Landing() {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
       const targetTop = topOffset + scrollTop - 100;
-      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
     }
   };
 
@@ -70,11 +72,11 @@ function Landing() {
     if (scrollTop === 0) {
       // Window is still at the top of the page height
       setIsAtTop(true);
-      console.log('am at top');
+      console.log("am at top");
     } else {
       // Window is not at the top of the page height
       setIsAtTop(false);
-      console.log('am not at top');
+      console.log("am not at top");
     }
   };
 
@@ -83,24 +85,29 @@ function Landing() {
       setIsVisible(entry.isIntersecting);
     });
     observer.observe(ref.current);
-    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener("mousemove", onMouseMove);
     setActiveProjects(data);
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", onMouseMove);
       observer.disconnect();
     };
   }, []);
 
+  const [state, handleSubmit] = useForm("mjvqqbak");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
   const setActiveProjectFilter = async (filter) => {
     try {
-      if (!filter && typeof filter !== 'string') return false;
+      if (!filter && typeof filter !== "string") return false;
       let filterValue = filter.toLowerCase();
       setActiveFilter(filterValue);
-      if (filter === 'all') return setActiveProjects(data);
+      if (filter === "all") return setActiveProjects(data);
       const selectedProjects = data.filter((item) =>
         item.tech.some((tech) =>
           tech.toLowerCase().includes(filter.toLowerCase())
@@ -113,13 +120,13 @@ function Landing() {
   };
 
   return (
-    <div className={isDark ? 'text-white fw-normal' : 'text-dark fw-normal'}>
+    <div className={isDark ? "text-white fw-normal" : "text-dark fw-normal"}>
       {isDark ? <ParticlesBackground /> : <div />}
       <div
         className={
           isDark
-            ? 'container-fluid nav-area bg-black'
-            : 'container-fluid nav-area bg-white'
+            ? "container-fluid nav-area bg-black"
+            : "container-fluid nav-area bg-white"
         }
       >
         <div
@@ -148,8 +155,8 @@ function Landing() {
                   <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
                     onClick={() => handleScrollToSection(homeRef)}
                   >
@@ -161,8 +168,8 @@ function Landing() {
                   <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
                     onClick={() => handleScrollToSection(aboutRef)}
                   >
@@ -174,8 +181,8 @@ function Landing() {
                   <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
                     onClick={() => handleScrollToSection(portfolioRef)}
                   >
@@ -187,8 +194,8 @@ function Landing() {
                   <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
                     onClick={() => handleScrollToSection(techRef)}
                   >
@@ -200,8 +207,8 @@ function Landing() {
                   <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
                     onClick={() => handleScrollToSection(skillsRef)}
                   >
@@ -213,12 +220,24 @@ function Landing() {
                   <span
                     className={
                       isDark
-                        ? 'nav-link  fs-4 px-3 text-white fw-bold cursor-link'
-                        : 'nav-link  fs-4 px-3 text-dark fw-bold cursor-link'
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
                     onClick={() => handleScrollToSection(contactRef)}
                   >
                     Contact
+                  </span>
+                </li>
+                <li className="nav-item">
+                  <span
+                    className={
+                      isDark
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                    }
+                    onClick={() => handleScrollToSection(formRef)}
+                  >
+                    Send Message
                   </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
@@ -273,9 +292,9 @@ function Landing() {
                 <Typewriter
                   options={{
                     strings: [
-                      'As a FullStack Software Engineer, I have expertise in both FrontEnd and BackEnd Development.',
-                      'I specialize in developing Web and Mobile Applications.',
-                      'I am also passionate about tech writing and contribute to the Pixa Blog located at https://pixabits.net/blog/',
+                      "As a FullStack Software Engineer, I have expertise in both FrontEnd and BackEnd Development.",
+                      "I specialize in developing Web and Mobile Applications.",
+                      "I am also passionate about tech writing and contribute to the Pixa Blog located at https://pixabits.net/blog/",
                     ],
                     autoStart: true,
                     loop: true,
@@ -294,7 +313,7 @@ function Landing() {
           className="w-100 h-100 d-flex justify-content-center align-items-center p-0"
           ref={aboutRef}
         >
-          <div ref={ref} className={isVisible ? 'ease-in-text' : ''}>
+          <div ref={ref} className={isVisible ? "ease-in-text" : ""}>
             <div className=" display-4 py-5 text-center">About</div>
             <div className=" text-center py-5 fs-4">
               <p>
@@ -337,7 +356,7 @@ function Landing() {
           <div className=" display-4 py-2 text-center w-100">Portfolio</div>
         </div>
         <div className="text-center fs-4  py-2">
-          Filter projects by technology or tag {'  '}({activeProjects.length})
+          Filter projects by technology or tag {"  "}({activeProjects.length})
         </div>
         <div>
           {isDark ? (
@@ -346,8 +365,8 @@ function Landing() {
                 <button
                   className={
                     activeFilter === tech.toLowerCase()
-                      ? 'btn btn-primary rounded-pill m-1 fw-bold'
-                      : 'btn btn-outline-light  rounded-pill m-1 fw-bold'
+                      ? "btn btn-primary rounded-pill m-1 fw-bold"
+                      : "btn btn-outline-light  rounded-pill m-1 fw-bold"
                   }
                   onClick={() => setActiveProjectFilter(tech.toLowerCase())}
                   key={tech}
@@ -362,8 +381,8 @@ function Landing() {
                 <button
                   className={
                     activeFilter === tech.toLowerCase()
-                      ? 'btn btn-primary rounded-pill m-1 fw-bold'
-                      : 'btn btn-outline-secondary rounded-pill m-1 fw-bold'
+                      ? "btn btn-primary rounded-pill m-1 fw-bold"
+                      : "btn btn-outline-secondary rounded-pill m-1 fw-bold"
                   }
                   onClick={() => setActiveProjectFilter(tech.toLowerCase())}
                   key={tech}
@@ -400,7 +419,7 @@ function Landing() {
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div
             ref={ref}
-            className={isVisible ? 'ease-in-image w-100' : 'w-100'}
+            className={isVisible ? "ease-in-image w-100" : "w-100"}
           >
             <div className=" display-4 py-3 text-center py-5 w-100">
               Technologies
@@ -413,8 +432,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -431,8 +450,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -449,8 +468,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -467,8 +486,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -485,8 +504,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -503,8 +522,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -521,8 +540,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -539,8 +558,8 @@ function Landing() {
                     <button
                       className={
                         isDark
-                          ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                          : 'btn btn-outline-secondary  rounded-pill m-1 fw-bold'
+                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
                       }
                       key={elem}
                     >
@@ -561,7 +580,7 @@ function Landing() {
         <div className="w-100 h-100 d-flex align-items-center p-0">
           <div
             ref={ref}
-            className={isVisible ? 'ease-in-image w-100' : 'w-100'}
+            className={isVisible ? "ease-in-image w-100" : "w-100"}
           >
             <div className="display-4 py-5 text-center">Skills & Resume</div>
             <div className=" py-3 fs-4">
@@ -631,16 +650,75 @@ function Landing() {
 
       <div
         className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
+        ref={formRef}
+      >
+        <div ref={ref} className={isVisible ? "ease-in-image w-100" : "w-100"}>
+          <div className=" display-4 py-5 text-center py-5">
+            Send me Message
+          </div>
+          <div className="text-center fs-4">
+            Send me a quick message to discuss your next project, I will be
+            getting back to you in a short while
+          </div>
+          <div className="py-5 w-100 d-flex">
+            <form onSubmit={handleSubmit} className="form-wrapper mx-auto">
+              <div className="py-3">
+                <label htmlFor="email" className="fs-4 w-100">
+                  Email Address:
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className="form-control"
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="py-3">
+                <label htmlFor="message" className="fs-4 w-100">
+                  Message body:
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="form-control"
+                  rows={13}
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="g-recaptcha" data-sitekey="6LdsABopAAAAAP9VYnYUWljArdmhFGX7GyQ_FrO9"></div>
+              <button
+                type="submit"
+                disabled={state.submitting}
+                className="btn btn-primary fs-4 my-5"
+              >
+                SEND MESSAGE
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
         ref={contactRef}
       >
-        <div ref={ref} className={isVisible ? 'ease-in-image w-100' : 'w-100'}>
+        <div ref={ref} className={isVisible ? "ease-in-image w-100" : "w-100"}>
           <div className=" display-4 py-5 text-center py-5">Contact</div>
           <div className="" id="contact">
             <div className="card bg-transparent">
               <ul className="list-group list-group-flush bg-transparent fs-4">
                 <li className="list-group-item bg-transparent  row">
                   <span className="col-4 col-sm-6">
-                    Email <i className="bi-envelope-fill px-2 text-warning"></i>{' '}
+                    Email <i className="bi-envelope-fill px-2 text-warning"></i>{" "}
                     :
                   </span>
                   <Link
@@ -654,7 +732,7 @@ function Landing() {
                 </li>
                 <li className="list-group-item bg-transparent  row">
                   <span className="col-sm-4">
-                    Stackoverflow{' '}
+                    Stackoverflow{" "}
                     <i className="bi-stack-overflow px-2 text-danger"></i> :
                   </span>
                   <Link
@@ -716,9 +794,9 @@ function Landing() {
           onClick={() => handleScrollToSection(homeRef)}
           className="btn btn-primary rounded text-white shadow-sm m-0"
           style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
             zIndex: 1050,
           }}
         >
