@@ -99,7 +99,7 @@ function Landing() {
 
   const [state, handleSubmit] = useForm("mjvqqbak");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return alert("Your message has been successfully sent. I will be contacting you shortly")
   }
 
   const setActiveProjectFilter = async (filter) => {
