@@ -684,7 +684,7 @@ function Landing() {
           <div className="py-5 w-100 d-flex">
             <form
               onSubmit={handleSubmit}
-              className="form-wrapper mx-auto"
+              className="col-12 col-lg-6 col-xl-6  mx-auto"
               method="POST"
             >
               <div className="py-3">
