@@ -707,14 +707,14 @@ function Landing() {
         id="formId"
       >
         <div ref={ref} className={isVisible ? "ease-in-image w-100" : "w-100"}>
-          <div className=" display-4 py-5 text-center py-5">
+          <div className=" display-4 text-center py-1">
             Send me a Quick Message
           </div>
           <div className="text-center fs-4">
             Send me a quick message to discuss your next project, I will be
             getting back to you in a short while
           </div>
-          <div className="py-5 w-100 d-flex">
+          <div className="pt-2 w-100 d-flex">
             <form
               onSubmit={handleSubmit}
               className="col-12 col-lg-6 col-xl-6  mx-auto"
