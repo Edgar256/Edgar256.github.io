@@ -119,7 +119,7 @@ function Landing() {
             onClick={handleReload}
             className="btn btn-primary mx-auto rounded-pill fs-4"
           >
-            Reload Page
+            Back to Home Page
           </button>
         </div>
       </div>
