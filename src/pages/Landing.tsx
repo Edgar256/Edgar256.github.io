@@ -159,7 +159,7 @@ function Landing() {
         >
           <nav className="navbar navbar-expand-lg navbar-white bg-transparent ">
             <button
-              className="navbar-toggler  bg-white"
+              className="navbar-toggler bg-white"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNavDropdown"
@@ -182,6 +182,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(homeRef)}
                   >
                     Home
@@ -195,6 +199,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(aboutRef)}
                   >
                     About
@@ -208,6 +216,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(portfolioRef)}
                   >
                     Portfolio
@@ -221,6 +233,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(techRef)}
                   >
                     Technologies
@@ -234,6 +250,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(skillsRef)}
                   >
                     Skills & CV
@@ -247,6 +267,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(contactRef)}
                   >
                     Contact
@@ -259,6 +283,10 @@ function Landing() {
                         ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
                         : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
                     }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
                     onClick={() => handleScrollToSection(formRef)}
                   >
                     Send Message
