@@ -109,7 +109,7 @@ function Landing() {
     return (
       <div>
         <div className="w-100 d-flex p-3 py-5">
-          <p className="alert alert-success text-center mx-auto">
+          <p className="alert alert-success text-center mx-auto fs-4">
             "Your message has been successfully sent. I will be contacting you
             shortly"
           </p>
@@ -117,7 +117,7 @@ function Landing() {
         <div className="w-100 p-3 d-flex my-5">
           <button
             onClick={handleReload}
-            className="btn btn-primary mx-auto rounded-pill"
+            className="btn btn-primary mx-auto rounded-pill fs-4"
           >
             Reload Page
           </button>
@@ -728,7 +728,7 @@ function Landing() {
                   id="email"
                   type="email"
                   name="email"
-                  className="form-control"
+                  className="form-control fs-4"
                 />
                 <ValidationError
                   prefix="Email"
@@ -744,7 +744,7 @@ function Landing() {
                   id="title"
                   type="text"
                   name="title"
-                  className="form-control"
+                  className="form-control fs-4"
                 />
                 <ValidationError
                   prefix="Title"
@@ -759,7 +759,7 @@ function Landing() {
                 <textarea
                   id="message"
                   name="message"
-                  className="form-control"
+                  className="form-control fs-4"
                   rows={8}
                 />
                 <ValidationError
