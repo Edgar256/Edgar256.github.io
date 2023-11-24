@@ -278,18 +278,19 @@ function Landing() {
                 </li>
                 <li className="nav-item">
                   <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
+                    // className={
+                    //   isDark
+                    //     ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                    //     : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                    // }
+                    className="btn btn-success fw-bold cursor-link fs-4 mx-2 rounded-pill"
                     data-toggle="collapse"
                     data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown"
                     aria-expanded="false"
                     onClick={() => handleScrollToSection(formRef)}
                   >
-                    Send Message
+                    Send Me A Quick Message
                   </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
@@ -707,7 +708,7 @@ function Landing() {
       >
         <div ref={ref} className={isVisible ? "ease-in-image w-100" : "w-100"}>
           <div className=" display-4 py-5 text-center py-5">
-            Send me Message
+            Send me a Quick Message
           </div>
           <div className="text-center fs-4">
             Send me a quick message to discuss your next project, I will be
@@ -719,7 +720,7 @@ function Landing() {
               className="col-12 col-lg-6 col-xl-6  mx-auto"
               method="POST"
             >
-              <div className="py-3">
+              <div className="py-1">
                 <label htmlFor="email" className="fs-4 w-100">
                   Email Address:
                 </label>
@@ -735,7 +736,23 @@ function Landing() {
                   errors={state.errors}
                 />
               </div>
-              <div className="py-3">
+              <div className="py-1">
+                <label htmlFor="title" className="fs-4 w-100">
+                  Title
+                </label>
+                <input
+                  id="title"
+                  type="text"
+                  name="title"
+                  className="form-control"
+                />
+                <ValidationError
+                  prefix="Title"
+                  field="title"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="py-1">
                 <label htmlFor="message" className="fs-4 w-100">
                   Message body:
                 </label>
@@ -743,7 +760,7 @@ function Landing() {
                   id="message"
                   name="message"
                   className="form-control"
-                  rows={13}
+                  rows={8}
                 />
                 <ValidationError
                   prefix="Message"
@@ -758,7 +775,7 @@ function Landing() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="btn btn-primary fs-4 px-5 my-5 rounded-pill"
+                  className="btn btn-primary fs-4 px-5 my-2 rounded-pill"
                 >
                   SEND MESSAGE
                 </button>
