@@ -711,8 +711,8 @@ function Landing() {
             Send me a Quick Message
           </div>
           <div className="text-center fs-4">
-            Send me a quick message to discuss your next project, I will be
-            getting back to you in a short while
+            Awaiting your message for prompt discussion on your important
+            project. Thank you for your inquiry
           </div>
           <div className="pt-2 w-100 d-flex">
             <form
