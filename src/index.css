@@ -99,5 +99,14 @@ html {
   .navbar {
     width: 100%;
   }
+  .block-content{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {  
+  .block-content{
+    text-align: center;
+  }
 }
 

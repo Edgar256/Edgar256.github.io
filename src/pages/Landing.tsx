@@ -115,7 +115,10 @@ function Landing() {
           </p>
         </div>
         <div className="w-100 p-3 d-flex my-5">
-          <button onClick={handleReload} className="btn btn-primary mx-auto">
+          <button
+            onClick={handleReload}
+            className="btn btn-primary mx-auto rounded-pill"
+          >
             Reload Page
           </button>
         </div>
@@ -296,17 +299,17 @@ function Landing() {
       >
         <div className="w-100 h-100  p-0 py-0">
           <div className="d-lg-flex w-100 d-sm-block">
-            <div className="d-sm-flex justify-content-sm-center">
+            <div className="d-sm-flex d-flex justify-content-sm-center justify-content-center">
               <img
                 src="./images/edgar-photo.jpg"
                 alt="Edgar profile"
-                className="rounded-circle mx-auto py-1 px-2 "
+                className="rounded-circle mx-auto py-2 px-2 "
                 width={150}
                 height={150}
               />
             </div>
-            <div className="w-100 px-2 py-2 ">
-              <div className="display-2 d-sm-flex justify-content-lg-start justify-content-sm-center text-xl-start text-lg-start text-md-start text-left text-sm-center">
+            <div className="w-100 px-2 py-2 block-content">
+              <div className="display-2 d-sm-flex justify-content-lg-start justify-content-sm-center text-xl-start text-lg-start text-md-center text-left text-sm-center">
                 Hi, I'm Edgar Tinkamanyire,
               </div>
               <div className="fs-4">
@@ -445,9 +448,9 @@ function Landing() {
             <div className=" display-4 py-3 text-center py-5 w-100">
               Technologies
             </div>
-            <div className=" py-3">
+            <div className=" py-3 text-center">
               <h4>PROTOTYPING AND WIREFRAMING</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {prototyping &&
                   prototyping.map((elem) => (
                     <button
@@ -463,9 +466,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>FRONTEND</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {frontend &&
                   frontend.map((elem) => (
                     <button
@@ -481,9 +484,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>BACKEND</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {backend &&
                   backend.map((elem) => (
                     <button
@@ -499,9 +502,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>MOBILE APPS</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {mobileapps &&
                   mobileapps.map((elem) => (
                     <button
@@ -517,9 +520,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>CMS</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {cms &&
                   cms.map((elem) => (
                     <button
@@ -535,9 +538,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>DATABASES</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {databases &&
                   databases.map((elem) => (
                     <button
@@ -553,9 +556,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>VERSION CONTROL</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {versioning &&
                   versioning.map((elem) => (
                     <button
@@ -571,9 +574,9 @@ function Landing() {
                   ))}
               </div>
             </div>
-            <div className=" py-3">
+            <div className="py-3 text-center">
               <h4>DEV-OPS</h4>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                 {devops &&
                   devops.map((elem) => (
                     <button
@@ -604,7 +607,7 @@ function Landing() {
             className={isVisible ? "ease-in-image w-100" : "w-100"}
           >
             <div className="display-4 py-5 text-center">Skills & Resume</div>
-            <div className=" py-3 fs-4">
+            <div className=" py-3 fs-4 text-center">
               <a
                 href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
                 target="_blank"
@@ -613,7 +616,7 @@ function Landing() {
                 Download my full PDF resume here
               </a>
             </div>
-            <div className="d-flex  w-100 p-4">
+            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
               <p className="bi-list-nested display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Agile Development</h2>
@@ -622,7 +625,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex  w-100 p-4">
+            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
               <p className="bi-person-bounding-box display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Leadership Skills & Team work</h2>
@@ -633,7 +636,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex  w-100 p-3">
+            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
               <p className="bi-people-fill display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Collaboration Skills</h2>
@@ -645,7 +648,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex  w-100 p-3">
+            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
               <p className="bi-x-diamond-fill display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Pixel Perfect</h2>
@@ -655,7 +658,7 @@ function Landing() {
                 </p>
               </div>
             </div>
-            <div className="d-flex  w-100 p-3">
+            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
               <p className="bi-columns-gap display-1 px-2"></p>
               <div className="py-1 px-3">
                 <h2>Responsive Design</h2>
@@ -671,7 +674,8 @@ function Landing() {
 
       <div
         className="container position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
-        ref={formRef} id="formId"
+        ref={formRef}
+        id="formId"
       >
         <div ref={ref} className={isVisible ? "ease-in-image w-100" : "w-100"}>
           <div className=" display-4 py-5 text-center py-5">
@@ -726,7 +730,7 @@ function Landing() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="btn btn-primary fs-4 my-5"
+                  className="btn btn-primary fs-4 px-5 my-5 rounded-pill"
                 >
                   SEND MESSAGE
                 </button>

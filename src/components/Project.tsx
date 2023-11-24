@@ -1,8 +1,8 @@
-import { useRef, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // import ThemeContext
-import { useThemeContext } from '../contexts/ContextProvider';
+import { useThemeContext } from "../contexts/ContextProvider";
 
 export default function Project(props) {
   const ref = useRef(null);
@@ -18,97 +18,99 @@ export default function Project(props) {
   }, []);
 
   return (
-    <div className="w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block">
-      <div
-        ref={ref}
-        className={
-          isVisible
-            ? 'ease-in-text col-lg-6 col-sm-12 py-1'
-            : 'col-lg-6 col-sm-12  py-1'
-        }
-      >
-        <h2>{props.title}</h2>
-        <h4>ROLE: {props.role}</h4>
-        <div className="fs-4">{props.description}</div>
-        <div>
-          <h6 className="fs-4 pt-3">Tech Stack/Tags</h6>
-          <div className="d-flex flex-wrap">
-            {props.tech &&
-              props.tech.map((elem) => (
-                <button
-                  className={
-                    isDark
-                      ? 'btn btn-outline-light rounded-pill m-1 fw-bold'
-                      : 'btn btn-outline-secondary rounded-pill m-1 fw-bold'
-                  }
-                  key={elem}
-                >
-                  {elem}
-                </button>
-              ))}
-          </div>
-        </div>
-        <div className="d-flex flex-wrap py-5">
-          <Link
-            className={
-              isDark
-                ? 'btn btn-outline-success rounded-pill m-1 px-3 py-3 fw-bold'
-                : 'btn btn-success rounded-pill m-1 px-3 py-3 fw-bold'
-            }
-            to={`/project/${props.id}`}
-          >
-            VIEW DETAILS
-          </Link>
-          {props.websiteURL ? (
-            <a
-              href={props.websiteURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={
-                isDark
-                  ? 'btn btn-outline-primary rounded-pill m-1 px-3 py-3 fw-bold'
-                  : 'btn btn-primary rounded-pill m-1 px-3 py-3 fw-bold'
-              }
-            >
-              VISIT WEBSITE
-            </a>
-          ) : (
-            <div />
-          )}
-          {props.codeURL ? (
-            <a
-              href={props.codeURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={
-                isDark
-                  ? 'btn btn-outline-warning rounded-pill m-1 px-3 py-3 fw-bold'
-                  : 'btn btn-warning rounded-pill m-1 px-3 py-3 fw-bold'
-              }
-            >
-              VIEW GITHUB REPO
-            </a>
-          ) : (
-            <div />
-          )}
-        </div>
-      </div>
-      <div
-        className={
-          isVisible
-            ? 'ease-in-image col-lg-6 col-sm-12 py-1'
-            : 'col-lg-6 col-sm-12 py-1'
-        }
-      >
-        <img
-          src={props.photo}
-          alt={props.title}
+    <div className="py-4">
+      <div className="w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block block-content">
+        <div
+          ref={ref}
           className={
             isVisible
-              ? 'ease-in-image w-100 p-2 rounded-custom '
-              : 'w-100 p-2 rounded-custom '
+              ? "ease-in-text col-lg-6 col-sm-12 py-1"
+              : "col-lg-6 col-sm-12  py-1"
           }
-        />
+        >
+          <h2>{props.title}</h2>
+          <h4>ROLE: {props.role}</h4>
+          <div className="fs-4">{props.description}</div>
+          <div>
+            <h6 className="fs-4 pt-3 text-center">Tech Stack/Tags</h6>
+            <div className="d-flex flex-wrap justify-content-center">
+              {props.tech &&
+                props.tech.map((elem) => (
+                  <button
+                    className={
+                      isDark
+                        ? "btn btn-outline-light rounded-pill m-1 fw-bold"
+                        : "btn btn-outline-secondary rounded-pill m-1 fw-bold"
+                    }
+                    key={elem}
+                  >
+                    {elem}
+                  </button>
+                ))}
+            </div>
+          </div>
+          <div className="d-flex flex-wrap justify-content-center py-5">
+            <Link
+              className={
+                isDark
+                  ? "btn btn-outline-success rounded-pill m-1 px-3 py-2 fw-bold"
+                  : "btn btn-success rounded-pill m-1 px-3 py-2 fw-bold"
+              }
+              to={`/project/${props.id}`}
+            >
+              VIEW DETAILS
+            </Link>
+            {props.websiteURL ? (
+              <a
+                href={props.websiteURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  isDark
+                    ? "btn btn-outline-primary rounded-pill m-1 px-3 py-2 fw-bold"
+                    : "btn btn-primary rounded-pill m-1 px-3 py-2 fw-bold"
+                }
+              >
+                VISIT WEBSITE
+              </a>
+            ) : (
+              <div />
+            )}
+            {props.codeURL ? (
+              <a
+                href={props.codeURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  isDark
+                    ? "btn btn-outline-warning rounded-pill m-1 px-3 py-2 fw-bold"
+                    : "btn btn-warning rounded-pill m-1 px-3 py-2 fw-bold"
+                }
+              >
+                VIEW GITHUB REPO
+              </a>
+            ) : (
+              <div />
+            )}
+          </div>
+        </div>
+        <div
+          className={
+            isVisible
+              ? "ease-in-image col-lg-6 col-sm-12 py-1"
+              : "col-lg-6 col-sm-12 py-1"
+          }
+        >
+          <img
+            src={props.photo}
+            alt={props.title}
+            className={
+              isVisible
+                ? "ease-in-image w-100 p-2 rounded-custom "
+                : "w-100 p-2 rounded-custom "
+            }
+          />
+        </div>
       </div>
     </div>
   );
