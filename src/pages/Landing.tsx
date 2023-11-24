@@ -117,7 +117,7 @@ function Landing() {
         <div className="w-100 p-3 d-flex my-5">
           <button
             onClick={handleReload}
-            className="btn btn-primary mx-auto rounded-pill fs-4"
+            className="btn btn-success mx-auto rounded-pill fs-4"
           >
             Back to Home Page
           </button>
@@ -775,7 +775,7 @@ function Landing() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="btn btn-primary fs-4 px-5 my-2 rounded-pill"
+                  className="btn btn-success fs-4 px-5 my-2 rounded-pill"
                 >
                   SEND MESSAGE
                 </button>
