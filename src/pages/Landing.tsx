@@ -290,7 +290,7 @@ function Landing() {
                     aria-expanded="false"
                     onClick={() => handleScrollToSection(formRef)}
                   >
-                    Send Me A Quick Message
+                    Get A Quote
                   </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
