@@ -1,12 +1,11 @@
-import { useCallback } from 'react';
-import type { Container, Engine } from 'tsparticles-engine';
-import Particles from 'react-particles';
-import { loadFull } from 'tsparticles';
+import { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
-
+    
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -14,9 +13,7 @@ export default function ParticlesBackground() {
   }, []);
 
   const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      await console.log(container);
-    },
+    async (container: Container | undefined) => {},
     []
   );
   return (
@@ -27,7 +24,7 @@ export default function ParticlesBackground() {
       options={{
         background: {
           color: {
-            value: '#000000',
+            value: "#000000",
           },
         },
         fpsLimit: 120,
@@ -35,11 +32,11 @@ export default function ParticlesBackground() {
           events: {
             onClick: {
               enable: true,
-              mode: 'push',
+              mode: "push",
             },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: "repulse",
             },
             resize: true,
           },
@@ -55,10 +52,10 @@ export default function ParticlesBackground() {
         },
         particles: {
           color: {
-            value: '#555',
+            value: "#555",
           },
           links: {
-            color: '#555',
+            color: "#555",
             distance: 150,
             enable: true,
             opacity: 0.3,
@@ -68,10 +65,10 @@ export default function ParticlesBackground() {
             enable: true,
           },
           move: {
-            direction: 'none',
+            direction: "none",
             enable: true,
             outModes: {
-              default: 'bounce',
+              default: "bounce",
             },
             random: false,
             speed: 2,
@@ -88,7 +85,7 @@ export default function ParticlesBackground() {
             value: 0.7,
           },
           shape: {
-            type: 'circle',
+            type: "circle",
           },
           size: {
             value: { min: 1, max: 5 },

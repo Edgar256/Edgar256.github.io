@@ -74,11 +74,9 @@ function Landing() {
     if (scrollTop === 0) {
       // Window is still at the top of the page height
       setIsAtTop(true);
-      console.log("am at top");
     } else {
       // Window is not at the top of the page height
       setIsAtTop(false);
-      console.log("am not at top");
     }
   };
 
@@ -90,7 +88,7 @@ function Landing() {
     window.addEventListener("mousemove", onMouseMove);
     setActiveProjects(data);
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);    
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -138,9 +136,7 @@ function Landing() {
         )
       );
       return setActiveProjects(selectedProjects);
-    } catch (error) {
-      console.log({ error });
-    }
+    } catch (error) {}
   };
 
   return (
@@ -346,7 +342,7 @@ function Landing() {
                   options={{
                     strings: [
                       "As a FullStack Software Engineer, I have expertise in both FrontEnd and BackEnd Development.",
-                      "I specialize in developing Web and Mobile Applications.",
+                      "I specialize in developing both Web and Mobile Applications.",
                       "I am also passionate about tech writing and contribute to the Pixa Blog located at https://pixabits.net/blog/",
                     ],
                     autoStart: true,
@@ -836,14 +832,14 @@ function Landing() {
                       Linkedin<i className="bi-linkedin px-2 text-info"></i>:
                     </span>{" "}
                     <span>
-                    <Link
-                      className="col-sm-8 text-break text-decoration-none text-muted"
-                      to="https://www.linkedin.com/in/tinkamanyire-edgar/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      https://www.linkedin.com/in/tinkamanyire-edgar/
-                    </Link>
+                      <Link
+                        className="col-sm-8 text-break text-decoration-none text-muted"
+                        to="https://www.linkedin.com/in/tinkamanyire-edgar/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        https://www.linkedin.com/in/tinkamanyire-edgar/
+                      </Link>
                     </span>
                   </li>
                   <li className="list-group-item bg-transparent text-lg-start text-center py-3">
@@ -851,14 +847,14 @@ function Landing() {
                       Github<i className="bi-github px-2"></i>:
                     </span>{" "}
                     <span>
-                    <Link
-                      className="col-sm-8 text-break  text-decoration-none text-muted"
-                      to="https://github.com/Edgar256"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      https://github.com/Edgar256
-                    </Link>
+                      <Link
+                        className="col-sm-8 text-break  text-decoration-none text-muted"
+                        to="https://github.com/Edgar256"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        https://github.com/Edgar256
+                      </Link>
                     </span>
                   </li>
                   <li className="list-group-item bg-transparent text-lg-start text-center py-3">
@@ -866,14 +862,14 @@ function Landing() {
                       Codewars<i className="bi-code-slash px-2"></i>:
                     </span>{" "}
                     <span>
-                    <Link
-                      className="col-sm-8 text-break  text-decoration-none text-muted"
-                      to="https://www.codewars.com/users/Edgar256"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      https://www.codewars.com/users/Edgar256
-                    </Link>
+                      <Link
+                        className="col-sm-8 text-break  text-decoration-none text-muted"
+                        to="https://www.codewars.com/users/Edgar256"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        https://www.codewars.com/users/Edgar256
+                      </Link>
                     </span>
                   </li>
                 </ul>
