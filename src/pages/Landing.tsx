@@ -329,8 +329,8 @@ function Landing() {
                 src="./images/edgar-photo.jpg"
                 alt="Edgar profile"
                 className="rounded-circle mx-auto py-2 px-2 "
-                width={150}
-                height={150}
+                width={200}
+                height={200}
               />
             </div>
             <div className="w-100 px-2 py-2 block-content">
