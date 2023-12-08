@@ -37,7 +37,7 @@ export default function Project(props) {
           }
         >
           <h2>{props.title}</h2>
-          <h4>ROLE: {props.role}</h4>
+          <div className="fs-4 fw-bold">ROLE: {props.role}</div>
           <div className="fs-4">{props.description}</div>
           <div>
             <p className="fs-4 pt-3 text-center fw-bold">Tech Stack/Tags</p>

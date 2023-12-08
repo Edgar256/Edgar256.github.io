@@ -313,6 +313,10 @@ function Landing() {
                         <small>Light Mode</small>
                       </span>
                     )}
+                    {/* Invisible Label */}
+                    <span className="visually-hidden">
+                      Dark/Light Mode Switch
+                    </span>
                   </span>
                 }
               />
@@ -328,7 +332,7 @@ function Landing() {
           <div className="d-lg-flex w-100 d-sm-block">
             <div className="d-sm-flex d-flex justify-content-sm-center justify-content-center">
               <img
-                src="./images/edgar-photo.jpg"
+                src="./images/edgar-photo.webp"
                 alt="Edgar profile"
                 className="rounded-circle mx-auto py-2 px-2 "
                 width={200}
@@ -445,7 +449,7 @@ function Landing() {
           )}
         </div>
 
-        {activeProjects.map((project,index) => {
+        {activeProjects.map((project, index) => {
           return (
             <Project
               key={index}
@@ -792,9 +796,7 @@ function Landing() {
           className="position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
           ref={contactRef}
         >
-          <div
-            className={isVisible ? "ease-in-image w-100" : "w-100"}
-          >
+          <div className={isVisible ? "ease-in-image w-100" : "w-100"}>
             <div className=" display-4 py-5 text-center py-5">Contact</div>
             <div className="" id="contact">
               <div className="card bg-transparent">

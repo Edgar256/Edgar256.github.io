@@ -16,7 +16,7 @@ const projects = [
       'AJAX',
       'RESTFUL APIS',
     ],
-    profilePhoto: 'images/faveapp-all-image.png',
+    profilePhoto: 'images/faveapp-all-image.webp',
     photos: [
       'fave001.PNG',
       'fave002.PNG',
@@ -51,7 +51,7 @@ const projects = [
     descriptionFull:
       'As a Frontend Developer at Getpoints, I was an integral part of the team responsible for building a sophisticated and user-friendly Loyalty Rewards program that was designed to help businesses maintain and grow their client-base. At its core, the Getpoints Loyalty program offered businesses a way to incentivize customer loyalty by giving them points that could be redeemed for rewards or discounts. As a result, businesses were able to build stronger relationships with their customers, which ultimately translated into increased revenue and long-term growth. One of the key challenges we faced in developing the Getpoints Loyalty program was creating a system that was flexible enough to meet the needs of businesses across different industries and regions. To accomplish this, we designed a platform that could be customized to suit the specific needs of each business. This required a significant amount of collaboration between our frontend and backend development teams, as well as frequent communication with our clients to ensure that their needs were being met. Despite these challenges, the Getpoints Loyalty program was a resounding success, particularly in its first year of operation. We were thrilled to see businesses across Africa experience growth of up to three-fold as a direct result of the program. This success was a testament to the hard work and dedication of our entire team, as well as the value that our Loyalty program provided to businesses in the region. As a Frontend Developer on this project, my specific responsibilities included designing and developing the user interface of the Getpoints Loyalty program. This involved working closely with our designers and product managers to ensure that the program was both visually appealing and easy to use. I was also responsible for conducting thorough testing to ensure that the program was bug-free and fully functional. Another critical aspect of my role was providing technical support to our clients as they implemented the program',
     tech: ['HTML5', 'CSS3', 'JQUERY', 'PHP', 'MYSQL', 'AJAX', 'CORDOVA'],
-    profilePhoto: 'images/gp-all-image.png',
+    profilePhoto: 'images/gp-all-image.webp',
     photos: [
       'getpoints001.PNG',
       'getpoints002.PNG',
@@ -96,7 +96,7 @@ const projects = [
       'PLUGINS',
       'CHILD THEMES',
     ],
-    profilePhoto: 'images/pixabits.jpg',
+    profilePhoto: 'images/pixabits.webp',
     photos: [
       'pixabits001.jpg',
       'pixabits002.jpg',
@@ -128,7 +128,7 @@ const projects = [
     descriptionFull:
       'I am the owner of the JS ALGORITHMS project where common Javascript Algorithms found online are compiled. As the owner, I have developed and implemented various algorithms using the Javascript programming language. Javascript Algorithms refer to a collection of techniques or procedures used to solve problems or perform specific tasks using the Javascript programming language. These algorithms can be applied in a variety of areas such as web development, data analysis, machine learning, and more. The JS ALGORITHMS project includes various algorithms such as sorting, searching, graph traversal, dynamic programming, and more. My goal in creating this project was to provide a comprehensive library of common algorithms that developers can use in their projects to improve efficiency and performance. As the owner of this project, I have been responsible for developing, testing, and optimizing the algorithms to ensure their compatibility with different browsers and platforms. I am proud of the resources this project has provided to the developer community, helping to improve knowledge and skills in Javascript programming and algorithm development.',
     tech: ['JAVASCRIPT', 'CSS3', 'HEROKU', 'HTML', 'GIT', 'ALGORITHMS'],
-    profilePhoto: 'images/algo-all-image.png',
+    profilePhoto: 'images/algo-all-image.webp',
     photos: ['jsAlgo001.PNG', 'jsAlgo002.PNG'],
     websiteURL: 'https://edgar256.github.io/js-algorithms/',
     codeURL: 'https://github.com/Edgar256/js-algorithms',
@@ -149,7 +149,7 @@ const projects = [
     descriptionFull:
       'Vine Pharmaceuticals Online Store was an exciting project that required my expertise as a WordPress Developer. Although the project was initially built on Shopify, I was tasked with migrating the website to a WordPress platform to enhance its functionality and improve the user experience. As a WordPress Developer, I customized various aspects of the website to suit the needs of Vine Pharmaceuticals Online Store. This included the implementation of payment gateways, social media integration, inventory management, and more. Throughout the project, I collaborated closely with the client to ensure that the website met their specifications and preferences. I also ensured that the website was optimized for search engines and provided a responsive design that was accessible across different devices. Overall, the Vine Pharmaceuticals Online Store was an exciting opportunity for me to showcase my skills as a WordPress Developer. I am proud to have been a part of this project and to have contributed to the success of the online store.',
     tech: ['WORDPRESS', 'ECOMMERCE', 'PAYMENTS', 'HTML5', 'CSS3', 'APIs'],
-    profilePhoto: 'images/vine-profile-photo.jpg',
+    profilePhoto: 'images/vine-profile-photo.webp',
     photos: [
       'vine001.PNG',
       'vine002.PNG',
@@ -190,7 +190,7 @@ const projects = [
       'APOLLO-CLIENT',
       'SOCKETIO',
     ],
-    profilePhoto: 'images/flirtset-profile.JPG',
+    profilePhoto: 'images/flirtset-profile.webp',
     photos: [
       'flirtset-001.JPG',
       'flirtset-002.JPG',
@@ -237,7 +237,7 @@ const projects = [
       'Algorithms',
       'GH-Pages',
     ],
-    profilePhoto: 'images/product-carousel.jpg',
+    profilePhoto: 'images/product-carousel.webp',
     photos: [
       'product-carousel001.jpg',
       'product-carousel002.jpg',
@@ -273,7 +273,7 @@ const projects = [
       'Algorithms',
       'GH-Pages',
     ],
-    profilePhoto: 'images/shopping-cart.jpg',
+    profilePhoto: 'images/shopping-cart.webp',
     photos: [
       'shopping-cart001.jpg',
       'shopping-cart002.jpg',
@@ -308,7 +308,7 @@ const projects = [
     descriptionFull:
       'As a Full Stack Developer on the Real Estate Management System project, I was responsible for designing and implementing the user interface using HTML, CSS, JavaScript, AJAX, and jQuery. Additionally, I was tasked with building the backend of the system using PHP and MySQL to store and retrieve data. I worked closely with the team to understand the project requirements and design an effective solution that would make property management more accessible, faster, and more efficient. I also ensured that the project met the necessary prerequisites, such as having a web server that supports PHP, a version of PHP installed on the server or local machine, a MySQL server installed, and a database management tool. In addition to building the system, I also provided support and maintenance to ensure that the system was functioning correctly and efficiently. Throughout the project, I collaborated with other team members to ensure that the project was delivered on time and to the client`s satisfaction.',
     tech: ['HTML', 'CSS3', 'PHP', 'AJAX', 'MYSQL', 'JQUERY'],
-    profilePhoto: 'images/realtor-profile.jpg',
+    profilePhoto: 'images/realtor-profile.webp',
     photos: [
       'realtors-001.jpg',
       'realtors-002.jpg',
@@ -362,7 +362,7 @@ const projects = [
     descriptionFull:
       'As a Full Stack Developer on the Online Booking Adversting System project, I was responsible for designing and implementing the user interface using HTML, CSS, JavaScript, AJAX, and jQuery. Additionally, I was tasked with building the backend of the system using PHP and MySQL to store and retrieve data. I worked closely with the team to understand the project requirements and design an effective solution that would make property management more accessible, faster, and more efficient. I also ensured that the project met the necessary prerequisites, such as having a web server that supports PHP, a version of PHP installed on the server or local machine, a MySQL server installed, and a database management tool. In addition to building the system, I also provided support and maintenance to ensure that the system was functioning correctly and efficiently. Throughout the project, I collaborated with other team members to ensure that the project was delivered on time and to the client`s satisfaction.',
     tech: ['HTML', 'CSS3', 'PHP', 'AJAX', 'MYSQL', 'JQUERY'],
-    profilePhoto: 'images/advert-profile.JPG',
+    profilePhoto: 'images/advert-profile.webp',
     photos: [
       'adverts-001.JPG',
       'adverts-002.JPG',
@@ -420,7 +420,7 @@ const projects = [
       'PLUGINS',
       'CHILD THEMES',
     ],
-    profilePhoto: 'images/bidipa.jpg',
+    profilePhoto: 'images/bidipa.webp',
     photos: [
       'bidipa001.jpg',
       'bidipa002.jpg',
@@ -458,7 +458,7 @@ const projects = [
       'PLUGINS',
       'CHILD THEMES',
     ],
-    profilePhoto: 'images/eob.jpg',
+    profilePhoto: 'images/eob.webp',
     photos: [
       'eob001.jpg',
       'eob002.jpg',
@@ -494,7 +494,7 @@ const projects = [
       'PLUGINS',
       'CHILD THEMES',
     ],
-    profilePhoto: 'images/rfg.jpg',
+    profilePhoto: 'images/rfg.webp',
     photos: [
       'rfg001.jpg',
       'rfg002.jpg',
@@ -532,7 +532,7 @@ const projects = [
       'PLUGINS',
       'CHILD THEMES',
     ],
-    profilePhoto: 'images/ofnet.jpg',
+    profilePhoto: 'images/ofnet.webp',
     photos: [
       'ofnet001.jpg',
       'ofnet002.jpg',
@@ -559,7 +559,7 @@ const projects = [
     descriptionFull:
       "Anais is a Medical Start-up in Uganda with a goal of extending services to patients who need Palliative Care, Bedside Nursing Care, Live-In Companionship, Hospital Attendant Services, Emergency Care and Management, Personal Care and Hospice services. The web-app was built as a marketing tool and I intergrated with Anais' Social Media Feed. The Web-App was built with wordpress.",
     tech: ['WORPRESS', 'CSS3', 'PHP', 'SEO'],
-    profilePhoto: 'images/anais.png',
+    profilePhoto: 'images/anais.webp',
     photos: ['anais001.PNG', 'anais002.PNG', 'anais003.PNG', 'anais004.PNG'],
     websiteURL: 'https://anais.mywebcommunity.org',
     role: 'WORDPRESS DEVELOPER',
@@ -591,7 +591,7 @@ const projects = [
       'PHOTOSHOP',
       'HEROKU',
     ],
-    profilePhoto: 'images/ekaawa.jpg',
+    profilePhoto: 'images/ekaawa.webp',
     photos: [
       'ekaawa001.jpg',
       'ekaawa002.jpg',
