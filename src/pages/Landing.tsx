@@ -445,16 +445,16 @@ function Landing() {
           )}
         </div>
 
-        {activeProjects.map((project) => {
+        {activeProjects.map((project,index) => {
           return (
             <Project
-              key={project.id}
+              key={index}
               title={project.name}
               role={project.role}
               description={project.description}
               tech={project.tech}
               photo={project.profilePhoto}
-              id={project.id}
+              id={index}
               websiteURL={project.websiteURL}
               codeURL={project.codeURL}
             />
