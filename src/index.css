@@ -72,6 +72,13 @@ html {
 .Typewriter{
   font-family: 'Courier New', Courier, monospace;
 }
+.custom-image {
+  /* width: your-width-in-pixels;
+  height: your-height-in-pixels; */
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the image's aspect ratio */
+}
+
 
 /* Animations */
 @keyframes ease-in-image {

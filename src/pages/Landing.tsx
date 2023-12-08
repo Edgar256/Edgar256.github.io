@@ -299,6 +299,7 @@ function Landing() {
                 type="switch"
                 checked={isChecked}
                 onChange={handleToggle}
+                id="viewMode"
                 label={
                   <span className="Form-switch-label">
                     {isChecked ? (
@@ -314,12 +315,15 @@ function Landing() {
                       </span>
                     )}
                     {/* Invisible Label */}
-                    <span className="visually-hidden">
+                    {/* <span className="visually-hidden">
                       Dark/Light Mode Switch
-                    </span>
+                    </span> */}
                   </span>
                 }
               />
+              <label htmlFor="viewMode" className="visually-hidden">
+                Dark/Light Mode Switch
+              </label>
             </Form>
           </nav>
         </div>
@@ -481,7 +485,7 @@ function Landing() {
               Technologies
             </div>
             <div className=" py-3 text-center">
-              <h4>PROTOTYPING AND WIREFRAMING</h4>
+              <div className="fs-4">PROTOTYPING AND WIREFRAMING</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {prototyping &&
                   prototyping.map((elem) => (
@@ -499,7 +503,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>FRONTEND</h4>
+              <div className="fs-4">FRONTEND</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {frontend &&
                   frontend.map((elem) => (
@@ -517,7 +521,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>BACKEND</h4>
+              <div className="fs-4">BACKEND</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {backend &&
                   backend.map((elem) => (
@@ -535,7 +539,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>MOBILE APPS</h4>
+              <div className="fs-4">MOBILE APPS</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {mobileapps &&
                   mobileapps.map((elem) => (
@@ -553,7 +557,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>CMS</h4>
+              <div className="fs-4">CMS</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {cms &&
                   cms.map((elem) => (
@@ -571,7 +575,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>DATABASES</h4>
+              <div className="fs-4">DATABASES</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {databases &&
                   databases.map((elem) => (
@@ -589,7 +593,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>VERSION CONTROL</h4>
+              <div className="fs-4">VERSION CONTROL</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {versioning &&
                   versioning.map((elem) => (
@@ -607,7 +611,7 @@ function Landing() {
               </div>
             </div>
             <div className="py-3 text-center">
-              <h4>DEV-OPS</h4>
+              <div className="fs-4">DEV-OPS</div>
               <div className="d-flex flex-wrap justify-content-center">
                 {devops &&
                   devops.map((elem) => (

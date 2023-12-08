@@ -112,10 +112,12 @@ export default function Project(props) {
           <img
             src={props.photo}
             alt={props.title}
+            height="auto"
+            width="auto"
             className={
               isVisible
-                ? "ease-in-image w-100 p-2 rounded-custom "
-                : "w-100 p-2 rounded-custom "
+                ? "ease-in-image w-100 p-2 rounded-custom custom-image"
+                : "w-100 p-2 rounded-custom custom-image "
             }
           />
         </div>

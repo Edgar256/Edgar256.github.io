@@ -37,6 +37,12 @@ html {
 .rounded-custom{
   border-radius: 30px !important;
 }
+.custom-image {
+  /* width: your-width-in-pixels;
+  height: your-height-in-pixels; */
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the image's aspect ratio */
+}
 
 @keyframes cursorPulse {
   0% {
