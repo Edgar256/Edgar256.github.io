@@ -449,12 +449,13 @@ function Landing() {
           return (
             <Project
               key={index}
+              count={index}
               title={project.name}
               role={project.role}
               description={project.description}
               tech={project.tech}
               photo={project.profilePhoto}
-              id={index}
+              id={project.id}
               websiteURL={project.websiteURL}
               codeURL={project.codeURL}
             />

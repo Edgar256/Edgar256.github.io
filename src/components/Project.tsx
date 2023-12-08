@@ -23,7 +23,7 @@ export default function Project(props) {
     <div className="py-4">
       <div
         className={
-          props.id % 2 === 0
+          props.count % 2 === 0
             ? "w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block block-content"
             : "w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block block-content flex-row-reverse"
         }
@@ -40,7 +40,7 @@ export default function Project(props) {
           <h4>ROLE: {props.role}</h4>
           <div className="fs-4">{props.description}</div>
           <div>
-            <h6 className="fs-4 pt-3 text-center">Tech Stack/Tags</h6>
+            <p className="fs-4 pt-3 text-center fw-bold">Tech Stack/Tags</p>
             <div className="d-flex flex-wrap justify-content-center">
               {props.tech &&
                 props.tech.map((elem) => (
