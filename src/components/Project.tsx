@@ -11,7 +11,9 @@ export default function Project(props) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
     });
     observer.observe(ref.current);
     return () => observer.disconnect();
@@ -19,7 +21,13 @@ export default function Project(props) {
 
   return (
     <div className="py-4">
-      <div className="w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block block-content">
+      <div
+        className={
+          props.id % 2 === 0
+            ? "w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block block-content"
+            : "w-100 h-100 px-0 row py-5 my-5 d-lg-flex d-sm-block block-content flex-row-reverse"
+        }
+      >
         <div
           ref={ref}
           className={

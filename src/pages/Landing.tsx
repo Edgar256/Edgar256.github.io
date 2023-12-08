@@ -82,13 +82,15 @@ function Landing() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
     });
     observer.observe(ref.current);
     window.addEventListener("mousemove", onMouseMove);
     setActiveProjects(data);
 
-    window.addEventListener("scroll", handleScroll);    
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -702,7 +704,10 @@ function Landing() {
         ref={formRef}
         id="formId"
       >
-        <div ref={ref} className={isVisible ? "ease-in-image w-100" : "w-100"}>
+        <div
+          // ref={formRef}
+          className={isVisible ? "ease-in-image w-100" : "w-100"}
+        >
           <div className=" display-4 text-center py-1">
             Send me a Quick Message
           </div>
@@ -787,7 +792,6 @@ function Landing() {
           ref={contactRef}
         >
           <div
-            ref={ref}
             className={isVisible ? "ease-in-image w-100" : "w-100"}
           >
             <div className=" display-4 py-5 text-center py-5">Contact</div>

@@ -64,7 +64,9 @@ export default function Project() {
     const project = projects.find((project) => project.id === parseInt(id));
     setProject([project]);
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
     });
     observer.observe(ref.current);
     window.addEventListener('mousemove', onMouseMove);

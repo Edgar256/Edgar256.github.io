@@ -6,7 +6,9 @@ export default function Image(props) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
     });
     observer.observe(ref.current);
     return () => observer.disconnect();
