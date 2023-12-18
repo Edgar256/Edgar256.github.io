@@ -288,7 +288,7 @@ function Landing() {
                     aria-expanded="false"
                     onClick={() => handleScrollToSection(formRef)}
                   >
-                    Get A Quote
+                    Hire Me
                   </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
