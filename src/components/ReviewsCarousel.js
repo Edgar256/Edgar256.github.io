@@ -1,5 +1,5 @@
-import React from "react";
 import Slider from "react-slick";
+import ReactStars from "react-rating-stars-component";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,6 +40,13 @@ const ReviewsCarousel = ({ reviews }) => {
             <p className="fs-4">
               <i>{review.relationship}</i>
             </p>
+            <ReactStars
+              count={5}
+              size={35}
+              color="#ffd700"
+              activeColor="#ffd700"
+              edit={false}
+            />
             <p className="fs-4">{review.comment}</p>
           </div>
         </div>

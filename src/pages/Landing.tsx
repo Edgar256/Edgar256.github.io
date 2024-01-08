@@ -41,6 +41,7 @@ function Landing() {
   const techRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const reviewsRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
 
   const handleScrollToSection = (
@@ -109,7 +110,7 @@ function Landing() {
   const reviews = [
     {
       author: "Kirunda Brian",
-      img:"brian.jpg",
+      img: "brian.jpg",
       title:
         "Software Developer passionate about Web3, AI, and Blockchain, with expertise in Cybersecurity, React, TypeScript, and WordPress",
       relationship: "Kirunda worked with Edgar on the same team",
@@ -118,7 +119,7 @@ function Landing() {
     },
     {
       author: "Ian Ankunda",
-      img:"ian.jpg",
+      img: "ian.jpg",
       title: "Java Software Developer",
       relationship: "Ian worked with Edgar on the same team",
       comment:
@@ -276,6 +277,23 @@ function Landing() {
                     onClick={() => handleScrollToSection(skillsRef)}
                   >
                     Skills & CV
+                  </span>
+                </li>
+                <hr className="d-md-none d-sm-block border border-white my-1" />
+                <li className="nav-item">
+                  <span
+                    className={
+                      isDark
+                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                    }
+                    data-toggle="collapse"
+                    data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    onClick={() => handleScrollToSection(reviewsRef)}
+                  >
+                    Reviews
                   </span>
                 </li>
                 <hr className="d-md-none d-sm-block border border-white my-1" />
@@ -819,11 +837,11 @@ function Landing() {
       <div className="container">
         <div
           className="position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
-          ref={contactRef}
+          ref={reviewsRef}
         >
           <div className={isVisible ? "ease-in-image w-100" : "w-100"}>
             <div className=" display-4 py-5 text-center py-5">Reviews</div>
-            <div className="" id="contact">
+            <div className="" id="reviews">
               <ReviewsCarousel reviews={reviews} />
             </div>
           </div>
