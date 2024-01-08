@@ -79,6 +79,33 @@ html {
   height: auto; /* Maintains the image's aspect ratio */
 }
 
+.review-slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 54px !important;
+  color: #333;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  font-size: 36px !important;
+  color: #555;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 36px !important;
+  /* background-color: #fff; */
+  color: #000;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
 
 /* Animations */
 @keyframes ease-in-image {

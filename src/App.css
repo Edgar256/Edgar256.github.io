@@ -44,6 +44,28 @@ html {
   height: auto; /* Maintains the image's aspect ratio */
 }
 
+.review-slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 54px !important;
+  color: #333;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  font-size: 56px !important;
+  color: #555;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+
 @keyframes cursorPulse {
   0% {
     transform: scale(1);

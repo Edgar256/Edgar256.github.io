@@ -23,6 +23,7 @@ import devops from "../data/devops";
 
 // import ThemeContext
 import { useThemeContext } from "../contexts/ContextProvider";
+import ReviewsCarousel from "../components/ReviewsCarousel";
 
 function Landing() {
   const ref = useRef(null);
@@ -104,6 +105,26 @@ function Landing() {
   };
 
   const [state, handleSubmit] = useForm("mjvqqbak");
+
+  const reviews = [
+    {
+      author: "Kirunda Brian",
+      img:"brian.jpg",
+      title:
+        "Software Developer passionate about Web3, AI, and Blockchain, with expertise in Cybersecurity, React, TypeScript, and WordPress",
+      relationship: "Kirunda worked with Edgar on the same team",
+      comment:
+        "I had the pleasure of working closely with Edgar on a complex software development project, and I am truly impressed by his technical prowess and problem-solving skills. Edgar's dedication to writing clean, efficient code and his ability to tackle challenges with a strategic mindset make him an invaluable asset to any development team. His collaborative spirit and strong communication skills further enhance his effectiveness. I highly recommend Edgar for any software development endeavor; he is a true professional who consistently delivers outstanding results.",
+    },
+    {
+      author: "Ian Ankunda",
+      img:"ian.jpg",
+      title: "Java Software Developer",
+      relationship: "Ian worked with Edgar on the same team",
+      comment:
+        "I highly recommend Edgar for his exceptional contributions as a Software Engineer. He consistently delivers high-quality solutions, showcases a proactive mindset, and adapts well to new technologies. Edgar is not only technically proficient but also a collaborative team player with strong communication skills. His reliability, ownership of work, and dedication make him an invaluable asset to any team or project. Edgar would be a fantastic addition to any organization seeking a talented and dedicated Software Engineer.",
+    },
+  ];
 
   if (state.succeeded) {
     return (
@@ -791,6 +812,20 @@ function Landing() {
                 </button>
               )}
             </form>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div
+          className="position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
+          ref={contactRef}
+        >
+          <div className={isVisible ? "ease-in-image w-100" : "w-100"}>
+            <div className=" display-4 py-5 text-center py-5">Reviews</div>
+            <div className="" id="contact">
+              <ReviewsCarousel reviews={reviews} />
+            </div>
           </div>
         </div>
       </div>
