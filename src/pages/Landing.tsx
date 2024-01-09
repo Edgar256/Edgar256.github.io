@@ -112,6 +112,7 @@ function Landing() {
     try {
       e.preventDefault();
       setSendMsgErr("");
+      
       // Check for empty fields
       const formElements = e.target.elements;
 
