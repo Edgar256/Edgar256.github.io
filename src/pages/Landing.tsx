@@ -687,6 +687,7 @@ function Landing() {
                 href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-white"
               >
                 Download my full PDF resume here
               </a>
@@ -840,7 +841,7 @@ function Landing() {
           ref={reviewsRef}
         >
           <div className={isVisible ? "ease-in-image w-100" : "w-100"}>
-            <div className=" display-4 py-5 text-center py-5">Reviews</div>
+            <div className="display-4 py-5 text-center mb-5">Reviews</div>
             <div className="" id="reviews">
               <ReviewsCarousel reviews={reviews} />
             </div>

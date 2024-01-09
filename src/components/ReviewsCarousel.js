@@ -22,12 +22,12 @@ const ReviewsCarousel = ({ reviews }) => {
   return (
     <Slider {...settings}>
       {reviews.map((review, index) => (
-        <div key={index} className="d-flex">
-          <div className="p-2">
+        <div key={index} className="d-lg-flex d-xl-flex d-md-flex d-sm-block d-block">
+          <div className="p-2 d-flex">
             <img
               src={process.env.PUBLIC_URL + "/images/" + review.img}
               alt="user profile"
-              className="rounded-circle"
+              className="rounded-circle mx-auto w-sm-50"
               width={90}
               height={90}
             />
