@@ -28,6 +28,7 @@ import ReviewsCarousel from "../components/ReviewsCarousel";
 function Landing() {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [sendMsgErr, setSendMsgErr] = useState("");
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [activeFilter, setActiveFilter] = useState("all");
   const [loading, setLoading] = useState(false);
@@ -106,6 +107,33 @@ function Landing() {
   };
 
   const [state, handleSubmit] = useForm("mjvqqbak");
+
+  const handleFormSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      setSendMsgErr("");
+      // Check for empty fields
+      const formElements = e.target.elements;
+
+      for (const element of formElements) {
+        console.log({ element });
+        if (element.type !== "submit" && element.value.trim() === "") {
+          setSendMsgErr(`Empty field! Please fill out ${element.name} field`);
+          return;
+        }
+      }
+
+      console.log("Form validation passed. Proceeding with submission...");
+      setSendMsgErr("");
+      setLoading(true);
+      const response = await handleSubmit(e);
+      console.log({ response });
+      setLoading(false);
+    } catch (error) {
+      console.error("Error during form submission:", error);
+      setLoading(false);
+    }
+  };
 
   const reviews = [
     {
@@ -766,7 +794,7 @@ function Landing() {
           </div>
           <div className="pt-2 w-100 d-flex">
             <form
-              onSubmit={handleSubmit}
+              onSubmit={handleFormSubmit}
               className="col-12 col-lg-6 col-xl-6  mx-auto"
               method="POST"
             >
@@ -819,8 +847,15 @@ function Landing() {
                 />
               </div>
               <div className="g-recaptcha"></div>
+              {sendMsgErr && (
+                <div className="alert alert-danger text-center fs-4">
+                  {sendMsgErr}
+                </div>
+              )}
               {loading ? (
-                <Spinner />
+                <div className="d-flex">
+                  <Spinner className="mx-auto text-warning fs-4" />
+                </div>
               ) : (
                 <button
                   type="submit"
