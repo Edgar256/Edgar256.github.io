@@ -3,6 +3,7 @@ const techStack = [
   'REACT',
   'JAVASCRIPT',
   'TYPESCRIPT',
+  'FIREBASE',
   'EXPRESS',
   'NODEJS',
   'WORDPRESS',
@@ -13,6 +14,7 @@ const techStack = [
   'MONGODB',
   'MYSQL',
   'PAYMENTS',
+  'NETLIFY'
 ];
 
 export default techStack;
