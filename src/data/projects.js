@@ -1,6 +1,56 @@
 const projects = [
   {
     id: 1,
+    name: "SIMBA TELECOM E-COMMERCE WEBSITE",
+    description:
+      "As the Web Developer, I independently crafted the Simba Telecom website, an e-commerce platform built on WordPress and WooCommerce. The website offers a seamless shopping experience with integrated Pesapal payment, WhatsApp chat, and advanced analytics functionalities.",
+    descriptionFull:
+      "As the Web Developer for Simba Telecom E-commerce, I spearheaded the development of a robust online platform using WordPress and WooCommerce. The website, powered by WooCommerce, revolutionizes the e-commerce experience with integrated Pesapal payment for secure transactions. Additionally, WhatsApp chat integration enhances customer communication, while Google Analytics provides valuable insights. I conducted regular web security audits, ensuring the platform's safety, and generated comprehensive reports. The implementation of Google Analytics reporting further allowed us to understand user behavior and optimize the website for maximum performance. From conceptualization to implementation, I took charge of every aspect of the project, ensuring a user-friendly interface and optimal performance.",
+    tech: [
+      "WORDPRESS",
+      "WOOCOMMERCE",
+      "PAYMENTS",
+      "PESAPAL PAYMENT",
+      "WHATSAPP CHAT INTEGRATION",
+      "GOOGLE ANALYTICS",
+    ],
+    profilePhoto: "images/telecom.png",
+    photos: [
+      "telecom001.png",
+      "telecom002.png",
+      "telecom003.png",
+      "telecom004.png",
+      "telecom005.png",
+      "telecom006.png",
+      "telecom007.png",
+      "telecom008.png",
+      "telecom009.png",
+      "telecom010.png",
+    ],
+    websiteURL: "https://www.simbatelecom.com/",
+    role: "WEB DEVELOPER",
+    roleRecap:
+      "As the Sole Web Developer for Simba Telecom E-commerce, I led the entire project lifecycle, conceptualizing, designing, and implementing the WordPress and WooCommerce-based platform. Overseeing all aspects, including Pesapal payment integration, WhatsApp chat, and Google Analytics, I ensured the website's stability and success.",
+    contribution: [
+      "Led the end-to-end development of Simba Telecom E-commerce as the Web Developer.",
+      "Designed and developed a user-friendly interface for a seamless online shopping experience.",
+      "Implemented WooCommerce for powerful e-commerce functionality.",
+      "Integrated Pesapal payment functionality for secure and convenient transactions.",
+      "Incorporated WhatsApp chat integration to enhance customer communication and support.",
+      "Conducted regular web security audits, ensuring the platform's safety, and generated comprehensive reports.",
+      "Implemented Google Analytics reporting for insights into user behavior and website performance.",
+      "Conducted thorough code reviews to maintain high code quality and consistency.",
+      "Collaborated with designers to meet visual and functional requirements, ensuring an appealing and functional website.",
+      "Established and maintained a style guide for consistent design and code practices.",
+      "Regularly communicated project updates and progress throughout the development process.",
+      "Ensured comprehensive testing of all features before release for a stable and reliable website.",
+      "Created and maintained documentation for the entire development process.",
+      "Advocated for accessibility and responsive design principles to enhance usability.",
+      "Successfully delivered Simba Telecom E-commerce within project timelines and budget constraints.",
+    ],
+  },
+  {
+    id: 2,
     name: "SUBULA SHOPPING APP",
     description:
       "I independently developed the Subula Shopping App, a React and Firebase-based platform that revolutionizes the shopping experience. Users can seamlessly log in using email, password, or Google authentication and explore a diverse range of products, all within a user-friendly interface.",
@@ -45,7 +95,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "FAVEAPP",
     description:
       "I oversaw the development of FaveApp frontend, a Reviews and Ratings App where users could write reviews and assign star ratings to their favorite businesses. Users were able to view the businesses with the highest ratings and share them with their friends or make recommendations.",
@@ -89,7 +139,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "GETPOINTS",
     description:
       "As a Frontend Developer at Getpoints, my role involved contributing to the development of a Loyalty Rewards program aimed at helping businesses maintain and expand their customer base. The program was designed to offer points that could be converted into incentives for customers. In its initial year of operation, the Getpoints Loyalty program was able to facilitate the growth of businesses across Africa up to three times their original size.",
@@ -125,7 +175,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "PIXABITS GROUP LTD",
     description:
       "I worked as a WordPress Developer for Pixabits, a Ugandan startup that specializes in designing and developing digital products for enterprises of all sizes. As part of my role, I designed and developed a website using WordPress and Oxygen.",
@@ -166,7 +216,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "JS ALGORITHMS",
     description:
       "The JS ALGORITHMS project is a compilation of common Javascript Algorithms created by the owner. The project aims to provide a comprehensive library of algorithms that developers can use to improve the efficiency and performance of their projects. As the owner , i am responsible for developing, testing, and optimizing the algorithms to ensure compatibility with different browsers and platforms. The project is a valuable resource for the developer community, helping to improve knowledge and skills in Javascript programming and algorithm development.",
@@ -187,7 +237,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: "VINE PHARMACUETICALS ONLINE STORE",
     description:
       "Vine Pharmaceuticals Online Store was a project where I as the WordPress Developer, built on Shopify but later migrated to a WordPress platform to enhance its functionality and improve the user experience. The writer customized the website to meet the client`s specifications, optimized it for search engines, and ensured it had a responsive design accessible across different devices. The project was successful, and the writer is proud to have been a part of it.",
@@ -219,7 +269,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: "FLIRTSET WEB APP",
     websiteURL: "https://flirtset.com/",
     description:
@@ -268,7 +318,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: "PRODUCT CAROUSEL WITH FILTERS",
     description:
       "A Simple yet powerful image carousel with options to filter products by category, a dynamic learn more page, dynamic shop page and fully mobile responsive",
@@ -304,7 +354,7 @@ const projects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     name: "SHOPPING CART WITH FILTERS",
     description:
       "A Simple and User Friendly Shopping Cart with filters by category",
@@ -345,7 +395,7 @@ const projects = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     name: "REALTOR WEB APP",
     codeURL: "https://github.com/Edgar256/real-estate-listing",
     description:
@@ -398,7 +448,7 @@ const projects = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     name: "ONLINE BOOKING ADVERTISING PLATFORM",
     codeURL:
       "https://github.com/Edgar256/online-outdoor-advertising-space-booking-system",
@@ -449,7 +499,7 @@ const projects = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     name: "BIDIPA GHANA",
     description:
       "Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.",
@@ -487,7 +537,7 @@ const projects = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     name: "EYE OF THE BRAINS ECO FEEDS",
     description:
       "Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.",
@@ -523,7 +573,7 @@ const projects = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     name: "RECYCLING FIELD GHANA",
     description:
       "Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.",
@@ -561,7 +611,7 @@ const projects = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     name: "OFNET FARMS GHANA",
     description:
       "Under Andela , I partnered with Recycle Up! Incubator programme in contributing to the creation of a robust circular economy in Ghana where all resources are effectively used to maximize impact thereby avoiding waste. We provide early-stage social entrepreneurs on a cohort basis with business development training and consulting to develop their social businesses.",
@@ -597,7 +647,7 @@ const projects = [
     ],
   },
   {
-    id: 16,
+    id: 17,
     name: "ANAIS MEDICAL LOGISTICS",
     description:
       "Anais is a Medical Start-up in Uganda with a goal of extending services to patients who need Palliative Care, Bedside Nursing Care, Live-In Companionship, Hospital Attendant Services, Emergency Care and Management, Personal Care and Hospice services. The web-app was built as a marketing tool and I intergrated with Anais' Social Media Feed. The Web-App was built with wordpress.",
@@ -619,7 +669,7 @@ const projects = [
     ],
   },
   {
-    id: 17,
+    id: 18,
     name: "EKAAWA WEB APP",
     description:
       "I was hired as a Full Stack Software Developer by Inspire Africa, a Startup based in Uganda, Africa, to build a digital product that would establish a direct connection between coffee farmers and end-users. After several discussions with their business development team, we conceptualized and launched http://www.ekaawa.com.",
