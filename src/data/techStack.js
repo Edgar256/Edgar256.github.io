@@ -1,6 +1,6 @@
 const techStack = [
   "ALL",
-  "REACT",
+  "REACT","REACT NATIVE",
   "JAVASCRIPT",
   "TYPESCRIPT",
   "NEXT.JS",
