@@ -4,6 +4,11 @@ body {
 }
 html {
   scroll-behavior: smooth 5s;
+  margin: 0 0;
+}
+*{
+  margin: 0 0;
+  overflow-wrap: break-word;
 }
 
 /* Animations */
