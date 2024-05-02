@@ -12,18 +12,15 @@ import Project from "../components/Project";
 // import data dumps
 import techStack from "../data/techStack";
 import data from "../data/projects";
-import backend from "../data/backend";
-import prototyping from "../data/prototyping";
-import frontend from "../data/frontend";
-import mobileapps from "../data/mobileapps";
-import cms from "../data/cms";
-import databases from "../data/databases";
-import versioning from "../data/versioning";
-import devops from "../data/devops";
 
 // import ThemeContext
 import { useThemeContext } from "../contexts/ContextProvider";
 import ReviewsCarousel from "../components/ReviewsCarousel";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import ReviewsSection from "../components/ReviewsSection";
+import Skills from "../components/Skills";
+import Technologies from "../components/Technologies";
 
 function Landing() {
   const ref = useRef(null);
@@ -84,13 +81,13 @@ function Landing() {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-      }
-    });
-    observer.observe(ref.current);
-    window.addEventListener("mousemove", onMouseMove);
+    // const observer = new IntersectionObserver(([entry]) => {
+    //   if (entry.isIntersecting) {
+    //     setIsVisible(true);
+    //   }
+    // });
+    // observer.observe(ref.current);
+    // window.addEventListener("mousemove", onMouseMove);
     setActiveProjects(data);
 
     window.addEventListener("scroll", handleScroll);
@@ -98,7 +95,7 @@ function Landing() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", onMouseMove);
-      observer.disconnect();
+      // observer.disconnect();
     };
   }, []);
 
@@ -112,7 +109,7 @@ function Landing() {
     try {
       e.preventDefault();
       setSendMsgErr("");
-      
+
       // Check for empty fields
       const formElements = e.target.elements;
 
@@ -135,26 +132,6 @@ function Landing() {
       setLoading(false);
     }
   };
-
-  const reviews = [
-    {
-      author: "Kirunda Brian",
-      img: "brian.jpg",
-      title:
-        "Software Developer passionate about Web3, AI, and Blockchain, with expertise in Cybersecurity, React, TypeScript, and WordPress",
-      relationship: "Kirunda worked with Edgar on the same team",
-      comment:
-        "I had the pleasure of working closely with Edgar on a complex software development project, and I am truly impressed by his technical prowess and problem-solving skills. Edgar's dedication to writing clean, efficient code and his ability to tackle challenges with a strategic mindset make him an invaluable asset to any development team. His collaborative spirit and strong communication skills further enhance his effectiveness. I highly recommend Edgar for any software development endeavor; he is a true professional who consistently delivers outstanding results.",
-    },
-    {
-      author: "Ian Ankunda",
-      img: "ian.jpg",
-      title: "Java Software Developer",
-      relationship: "Ian worked with Edgar on the same team",
-      comment:
-        "I highly recommend Edgar for his exceptional contributions as a Software Engineer. He consistently delivers high-quality solutions, showcases a proactive mindset, and adapts well to new technologies. Edgar is not only technically proficient but also a collaborative team player with strong communication skills. His reliability, ownership of work, and dedication make him an invaluable asset to any team or project. Edgar would be a fantastic addition to any organization seeking a talented and dedicated Software Engineer.",
-    },
-  ];
 
   if (state.succeeded) {
     return (
@@ -396,83 +373,11 @@ function Landing() {
           </nav>
         </div>
       </div>
-      <div
-        className="container position-relative min-vh-100 d-flex justify-content-center align-items-center"
-        ref={homeRef}
-      >
-        <div className="w-100 h-100  p-0 py-0">
-          <div className="d-lg-flex w-100 d-sm-block">
-            <div className="d-sm-flex d-flex justify-content-sm-center justify-content-center">
-              <img
-                src="./images/edgar-photo.webp"
-                alt="Edgar profile"
-                className="rounded-circle mx-auto py-2 px-2 "
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="w-100 px-2 py-2 block-content">
-              <div className="display-2 d-sm-flex justify-content-lg-start justify-content-sm-center text-xl-start text-lg-start text-md-center text-left text-sm-center">
-                Hi, I'm Edgar Tinkamanyire,
-              </div>
-              <div className="fs-4">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "As a FullStack Software Engineer, I have expertise in both FrontEnd and BackEnd Development.",
-                      "I specialize in developing both Web and Mobile Applications.",
-                      "I am also passionate about tech writing and contribute to the Pixa Blog located at https://pixabits.net/blog/",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <Hero />
+      <div id="about">
+        <div ref={aboutRef}></div>
       </div>
-      <div
-        className="container-fluid position-relative min-vh-100 p-xl-5"
-        id="about"
-      >
-        <div
-          className="w-100 h-100 d-flex justify-content-center align-items-center p-0"
-          ref={aboutRef}
-        >
-          <div ref={ref} className={isVisible ? "ease-in-text" : ""}>
-            <div className=" display-4 py-5 text-center">About</div>
-            <div className=" text-center py-5 fs-4">
-              <p>
-                As a seasoned Senior Software Engineer with extensive experience
-                in Agile processes and a strong foundation in both front-end and
-                back-end technologies, my expertise lies in software
-                development. I have a wealth of knowledge in both relational
-                (MySQL, Postgres) and non-relational (MongoDB) databases, as
-                well as React JS, React Native, Node JS, Laravel, GraphQl,
-                NextJS, Vanilla JS, and Java. My proficiency with RESTful APIs,
-                CMSs such as WordPress and Drupal, graphic design, and
-                wireframing allows me to provide my clients with the best
-                possible results. I strive to remain up-to-date with emerging
-                technologies to ensure that I stay ahead of the curve.
-              </p>
-              <p>
-                As a Freelance FullStack Developer, I specialize in transforming
-                ideas into robust, scalable web and mobile apps, all while
-                adhering to the highest engineering principles. Throughout my
-                career, I have played an instrumental role in converting
-                concepts into reality. My philosophy is that every problem
-                requires a unique solution, and this mindset has contributed to
-                my success and the success of my teams. If you have an idea that
-                you want to convert into a web or mobile app, please don't
-                hesitate to get in touch with me. I am confident that my
-                expertise and experience will help you achieve your goals and
-                bring your ideas to life.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <About />
 
       <div
         className="container-fluid position-relative min-vh-100 p-xl-5"
@@ -544,160 +449,7 @@ function Landing() {
         id="tech"
         ref={techRef}
       >
-        <div className="w-100 h-100 d-flex align-items-center p-0">
-          <div
-            ref={ref}
-            className={isVisible ? "ease-in-image w-100" : "w-100"}
-          >
-            <div className=" display-4 py-3 text-center py-5 w-100">
-              Technologies
-            </div>
-            <div className=" py-3 text-center">
-              <div className="fs-4">PROTOTYPING AND WIREFRAMING</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {prototyping &&
-                  prototyping.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">FRONTEND</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {frontend &&
-                  frontend.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">BACKEND</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {backend &&
-                  backend.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">MOBILE APPS</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {mobileapps &&
-                  mobileapps.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">CMS</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {cms &&
-                  cms.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">DATABASES</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {databases &&
-                  databases.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">VERSION CONTROL</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {versioning &&
-                  versioning.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-            <div className="py-3 text-center">
-              <div className="fs-4">DEV-OPS</div>
-              <div className="d-flex flex-wrap justify-content-center">
-                {devops &&
-                  devops.map((elem) => (
-                    <button
-                      className={
-                        isDark
-                          ? "btn btn-outline-light rounded-pill m-1 fw-bold"
-                          : "btn btn-outline-secondary  rounded-pill m-1 fw-bold"
-                      }
-                      key={elem}
-                    >
-                      {elem}
-                    </button>
-                  ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <Technologies isDark={isDark} />
       </div>
 
       <div
@@ -705,76 +457,7 @@ function Landing() {
         id="skill"
         ref={skillsRef}
       >
-        <div className="w-100 h-100 d-flex align-items-center p-0">
-          <div
-            ref={ref}
-            className={isVisible ? "ease-in-image w-100" : "w-100"}
-          >
-            <div className="display-4 py-5 text-center">Skills & Resume</div>
-            <div className=" py-3 fs-4 text-center">
-              <a
-                href="./images/EDGAR TINKAMANYIRE RESUME.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white"
-              >
-                Download my full PDF resume here
-              </a>
-            </div>
-            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
-              <p className="bi-list-nested display-1 px-2"></p>
-              <div className="py-1 px-3">
-                <h2>Agile Development</h2>
-                <p className="fs-4">
-                  I have over 5 years experience working in Agile development
-                </p>
-              </div>
-            </div>
-            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
-              <p className="bi-person-bounding-box display-1 px-2"></p>
-              <div className="py-1 px-3">
-                <h2>Leadership Skills & Team work</h2>
-                <p className="fs-4">
-                  For the last 5 years , I have hard an opportunity to lead a
-                  team of my own. I have a lot of experience working with other
-                  people in a team both in-house and remotely.
-                </p>
-              </div>
-            </div>
-            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
-              <p className="bi-people-fill display-1 px-2"></p>
-              <div className="py-1 px-3">
-                <h2>Collaboration Skills</h2>
-                <p className="fs-4">
-                  I boast off a vast experience in major collaboration tools
-                  like Slack for communication, Invision & Figma for prototyping
-                  and wireframing, Postman & Swagger for API documentation, Git
-                  for version control.
-                </p>
-              </div>
-            </div>
-            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
-              <p className="bi-x-diamond-fill display-1 px-2"></p>
-              <div className="py-1 px-3">
-                <h2>Pixel Perfect</h2>
-                <p className="fs-4">
-                  My designs are pixel perfect, with strong emphasis on user
-                  empathy
-                </p>
-              </div>
-            </div>
-            <div className="d-block d-lg-flex d-xl-flex w-100 p-4 block-content">
-              <p className="bi-columns-gap display-1 px-2"></p>
-              <div className="py-1 px-3">
-                <h2>Responsive Design</h2>
-                <p className="fs-4">
-                  All the website apps I build are fully mobile responsive
-                  across all devices.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Skills />
       </div>
 
       <div
@@ -871,18 +554,8 @@ function Landing() {
         </div>
       </div>
 
-      <div className="container">
-        <div
-          className="position-relative min-vh-100 my-5 py-5 d-flex justify-content-center align-items-center"
-          ref={reviewsRef}
-        >
-          <div className={isVisible ? "ease-in-image w-100" : "w-100"}>
-            <div className="display-4 py-5 text-center mb-5">Reviews</div>
-            <div className="" id="reviews">
-              <ReviewsCarousel reviews={reviews} />
-            </div>
-          </div>
-        </div>
+      <div className="container" ref={reviewsRef}>
+        <ReviewsSection />
       </div>
 
       <div className="container">
