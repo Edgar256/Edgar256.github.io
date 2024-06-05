@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ParticlesBackground from "../components/ParticlesBackground";
-import Typewriter from "typewriter-effect";
 import Form from "react-bootstrap/Form";
 import { useForm, ValidationError } from "@formspree/react";
 import { Spinner } from "react-bootstrap";
@@ -15,7 +14,6 @@ import data from "../data/projects";
 
 // import ThemeContext
 import { useThemeContext } from "../contexts/ContextProvider";
-import ReviewsCarousel from "../components/ReviewsCarousel";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import ReviewsSection from "../components/ReviewsSection";
@@ -23,10 +21,8 @@ import Skills from "../components/Skills";
 import Technologies from "../components/Technologies";
 
 function Landing() {
-  const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [sendMsgErr, setSendMsgErr] = useState("");
-  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [activeFilter, setActiveFilter] = useState("all");
   const [loading, setLoading] = useState(false);
   const [activeProjects, setActiveProjects] = useState([]);
@@ -64,10 +60,6 @@ function Landing() {
     }
   };
 
-  const onMouseMove = (e) => {
-    setCursorPos({ x: e.clientX, y: e.clientY });
-  };
-
   const handleScroll = () => {
     const scrollTop =
       document.documentElement.scrollTop || document.body.scrollTop;
@@ -81,21 +73,11 @@ function Landing() {
   };
 
   useEffect(() => {
-    // const observer = new IntersectionObserver(([entry]) => {
-    //   if (entry.isIntersecting) {
-    //     setIsVisible(true);
-    //   }
-    // });
-    // observer.observe(ref.current);
-    // window.addEventListener("mousemove", onMouseMove);
+    setIsVisible(false);
     setActiveProjects(data);
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", onMouseMove);
-      // observer.disconnect();
     };
   }, []);
 
@@ -112,23 +94,18 @@ function Landing() {
 
       // Check for empty fields
       const formElements = e.target.elements;
-
       for (const element of formElements) {
-        console.log({ element });
         if (element.type !== "submit" && element.value.trim() === "") {
           setSendMsgErr(`Empty field! Please fill out ${element.name} field`);
           return;
         }
       }
 
-      console.log("Form validation passed. Proceeding with submission...");
       setSendMsgErr("");
       setLoading(true);
-      const response = await handleSubmit(e);
-      console.log({ response });
+      await handleSubmit(e);
       setLoading(false);
     } catch (error) {
-      console.error("Error during form submission:", error);
       setLoading(false);
     }
   };
@@ -170,7 +147,10 @@ function Landing() {
   };
 
   return (
-    <div className={isDark ? "text-white fw-normal" : "text-dark fw-normal"}>
+    <div
+      className={isDark ? "text-white fw-normal" : "text-dark fw-normal"}
+      ref={homeRef}
+    >
       {isDark ? <ParticlesBackground /> : <div />}
       <div
         className={
