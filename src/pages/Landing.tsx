@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ParticlesBackground from "../components/ParticlesBackground";
+import Typewriter from "typewriter-effect";
 import Form from "react-bootstrap/Form";
 import { useForm, ValidationError } from "@formspree/react";
 import { Spinner } from "react-bootstrap";
@@ -14,6 +15,7 @@ import data from "../data/projects";
 
 // import ThemeContext
 import { useThemeContext } from "../contexts/ContextProvider";
+import ReviewsCarousel from "../components/ReviewsCarousel";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import ReviewsSection from "../components/ReviewsSection";
@@ -21,8 +23,10 @@ import Skills from "../components/Skills";
 import Technologies from "../components/Technologies";
 
 function Landing() {
+  const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [sendMsgErr, setSendMsgErr] = useState("");
+  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [activeFilter, setActiveFilter] = useState("all");
   const [loading, setLoading] = useState(false);
   const [activeProjects, setActiveProjects] = useState([]);
@@ -59,7 +63,10 @@ function Landing() {
       throw error;
     }
   };
- 
+
+  const onMouseMove = (e) => {
+    setCursorPos({ x: e.clientX, y: e.clientY });
+  };
 
   const handleScroll = () => {
     const scrollTop =
@@ -74,7 +81,6 @@ function Landing() {
   };
 
   useEffect(() => {
-    setIsVisible(false)
     // const observer = new IntersectionObserver(([entry]) => {
     //   if (entry.isIntersecting) {
     //     setIsVisible(true);
@@ -88,6 +94,7 @@ function Landing() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", onMouseMove);
       // observer.disconnect();
     };
   }, []);
