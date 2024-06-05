@@ -499,6 +499,22 @@ function Landing() {
                 />
               </div>
               <div className="py-1">
+                <label htmlFor="email" className="fs-4 w-100">
+                  Telephone:
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  className="form-control fs-4"
+                />
+                <ValidationError
+                  prefix="Phone"
+                  field="phone"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="py-1">
                 <label htmlFor="title" className="fs-4 w-100">
                   Title
                 </label>
