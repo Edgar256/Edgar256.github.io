@@ -479,7 +479,7 @@ function Landing() {
                 />
               </div>
               <div className="py-1">
-                <label htmlFor="email" className="fs-4 w-100">
+                <label htmlFor="phone" className="fs-4 w-100">
                   Telephone:
                 </label>
                 <input
