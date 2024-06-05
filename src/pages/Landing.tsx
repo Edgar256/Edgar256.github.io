@@ -516,7 +516,7 @@ function Landing() {
               </div>
               <div className="py-1">
                 <label htmlFor="title" className="fs-4 w-100">
-                  Title
+                  Message Title
                 </label>
                 <input
                   id="title"
