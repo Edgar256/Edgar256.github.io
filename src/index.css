@@ -105,6 +105,10 @@ html {
 .slick-dots {
   bottom: 10px;
 }
+.rsis-container div,
+.rsis-container img{
+  border-radius: 20px !important;
+}
 
 
 /* Animations */

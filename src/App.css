@@ -121,3 +121,6 @@ button:focus .cursor {
 .cursor-link:hover {
   color: #007bff !important;
 }
+.rsis-image{
+  border-radius: 200px !important;
+}
