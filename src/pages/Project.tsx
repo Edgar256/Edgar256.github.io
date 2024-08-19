@@ -112,6 +112,9 @@ export default function Project() {
     window.addEventListener("resize", updateDimensions);
     window.removeEventListener("resize", updateDimensions);
 
+    console.log("I loadedt this page");
+    handleScrollToSection(homeRef)
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", onMouseMove);
@@ -185,7 +188,7 @@ export default function Project() {
                         showBullets={true}
                         showNavs={true}
                         autoPlay={true}
-                        autoPlayDelay={2.5}
+                        autoPlayDelay={2.0}
                         bgColor={!isChecked ? "#ffffff" : "#000000"}
                         // style={{ width: "100%", height: "auto" }}
                       />
