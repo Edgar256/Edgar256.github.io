@@ -2,6 +2,7 @@
   "name": "edgar256",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://edgar256.github.io/Edgar256.github.io",
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@popperjs/core": "^2.11.6",
