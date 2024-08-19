@@ -171,7 +171,8 @@ const projects = [
       "rafikiapp005.png",
       "rafikiapp006.png",
     ],
-    websiteURL: "https://drive.google.com/file/d/1sZFR-uqGzmW-91tUynUWCmRkGc4oiyhh/view?usp=drive_link",
+    websiteURL:
+      "https://drive.google.com/file/d/1sZFR-uqGzmW-91tUynUWCmRkGc4oiyhh/view?usp=drive_link",
     codeURL: "https://github.com/Edgar256/RafikiApp",
     role: "MOBILE APP DEVELOPER",
     roleRecap:
@@ -324,9 +325,10 @@ const projects = [
     roleRecap:
       "I individually built this App to expriementing with the interaction of the DOM ",
     contribution: [
-      "I conducted Code Reviews",
-      "I wrote Unit tests for the Project",
-      "I converted Wireframes into Responsive and Beautiful Code",
+      "Developed and implemented various algorithms to address common problems and enhance functionality.",
+      "Conducted comprehensive code reviews to ensure adherence to best practices and maintain code quality.",
+      "Authored unit tests to verify the accuracy and reliability of the algorithms.",
+      "Transformed wireframes into responsive, user-friendly, and visually appealing web pages.",
     ],
   },
   {
