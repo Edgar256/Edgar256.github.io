@@ -57,7 +57,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      <div className=" display-4 text-center py-1">Send me a Quick Message</div>
+      <div className=" display-4 text-center py-1">Let's work together!</div>
       <div className="text-center fs-4">
         Awaiting your message for prompt discussion on your important project.
         Thank you for your inquiry
