@@ -144,10 +144,16 @@ html {
     text-align: center;
   }
 }
-
 @media screen and (max-width: 992px) {  
   .block-content{
     text-align: center;
+  }
+  .nav-area{
+    position: relative !important;
+  }
+  #home{
+    width: 100%;
+    justify-content: space-between !important;
   }
 }
 

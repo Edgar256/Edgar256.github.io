@@ -102,201 +102,203 @@ function Landing() {
       ref={homeRef}
     >
       {isDark ? <ParticlesBackground /> : <div />}
-      <div
-        className={
-          isDark
-            ? "container-fluid nav-area bg-black"
-            : "container-fluid nav-area bg-white"
-        }
-      >
+      <div className="position-relative w-100">
         <div
-          className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
-          id="home"
+          className={
+            isDark
+              ? "container-fluid nav-area bg-black"
+              : "container-fluid nav-area bg-white"
+          }
         >
-          <nav className="navbar navbar-expand-lg navbar-white bg-transparent ">
-            <button
-              className="navbar-toggler bg-white"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon "></span>
-            </button>
-            <div
-              className="collapse navbar-collapse w-100 bg-transparent"
-              id="navbarNavDropdown"
-            >
-              <ul className="navbar-nav w-100">
-                <hr className="d-md-none d-sm-block border border-dark my-1" />
-                <li className="nav-item active">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(homeRef)}
-                  >
-                    Home
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-                <li className="nav-item">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(aboutRef)}
-                  >
-                    About
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-                <li className="nav-item">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(portfolioRef)}
-                  >
-                    Portfolio
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-                <li className="nav-item">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(techRef)}
-                  >
-                    Technologies
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-                <li className="nav-item">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(skillsRef)}
-                  >
-                    Skills & CV
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-                <li className="nav-item">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(reviewsRef)}
-                  >
-                    Reviews
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-                <li className="nav-item">
-                  <span
-                    className={
-                      isDark
-                        ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                        : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    }
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(contactRef)}
-                  >
-                    Contact
-                  </span>
-                </li>
-                <li className="nav-item">
-                  <span
-                    // className={
-                    //   isDark
-                    //     ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
-                    //     : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
-                    // }
-                    className="btn btn-success fw-bold cursor-link fs-4 mx-2 rounded-pill"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    onClick={() => handleScrollToSection(formRef)}
-                  >
-                    Hire Me
-                  </span>
-                </li>
-                <hr className="d-md-none d-sm-block border border-white my-1" />
-              </ul>
-            </div>
-            <Form>
-              <Form.Check
-                type="switch"
-                checked={isChecked}
-                onChange={handleToggle}
-                id="viewMode"
-                label={
-                  <span className="Form-switch-label">
-                    {isChecked ? (
-                      <span className="dark-mode-label">
-                        <small>
-                          Dark
-                          <br /> Mode
-                        </small>
-                      </span>
-                    ) : (
-                      <span className="light-mode-label">
-                        <small>Light Mode</small>
-                      </span>
-                    )}
-                  </span>
-                }
-              />
-              <label htmlFor="viewMode" className="visually-hidden">
-                Dark/Light Mode Switch
-              </label>
-            </Form>
-          </nav>
+          <div
+            className="d-flex justify-content-lg-center justify-content-sm-start pt-3"
+            id="home"
+          >
+            <nav className="navbar navbar-expand-lg navbar-white bg-transparent ">
+              <button
+                className="navbar-toggler bg-white"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon "></span>
+              </button>
+              <div
+                className="collapse navbar-collapse w-100 bg-transparent"
+                id="navbarNavDropdown"
+              >
+                <ul className="navbar-nav w-100">
+                  <hr className="d-md-none d-sm-block border border-dark my-1" />
+                  <li className="nav-item active">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(homeRef)}
+                    >
+                      Home
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                  <li className="nav-item">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(aboutRef)}
+                    >
+                      About
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                  <li className="nav-item">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(portfolioRef)}
+                    >
+                      Portfolio
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                  <li className="nav-item">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(techRef)}
+                    >
+                      Technologies
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                  <li className="nav-item">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(skillsRef)}
+                    >
+                      Skills & CV
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                  <li className="nav-item">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(reviewsRef)}
+                    >
+                      Reviews
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                  <li className="nav-item">
+                    <span
+                      className={
+                        isDark
+                          ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                          : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      }
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(contactRef)}
+                    >
+                      Contact
+                    </span>
+                  </li>
+                  <li className="nav-item">
+                    <span
+                      // className={
+                      //   isDark
+                      //     ? "nav-link  fs-4 px-3 text-white fw-bold cursor-link"
+                      //     : "nav-link  fs-4 px-3 text-dark fw-bold cursor-link"
+                      // }
+                      className="btn btn-success fw-bold cursor-link fs-4 mx-2 rounded-pill"
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      onClick={() => handleScrollToSection(formRef)}
+                    >
+                      Hire Me
+                    </span>
+                  </li>
+                  <hr className="d-md-none d-sm-block border border-white my-1" />
+                </ul>
+              </div>
+              <Form>
+                <Form.Check
+                  type="switch"
+                  checked={isChecked}
+                  onChange={handleToggle}
+                  id="viewMode"
+                  label={
+                    <span className="Form-switch-label">
+                      {isChecked ? (
+                        <span className="dark-mode-label">
+                          <small>
+                            Dark
+                            <br /> Mode
+                          </small>
+                        </span>
+                      ) : (
+                        <span className="light-mode-label">
+                          <small>Light Mode</small>
+                        </span>
+                      )}
+                    </span>
+                  }
+                />
+                <label htmlFor="viewMode" className="visually-hidden">
+                  Dark/Light Mode Switch
+                </label>
+              </Form>
+            </nav>
+          </div>
         </div>
       </div>
       <Hero />
